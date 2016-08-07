@@ -10,20 +10,20 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.controller.DeleteModelController
-	c4045 [label=<<table title="net.ljcomputing.sr.fx.controller.DeleteModelController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DeleteModelController.html">
+	c855 [label=<<table title="net.ljcomputing.sr.fx.controller.DeleteModelController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DeleteModelController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeleteModelController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DeleteModelController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.model.Model
-	c4052 [label=<<table title="net.ljcomputing.sr.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../model/Model.html">
+	// net.ljcomputing.sr.fx.controller.DeleteModelController DEPEND net.ljcomputing.model.Model
+	c855:p -> c859:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.model.Model
+	c859 [label=<<table title="net.ljcomputing.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Model </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.model </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../../model/Model.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.fx.controller.DeleteModelController DEPEND net.ljcomputing.sr.model.Model
-	c4045:p -> c4052:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 }
 

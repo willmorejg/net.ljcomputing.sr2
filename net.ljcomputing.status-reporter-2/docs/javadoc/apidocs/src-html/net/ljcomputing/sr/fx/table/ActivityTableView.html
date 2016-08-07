@@ -28,7 +28,7 @@
 <span class="sourceLineNo">020</span>import net.ljcomputing.sr.fx.table.cell.WbsComboTableCell;<a name="line.20"></a>
 <span class="sourceLineNo">021</span>import net.ljcomputing.sr.model.Activity;<a name="line.21"></a>
 <span class="sourceLineNo">022</span>import net.ljcomputing.sr.model.WorkBreakdownStructure;<a name="line.22"></a>
-<span class="sourceLineNo">023</span>import net.ljcomputing.sr.service.ModelServiceFactory;<a name="line.23"></a>
+<span class="sourceLineNo">023</span>import net.ljcomputing.sr.service.SrModelServiceFactory;<a name="line.23"></a>
 <span class="sourceLineNo">024</span>import net.ljcomputing.sr.service.impl.ActivityServiceImpl;<a name="line.24"></a>
 <span class="sourceLineNo">025</span><a name="line.25"></a>
 <span class="sourceLineNo">026</span>import org.slf4j.Logger;<a name="line.26"></a>
@@ -127,7 +127,7 @@
 <span class="sourceLineNo">119</span>      model.setId(current.getId());<a name="line.119"></a>
 <span class="sourceLineNo">120</span><a name="line.120"></a>
 <span class="sourceLineNo">121</span>      try {<a name="line.121"></a>
-<span class="sourceLineNo">122</span>        new ActivityServiceImpl().update(model);<a name="line.122"></a>
+<span class="sourceLineNo">122</span>        SrModelServiceFactory.ActivityView.getServiceInstance().update(model);<a name="line.122"></a>
 <span class="sourceLineNo">123</span>      } catch (Exception e1) {<a name="line.123"></a>
 <span class="sourceLineNo">124</span>        new ErrorAlert().show(e1);<a name="line.124"></a>
 <span class="sourceLineNo">125</span>      }<a name="line.125"></a>
@@ -173,7 +173,7 @@
 <span class="sourceLineNo">165</span>   */<a name="line.165"></a>
 <span class="sourceLineNo">166</span>  @SuppressWarnings("unchecked")<a name="line.166"></a>
 <span class="sourceLineNo">167</span>  private void populateWbsCombo() throws Exception {<a name="line.167"></a>
-<span class="sourceLineNo">168</span>    wbsList = FXCollections.observableArrayList(ModelServiceFactory.WorkBreakdownStructure.getServiceInstance().readAll());<a name="line.168"></a>
+<span class="sourceLineNo">168</span>    wbsList = FXCollections.observableArrayList(SrModelServiceFactory.WorkBreakdownStructure.getServiceInstance().readAll());<a name="line.168"></a>
 <span class="sourceLineNo">169</span><a name="line.169"></a>
 <span class="sourceLineNo">170</span>    wbsCol.setCellValueFactory(new Callback&lt;CellDataFeatures&lt;Activity, String&gt;, ObservableValue&lt;String&gt;&gt;() {<a name="line.170"></a>
 <span class="sourceLineNo">171</span>      <a name="line.171"></a>
@@ -197,7 +197,7 @@
 <span class="sourceLineNo">189</span>      newActivity.setId(model.getId());<a name="line.189"></a>
 <span class="sourceLineNo">190</span><a name="line.190"></a>
 <span class="sourceLineNo">191</span>      try {<a name="line.191"></a>
-<span class="sourceLineNo">192</span>        ModelServiceFactory.Activity.getServiceInstance().update(newActivity);<a name="line.192"></a>
+<span class="sourceLineNo">192</span>        SrModelServiceFactory.Activity.getServiceInstance().update(newActivity);<a name="line.192"></a>
 <span class="sourceLineNo">193</span>      } catch (Exception e1) {<a name="line.193"></a>
 <span class="sourceLineNo">194</span>        new ErrorAlert().show(e1);<a name="line.194"></a>
 <span class="sourceLineNo">195</span>      }<a name="line.195"></a>

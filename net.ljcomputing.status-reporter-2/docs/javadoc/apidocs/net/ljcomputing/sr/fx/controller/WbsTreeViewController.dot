@@ -10,68 +10,48 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c7354 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../treeview/WbsTreeView.html">
+	c1531 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../treeview/WbsTreeView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeView </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.treeview </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../treeview/WbsTreeView.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c7358 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeViewController.html">
+	c1535 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeViewController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeViewController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeViewController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.AbstractComponentController
-	c7359 [label=<<table title="net.ljcomputing.sr.fx.controller.AbstractComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractComponentController.html">
+	c1536 [label=<<table title="net.ljcomputing.sr.fx.controller.AbstractComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractComponentController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractComponentController </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractComponentController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.ComponentController
-	c7361 [label=<<table title="net.ljcomputing.sr.fx.controller.ComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComponentController.html">
+	c1538 [label=<<table title="net.ljcomputing.sr.fx.controller.ComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComponentController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ComponentController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ComponentController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.MainController
-	c7362 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MainController.html">
+	c1539 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MainController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MainController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MainController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.service.ActivityService
-	c7375 [label=<<table title="net.ljcomputing.sr.service.ActivityService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ActivityService.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ActivityService </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.service </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/ActivityService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.service.WorkBreakdownStructureService
-	c7376 [label=<<table title="net.ljcomputing.sr.service.WorkBreakdownStructureService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/WorkBreakdownStructureService.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> WorkBreakdownStructureService </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.service </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/WorkBreakdownStructureService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.controller.WbsTreeViewController extends net.ljcomputing.sr.fx.controller.AbstractComponentController
-	c7359:p -> c7358:p [dir=back,arrowtail=empty];
+	c1536:p -> c1535:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sr.fx.controller.WbsTreeViewController implements net.ljcomputing.sr.fx.controller.ComponentController
-	c7361:p -> c7358:p [dir=back,arrowtail=empty,style=dashed];
+	c1538:p -> c1535:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sr.fx.controller.AbstractComponentController implements net.ljcomputing.sr.fx.controller.ComponentController
-	c7361:p -> c7359:p [dir=back,arrowtail=empty,style=dashed];
+	c1538:p -> c1536:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c7358:p -> c7354:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.controller.WbsTreeViewController NAVASSOC net.ljcomputing.sr.service.WorkBreakdownStructureService
-	c7358:p -> c7376:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.controller.WbsTreeViewController NAVASSOC net.ljcomputing.sr.service.ActivityService
-	c7358:p -> c7375:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1535:p -> c1531:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c7362:p -> c7354:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1539:p -> c1531:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c7362:p -> c7358:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1539:p -> c1535:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

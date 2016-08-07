@@ -10,16 +10,16 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.configuration.Tables
-	c90 [label=<<table title="net.ljcomputing.sr.configuration.Tables" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Tables.html">
+	c89 [label=<<table title="net.ljcomputing.sr.configuration.Tables" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Tables.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Tables </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Tables.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.configuration.Tables implements net.ljcomputing.persistence.DataSourceTable
-	c97:p -> c90:p [dir=back,arrowtail=empty,style=dashed];
+	c96:p -> c89:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.persistence.DataSourceTable
-	c97 [label=<<table title="net.ljcomputing.persistence.DataSourceTable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/persistence/DataSourceTable.html">
+	c96 [label=<<table title="net.ljcomputing.persistence.DataSourceTable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/persistence/DataSourceTable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DataSourceTable </td></tr>

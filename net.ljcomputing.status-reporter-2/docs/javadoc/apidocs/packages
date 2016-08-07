@@ -1,9 +1,5 @@
-net.ljcomputing.sr.initialize
 net.ljcomputing.sr.configuration
 net.ljcomputing.sr
-net.ljcomputing.sr.repository.impl
-net.ljcomputing.sr.persistence.impl
-net.ljcomputing.sr.persistence
 net.ljcomputing.sr.fx.menu.item
 net.ljcomputing.sr.fx.menu
 net.ljcomputing.sr.fx.dialog.impl
@@ -13,10 +9,3 @@ net.ljcomputing.sr.fx.table.cell
 net.ljcomputing.sr.fx.tree.item
 net.ljcomputing.sr.fx.treeview
 net.ljcomputing.sr.fx.controller
-net.ljcomputing.sr.model
-net.ljcomputing.sr.service
-net.ljcomputing.sr.service.impl
-net.ljcomputing.fx.action
-net.ljcomputing.fx.alert
-net.ljcomputing.fx.control.time
-net.ljcomputing

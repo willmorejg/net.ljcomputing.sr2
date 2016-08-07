@@ -1,16 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractModelDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" alt="" coords="446,17,709,42"/>
-<area shape="rect" id="node1" href="./AbstractModelDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="435,5,719,53"/>
-<area shape="rect" id="node2_1" href="./TaskDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" alt="" coords="415,113,521,138"/>
-<area shape="rect" id="node2" href="./TaskDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="404,101,532,149"/>
-<area shape="rect" id="node7_2" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="org.slf4j.Logger" alt="" coords="707,203,787,258"/>
-<area shape="rect" id="node7" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="&lt;TABLE&gt;" alt="" coords="696,198,797,263"/>
-<area shape="rect" id="node3_3" href="../../../model/TaskViewModel.html" title="net.ljcomputing.sr.model.TaskViewModel" alt="" coords="15,211,137,250"/>
-<area shape="rect" id="node3" href="../../../model/TaskViewModel.html" title="&lt;TABLE&gt;" alt="" coords="5,206,147,255"/>
-<area shape="rect" id="node4_4" href="../../../model/Task.html" title="net.ljcomputing.sr.model.Task" alt="" coords="182,211,303,250"/>
-<area shape="rect" id="node4" href="../../../model/Task.html" title="&lt;TABLE&gt;" alt="" coords="171,206,314,255"/>
-<area shape="rect" id="node5_5" href="../../../model/ActivityViewModel.html" title="net.ljcomputing.sr.model.ActivityViewModel" alt="" coords="349,211,470,250"/>
-<area shape="rect" id="node5" href="../../../model/ActivityViewModel.html" title="&lt;TABLE&gt;" alt="" coords="338,206,481,255"/>
-<area shape="rect" id="node6_6" href="../../../../fx/control/time/TimeControl.html" title="net.ljcomputing.fx.control.time.TimeControl" alt="" coords="515,211,661,250"/>
-<area shape="rect" id="node6" href="../../../../fx/control/time/TimeControl.html" title="&lt;TABLE&gt;" alt="" coords="505,206,671,255"/>
+<area shape="rect" id="node1_0" href="./AbstractModelDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" alt="" coords="98,17,361,42"/>
+<area shape="rect" id="node1" href="./AbstractModelDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="87,5,371,53"/>
+<area shape="rect" id="node2_1" href="./TaskDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" alt="" coords="239,113,345,138"/>
+<area shape="rect" id="node2" href="./TaskDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="228,101,356,149"/>
+<area shape="rect" id="node3_2" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="org.slf4j.Logger" alt="" coords="16,203,96,258"/>
+<area shape="rect" id="node3" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="&lt;TABLE&gt;" alt="" coords="5,198,107,263"/>
+<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="131,206,274,255"/>
+<area shape="rect" id="node5" href="null" title="&lt;TABLE&gt;" alt="" coords="298,206,465,255"/>
+<area shape="rect" id="node6" href="null" title="&lt;TABLE&gt;" alt="" coords="489,206,631,255"/>
+<area shape="rect" id="node7" href="null" title="&lt;TABLE&gt;" alt="" coords="655,206,798,255"/>
 </map>

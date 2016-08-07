@@ -10,65 +10,65 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog
-	c2006 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsDataDialog.html">
+	c458 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog
-	c2007 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivityDataDialog.html">
+	c459 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivityDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ActivityDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.sr.model.Model>
-	c2008 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractModelDataDialog.html">
+	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model>
+	c460 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractModelDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractModelDataDialog&lt;T extends Model&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractModelDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog
-	c2009 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskDataDialog.html">
+	c461 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TaskDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.fx.dialog.ModelDataEntry<T extends net.ljcomputing.sr.model.Model>
-	c2010 [label=<<table title="net.ljcomputing.sr.fx.dialog.ModelDataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ModelDataEntry.html">
+	// net.ljcomputing.sr.fx.dialog.ModelDataEntry<T extends net.ljcomputing.model.Model>
+	c462 [label=<<table title="net.ljcomputing.sr.fx.dialog.ModelDataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ModelDataEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ModelDataEntry&lt;T extends net.ljcomputing.sr.model.Model&gt; </td></tr>
+<tr><td align="center" balign="center"> ModelDataEntry&lt;T extends net.ljcomputing.model.Model&gt; </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.dialog </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../ModelDataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.model.Model
-	c2031 [label=<<table title="net.ljcomputing.sr.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../model/Model.html">
+	//net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.WorkBreakdownStructure>
+	c460:p -> c458:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.Activity>
+	c460:p -> c459:p [dir=back,arrowtail=empty];
+	//net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model> implements net.ljcomputing.sr.fx.dialog.ModelDataEntry<T extends net.ljcomputing.model.Model>
+	c462:p -> c460:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.TaskViewModel>
+	c460:p -> c461:p [dir=back,arrowtail=empty];
+	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog NAVASSOC org.slf4j.Logger
+	c459:p -> c480:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model> NAVASSOC org.slf4j.Logger
+	c460:p -> c480:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC org.slf4j.Logger
+	c461:p -> c480:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model> DEPEND net.ljcomputing.model.Model
+	c460:p -> c489:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sr.fx.dialog.ModelDataEntry<T extends net.ljcomputing.model.Model> DEPEND net.ljcomputing.model.Model
+	c462:p -> c489:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.model.Model
+	c489 [label=<<table title="net.ljcomputing.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Model </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.model </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../../../model/Model.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	//net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.WorkBreakdownStructure>
-	c2008:p -> c2006:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.Activity>
-	c2008:p -> c2007:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.sr.model.Model> implements net.ljcomputing.sr.fx.dialog.ModelDataEntry<T extends net.ljcomputing.sr.model.Model>
-	c2010:p -> c2008:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.TaskViewModel>
-	c2008:p -> c2009:p [dir=back,arrowtail=empty];
-	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog NAVASSOC org.slf4j.Logger
-	c2007:p -> c2058:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.sr.model.Model> NAVASSOC org.slf4j.Logger
-	c2008:p -> c2058:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC org.slf4j.Logger
-	c2009:p -> c2058:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.sr.model.Model> DEPEND net.ljcomputing.sr.model.Model
-	c2008:p -> c2031:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sr.fx.dialog.ModelDataEntry<T extends net.ljcomputing.sr.model.Model> DEPEND net.ljcomputing.sr.model.Model
-	c2010:p -> c2031:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// org.slf4j.Logger
-	c2058 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c480 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>

@@ -10,25 +10,25 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.treeview.WbsTreeCell
-	c7120 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeCell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeCell.html">
+	c1428 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeCell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeCell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeCell </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeCell.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.model.Model
-	c7134 [label=<<table title="net.ljcomputing.sr.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../model/Model.html">
+	// net.ljcomputing.sr.fx.treeview.WbsTreeCell NAVASSOC org.slf4j.Logger
+	c1428:p -> c1439:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sr.fx.treeview.WbsTreeCell DEPEND net.ljcomputing.model.Model
+	c1428:p -> c1440:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.model.Model
+	c1440 [label=<<table title="net.ljcomputing.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Model </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.model </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../../model/Model.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.fx.treeview.WbsTreeCell NAVASSOC org.slf4j.Logger
-	c7120:p -> c7161:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.treeview.WbsTreeCell DEPEND net.ljcomputing.sr.model.Model
-	c7120:p -> c7134:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// org.slf4j.Logger
-	c7161 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c1439 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>

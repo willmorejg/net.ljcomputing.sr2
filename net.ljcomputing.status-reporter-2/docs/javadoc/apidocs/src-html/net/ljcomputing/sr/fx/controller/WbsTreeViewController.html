@@ -26,13 +26,13 @@
 <span class="sourceLineNo">018</span>package net.ljcomputing.sr.fx.controller;<a name="line.18"></a>
 <span class="sourceLineNo">019</span><a name="line.19"></a>
 <span class="sourceLineNo">020</span>import net.ljcomputing.fx.alert.ErrorAlert;<a name="line.20"></a>
-<span class="sourceLineNo">021</span>import net.ljcomputing.sr.fx.tree.item.WbsTreeItem;<a name="line.21"></a>
-<span class="sourceLineNo">022</span>import net.ljcomputing.sr.fx.treeview.WbsTreeView;<a name="line.22"></a>
-<span class="sourceLineNo">023</span>import net.ljcomputing.sr.model.Activity;<a name="line.23"></a>
-<span class="sourceLineNo">024</span>import net.ljcomputing.sr.model.Model;<a name="line.24"></a>
+<span class="sourceLineNo">021</span>import net.ljcomputing.model.Model;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import net.ljcomputing.sr.fx.tree.item.WbsTreeItem;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import net.ljcomputing.sr.fx.treeview.WbsTreeView;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import net.ljcomputing.sr.model.Activity;<a name="line.24"></a>
 <span class="sourceLineNo">025</span>import net.ljcomputing.sr.model.WorkBreakdownStructure;<a name="line.25"></a>
 <span class="sourceLineNo">026</span>import net.ljcomputing.sr.service.ActivityService;<a name="line.26"></a>
-<span class="sourceLineNo">027</span>import net.ljcomputing.sr.service.ModelServiceFactory;<a name="line.27"></a>
+<span class="sourceLineNo">027</span>import net.ljcomputing.sr.service.SrModelServiceFactory;<a name="line.27"></a>
 <span class="sourceLineNo">028</span>import net.ljcomputing.sr.service.WorkBreakdownStructureService;<a name="line.28"></a>
 <span class="sourceLineNo">029</span><a name="line.29"></a>
 <span class="sourceLineNo">030</span>import org.slf4j.Logger;<a name="line.30"></a>
@@ -57,78 +57,75 @@
 <span class="sourceLineNo">049</span><a name="line.49"></a>
 <span class="sourceLineNo">050</span>  /** The wbs tree. */<a name="line.50"></a>
 <span class="sourceLineNo">051</span>  private WbsTreeView wbsTree;<a name="line.51"></a>
-<span class="sourceLineNo">052</span><a name="line.52"></a>
-<span class="sourceLineNo">053</span>  /** The wbs service. */<a name="line.53"></a>
-<span class="sourceLineNo">054</span>  private WorkBreakdownStructureService wbsService;<a name="line.54"></a>
-<span class="sourceLineNo">055</span><a name="line.55"></a>
-<span class="sourceLineNo">056</span>  /** The activity service. */<a name="line.56"></a>
-<span class="sourceLineNo">057</span>  private ActivityService activityService;<a name="line.57"></a>
-<span class="sourceLineNo">058</span>  <a name="line.58"></a>
-<span class="sourceLineNo">059</span>  public WbsTreeViewController(WbsTreeView wbsTree) {<a name="line.59"></a>
-<span class="sourceLineNo">060</span>    this.wbsTree = wbsTree;<a name="line.60"></a>
-<span class="sourceLineNo">061</span>  }<a name="line.61"></a>
-<span class="sourceLineNo">062</span><a name="line.62"></a>
-<span class="sourceLineNo">063</span>  /**<a name="line.63"></a>
-<span class="sourceLineNo">064</span>   * @see net.ljcomputing.sr.fx.controller.ComponentController#refreshComponents()<a name="line.64"></a>
-<span class="sourceLineNo">065</span>   */<a name="line.65"></a>
-<span class="sourceLineNo">066</span>  public void refreshComponents() {<a name="line.66"></a>
-<span class="sourceLineNo">067</span>    try {<a name="line.67"></a>
-<span class="sourceLineNo">068</span>      wbsService = (WorkBreakdownStructureService) ModelServiceFactory.WorkBreakdownStructure.getServiceInstance();<a name="line.68"></a>
-<span class="sourceLineNo">069</span>      activityService = (ActivityService) ModelServiceFactory.Activity.getServiceInstance();<a name="line.69"></a>
-<span class="sourceLineNo">070</span>    } catch (Exception e) {<a name="line.70"></a>
-<span class="sourceLineNo">071</span>      handleException(e);<a name="line.71"></a>
-<span class="sourceLineNo">072</span>    }<a name="line.72"></a>
-<span class="sourceLineNo">073</span><a name="line.73"></a>
-<span class="sourceLineNo">074</span>    wbsTree.setRoot(addTreeValues(getWorkBreakdownStructures()));<a name="line.74"></a>
-<span class="sourceLineNo">075</span>    wbsTree.getRoot().setExpanded(true);<a name="line.75"></a>
-<span class="sourceLineNo">076</span>  }<a name="line.76"></a>
-<span class="sourceLineNo">077</span><a name="line.77"></a>
-<span class="sourceLineNo">078</span>  /**<a name="line.78"></a>
-<span class="sourceLineNo">079</span>   * Gets the work breakdown structures.<a name="line.79"></a>
-<span class="sourceLineNo">080</span>   *<a name="line.80"></a>
-<span class="sourceLineNo">081</span>   * @return the work breakdown structures<a name="line.81"></a>
-<span class="sourceLineNo">082</span>   */<a name="line.82"></a>
-<span class="sourceLineNo">083</span>  private List&lt;Model&gt; getWorkBreakdownStructures() {<a name="line.83"></a>
-<span class="sourceLineNo">084</span>    List&lt;Model&gt; list = new LinkedList&lt;Model&gt;();<a name="line.84"></a>
-<span class="sourceLineNo">085</span>    <a name="line.85"></a>
-<span class="sourceLineNo">086</span>    try {<a name="line.86"></a>
-<span class="sourceLineNo">087</span>      list.addAll(wbsService.readAll());<a name="line.87"></a>
-<span class="sourceLineNo">088</span>    } catch (Exception e) {<a name="line.88"></a>
-<span class="sourceLineNo">089</span>      new ErrorAlert().show(e);<a name="line.89"></a>
-<span class="sourceLineNo">090</span>    }<a name="line.90"></a>
-<span class="sourceLineNo">091</span><a name="line.91"></a>
-<span class="sourceLineNo">092</span>    return list;<a name="line.92"></a>
-<span class="sourceLineNo">093</span>  }<a name="line.93"></a>
-<span class="sourceLineNo">094</span><a name="line.94"></a>
-<span class="sourceLineNo">095</span>  /**<a name="line.95"></a>
-<span class="sourceLineNo">096</span>   * Adds the tree values.<a name="line.96"></a>
-<span class="sourceLineNo">097</span>   *<a name="line.97"></a>
-<span class="sourceLineNo">098</span>   * @param wbsList the wbs list<a name="line.98"></a>
-<span class="sourceLineNo">099</span>   * @return the tree item<a name="line.99"></a>
-<span class="sourceLineNo">100</span>   */<a name="line.100"></a>
-<span class="sourceLineNo">101</span>  private TreeItem&lt;Model&gt; addTreeValues(List&lt;Model&gt; wbsList) {<a name="line.101"></a>
-<span class="sourceLineNo">102</span>    WbsTreeItem root = new WbsTreeItem(new WorkBreakdownStructure("WBS List"));<a name="line.102"></a>
-<span class="sourceLineNo">103</span><a name="line.103"></a>
-<span class="sourceLineNo">104</span>    for (Model model : wbsList) {<a name="line.104"></a>
-<span class="sourceLineNo">105</span>      WbsTreeItem wbsItem = new WbsTreeItem(model);<a name="line.105"></a>
-<span class="sourceLineNo">106</span><a name="line.106"></a>
-<span class="sourceLineNo">107</span>      try {<a name="line.107"></a>
-<span class="sourceLineNo">108</span>        for (Activity a : activityService.readByWbs(model.getId())) {<a name="line.108"></a>
-<span class="sourceLineNo">109</span>          WbsTreeItem activityItem = new WbsTreeItem(a);<a name="line.109"></a>
-<span class="sourceLineNo">110</span>          wbsItem.getChildren().add(activityItem);<a name="line.110"></a>
-<span class="sourceLineNo">111</span>          wbsItem.setExpanded(true);<a name="line.111"></a>
-<span class="sourceLineNo">112</span>        }<a name="line.112"></a>
-<span class="sourceLineNo">113</span>      } catch (Exception e) {<a name="line.113"></a>
-<span class="sourceLineNo">114</span>        new ErrorAlert().show(e);<a name="line.114"></a>
-<span class="sourceLineNo">115</span>      }<a name="line.115"></a>
-<span class="sourceLineNo">116</span><a name="line.116"></a>
-<span class="sourceLineNo">117</span>      root.getChildren().add(wbsItem);<a name="line.117"></a>
-<span class="sourceLineNo">118</span>      root.setExpanded(true);<a name="line.118"></a>
-<span class="sourceLineNo">119</span>    }<a name="line.119"></a>
-<span class="sourceLineNo">120</span><a name="line.120"></a>
-<span class="sourceLineNo">121</span>    return root;<a name="line.121"></a>
-<span class="sourceLineNo">122</span>  }<a name="line.122"></a>
-<span class="sourceLineNo">123</span>}<a name="line.123"></a>
+<span class="sourceLineNo">052</span>  <a name="line.52"></a>
+<span class="sourceLineNo">053</span>  /**<a name="line.53"></a>
+<span class="sourceLineNo">054</span>   * Instantiates a new wbs tree view controller.<a name="line.54"></a>
+<span class="sourceLineNo">055</span>   *<a name="line.55"></a>
+<span class="sourceLineNo">056</span>   * @param wbsTree the wbs tree<a name="line.56"></a>
+<span class="sourceLineNo">057</span>   */<a name="line.57"></a>
+<span class="sourceLineNo">058</span>  public WbsTreeViewController(WbsTreeView wbsTree) {<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    this.wbsTree = wbsTree;<a name="line.59"></a>
+<span class="sourceLineNo">060</span>  }<a name="line.60"></a>
+<span class="sourceLineNo">061</span><a name="line.61"></a>
+<span class="sourceLineNo">062</span>  /**<a name="line.62"></a>
+<span class="sourceLineNo">063</span>   * @see net.ljcomputing.sr.fx.controller.ComponentController#refreshComponents()<a name="line.63"></a>
+<span class="sourceLineNo">064</span>   */<a name="line.64"></a>
+<span class="sourceLineNo">065</span>  public void refreshComponents() {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>    wbsTree.setRoot(addTreeValues(getWorkBreakdownStructures()));<a name="line.66"></a>
+<span class="sourceLineNo">067</span>    wbsTree.getRoot().setExpanded(true);<a name="line.67"></a>
+<span class="sourceLineNo">068</span>  }<a name="line.68"></a>
+<span class="sourceLineNo">069</span><a name="line.69"></a>
+<span class="sourceLineNo">070</span>  /**<a name="line.70"></a>
+<span class="sourceLineNo">071</span>   * Gets the work breakdown structures.<a name="line.71"></a>
+<span class="sourceLineNo">072</span>   *<a name="line.72"></a>
+<span class="sourceLineNo">073</span>   * @return the work breakdown structures<a name="line.73"></a>
+<span class="sourceLineNo">074</span>   */<a name="line.74"></a>
+<span class="sourceLineNo">075</span>  private List&lt;Model&gt; getWorkBreakdownStructures() {<a name="line.75"></a>
+<span class="sourceLineNo">076</span>    List&lt;Model&gt; list = new LinkedList&lt;Model&gt;();<a name="line.76"></a>
+<span class="sourceLineNo">077</span>    <a name="line.77"></a>
+<span class="sourceLineNo">078</span>    try {<a name="line.78"></a>
+<span class="sourceLineNo">079</span>      WorkBreakdownStructureService wbsService = <a name="line.79"></a>
+<span class="sourceLineNo">080</span>          (WorkBreakdownStructureService) SrModelServiceFactory.WorkBreakdownStructure.getServiceInstance();<a name="line.80"></a>
+<span class="sourceLineNo">081</span>      <a name="line.81"></a>
+<span class="sourceLineNo">082</span>      list.addAll(wbsService.readAll());<a name="line.82"></a>
+<span class="sourceLineNo">083</span>    } catch (Exception e) {<a name="line.83"></a>
+<span class="sourceLineNo">084</span>      new ErrorAlert().show(e);<a name="line.84"></a>
+<span class="sourceLineNo">085</span>    }<a name="line.85"></a>
+<span class="sourceLineNo">086</span><a name="line.86"></a>
+<span class="sourceLineNo">087</span>    return list;<a name="line.87"></a>
+<span class="sourceLineNo">088</span>  }<a name="line.88"></a>
+<span class="sourceLineNo">089</span><a name="line.89"></a>
+<span class="sourceLineNo">090</span>  /**<a name="line.90"></a>
+<span class="sourceLineNo">091</span>   * Adds the tree values.<a name="line.91"></a>
+<span class="sourceLineNo">092</span>   *<a name="line.92"></a>
+<span class="sourceLineNo">093</span>   * @param wbsList the wbs list<a name="line.93"></a>
+<span class="sourceLineNo">094</span>   * @return the tree item<a name="line.94"></a>
+<span class="sourceLineNo">095</span>   */<a name="line.95"></a>
+<span class="sourceLineNo">096</span>  private TreeItem&lt;Model&gt; addTreeValues(List&lt;Model&gt; wbsList) {<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    WbsTreeItem root = new WbsTreeItem(new WorkBreakdownStructure("WBS List"));<a name="line.97"></a>
+<span class="sourceLineNo">098</span><a name="line.98"></a>
+<span class="sourceLineNo">099</span>    for (Model model : wbsList) {<a name="line.99"></a>
+<span class="sourceLineNo">100</span>      WbsTreeItem wbsItem = new WbsTreeItem(model);<a name="line.100"></a>
+<span class="sourceLineNo">101</span><a name="line.101"></a>
+<span class="sourceLineNo">102</span>      try {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>        ActivityService activityService = (ActivityService) SrModelServiceFactory.Activity.getServiceInstance();<a name="line.103"></a>
+<span class="sourceLineNo">104</span>        <a name="line.104"></a>
+<span class="sourceLineNo">105</span>        for (Activity a : activityService.readByWbs(model.getId())) {<a name="line.105"></a>
+<span class="sourceLineNo">106</span>          WbsTreeItem activityItem = new WbsTreeItem(a);<a name="line.106"></a>
+<span class="sourceLineNo">107</span>          wbsItem.getChildren().add(activityItem);<a name="line.107"></a>
+<span class="sourceLineNo">108</span>          wbsItem.setExpanded(true);<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        }<a name="line.109"></a>
+<span class="sourceLineNo">110</span>      } catch (Exception e) {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        new ErrorAlert().show(e);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>      }<a name="line.112"></a>
+<span class="sourceLineNo">113</span><a name="line.113"></a>
+<span class="sourceLineNo">114</span>      root.getChildren().add(wbsItem);<a name="line.114"></a>
+<span class="sourceLineNo">115</span>      root.setExpanded(true);<a name="line.115"></a>
+<span class="sourceLineNo">116</span>    }<a name="line.116"></a>
+<span class="sourceLineNo">117</span><a name="line.117"></a>
+<span class="sourceLineNo">118</span>    return root;<a name="line.118"></a>
+<span class="sourceLineNo">119</span>  }<a name="line.119"></a>
+<span class="sourceLineNo">120</span>}<a name="line.120"></a>
 
 
 

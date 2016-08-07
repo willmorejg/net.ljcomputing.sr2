@@ -33,7 +33,7 @@
 <span class="sourceLineNo">025</span>import net.ljcomputing.sr.model.Task;<a name="line.25"></a>
 <span class="sourceLineNo">026</span>import net.ljcomputing.sr.model.TaskViewModel;<a name="line.26"></a>
 <span class="sourceLineNo">027</span>import net.ljcomputing.sr.service.ActivityViewService;<a name="line.27"></a>
-<span class="sourceLineNo">028</span>import net.ljcomputing.sr.service.ModelServiceFactory;<a name="line.28"></a>
+<span class="sourceLineNo">028</span>import net.ljcomputing.sr.service.SrModelServiceFactory;<a name="line.28"></a>
 <span class="sourceLineNo">029</span>import net.ljcomputing.sr.service.TaskService;<a name="line.29"></a>
 <span class="sourceLineNo">030</span><a name="line.30"></a>
 <span class="sourceLineNo">031</span>import org.slf4j.Logger;<a name="line.31"></a>
@@ -178,7 +178,7 @@
 <span class="sourceLineNo">170</span>        <a name="line.170"></a>
 <span class="sourceLineNo">171</span>        deleteMenu.setOnAction(event -&gt; {<a name="line.171"></a>
 <span class="sourceLineNo">172</span>          try {<a name="line.172"></a>
-<span class="sourceLineNo">173</span>            TaskService service = (TaskService) ModelServiceFactory.Task.getServiceInstance();<a name="line.173"></a>
+<span class="sourceLineNo">173</span>            TaskService service = (TaskService) SrModelServiceFactory.Task.getServiceInstance();<a name="line.173"></a>
 <span class="sourceLineNo">174</span>            service.delete(row.getItem().getId());<a name="line.174"></a>
 <span class="sourceLineNo">175</span>            taskTable.getItems().remove(row.getItem());<a name="line.175"></a>
 <span class="sourceLineNo">176</span>            taskTableController.populateTaskTask();<a name="line.176"></a>
@@ -191,7 +191,7 @@
 <span class="sourceLineNo">183</span>        <a name="line.183"></a>
 <span class="sourceLineNo">184</span>        editMenu.setOnAction(event -&gt; {<a name="line.184"></a>
 <span class="sourceLineNo">185</span>          try {<a name="line.185"></a>
-<span class="sourceLineNo">186</span>            ActivityViewService activityViewService = (ActivityViewService) ModelServiceFactory.ActivityView.getServiceInstance();<a name="line.186"></a>
+<span class="sourceLineNo">186</span>            ActivityViewService activityViewService = (ActivityViewService) SrModelServiceFactory.ActivityView.getServiceInstance();<a name="line.186"></a>
 <span class="sourceLineNo">187</span>            ObservableList&lt;ActivityViewModel&gt; activityViewList = FXCollections.observableArrayList(activityViewService.readAll());<a name="line.187"></a>
 <span class="sourceLineNo">188</span>            int previousIndex = row.getIndex() + 1;<a name="line.188"></a>
 <span class="sourceLineNo">189</span>            TaskViewModel preiousItem = (taskTable.getItems().size() == previousIndex) ? null : taskTable.getItems().get(previousIndex);<a name="line.189"></a>
@@ -200,7 +200,7 @@
 <span class="sourceLineNo">192</span><a name="line.192"></a>
 <span class="sourceLineNo">193</span>            if(response.get().equals(ButtonType.OK)) {<a name="line.193"></a>
 <span class="sourceLineNo">194</span>              Task model = dialog.getItem().getTask();<a name="line.194"></a>
-<span class="sourceLineNo">195</span>              TaskService service = (TaskService) ModelServiceFactory.Task.getServiceInstance();<a name="line.195"></a>
+<span class="sourceLineNo">195</span>              TaskService service = (TaskService) SrModelServiceFactory.Task.getServiceInstance();<a name="line.195"></a>
 <span class="sourceLineNo">196</span>              service.update(model);<a name="line.196"></a>
 <span class="sourceLineNo">197</span>              taskTableController.populateTaskTask();<a name="line.197"></a>
 <span class="sourceLineNo">198</span>            }<a name="line.198"></a>

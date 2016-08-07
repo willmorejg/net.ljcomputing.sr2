@@ -1,5 +1,5 @@
 -classpath
-'/home/jim/.m2/repository/org/apache/derby/derbytools/10.12.1.1/derbytools-10.12.1.1.jar:/home/jim/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/jim/.m2/repository/net/ljcomputing/utility/1.0.0-SNAPSHOT/utility-1.0.0-SNAPSHOT.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.persistence/persistence-1.0.0/net.ljcomputing.persistence-persistence-1.0.0.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.model/model-1.0.0/net.ljcomputing.model-model-1.0.0.jar:/home/jim/.m2/repository/net/ljcomputing/model/1.0.0-SNAPSHOT/model-1.0.0-SNAPSHOT.jar:/home/jim/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/jim/.m2/repository/org/apache/commons/commons-pool2/2.2/commons-pool2-2.2.jar:/home/jim/.m2/repository/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar:/home/jim/workspace/net.ljcomputing.sr2/net.ljcomputing.sr2-persistence/target/sr2-persistence-1.0.0-SNAPSHOT.jar:/home/jim/workspace/net.ljcomputing.sr2/net.ljcomputing.sr2-domain/target/sr2-domain-1.0.0-SNAPSHOT.jar:/home/jim/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.utility/utility-1.0.0/net.ljcomputing.utility-utility-1.0.0.jar:/home/jim/workspace/net.ljcomputing.service/target/classes:/home/jim/.m2/repository/net/ljcomputing/persistence/1.0.0-SNAPSHOT/persistence-1.0.0-SNAPSHOT.jar:/home/jim/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/home/jim/.m2/repository/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar:/home/jim/.m2/repository/org/apache/commons/commons-dbcp2/2.0.1/commons-dbcp2-2.0.1.jar'
+'/home/jim/.m2/repository/org/apache/derby/derbytools/10.12.1.1/derbytools-10.12.1.1.jar:/home/jim/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.service/service-1.0.1/net.ljcomputing.service-service-1.0.1.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.persistence/persistence-1.0.2/net.ljcomputing.persistence-persistence-1.0.2.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.model/model-1.0.0/net.ljcomputing.model-model-1.0.0.jar:/home/jim/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/jim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/jim/.m2/repository/org/apache/commons/commons-pool2/2.2/commons-pool2-2.2.jar:/home/jim/.m2/repository/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar:/home/jim/git/net.ljcomputing.sr2.git/net.ljcomputing.sr2/net.ljcomputing.sr2-persistence/target/sr2-persistence-1.0.0-SNAPSHOT.jar:/home/jim/git/net.ljcomputing.sr2.git/net.ljcomputing.sr2/net.ljcomputing.sr2-domain/target/sr2-domain-1.0.0-SNAPSHOT.jar:/home/jim/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar:/home/jim/.m2/repository/com/github/willmorejg/net.ljcomputing.utility/utility-1.0.0/net.ljcomputing.utility-utility-1.0.0.jar:/home/jim/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/home/jim/.m2/repository/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar:/home/jim/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/jim/.m2/repository/org/apache/commons/commons-dbcp2/2.0.1/commons-dbcp2-2.0.1.jar'
 -doclet
 'org.umlgraph.doclet.UmlGraphDoc'
 -docletpath
@@ -8,7 +8,7 @@
 'UTF-8'
 -private
 -sourcepath
-'/home/jim/workspace/net.ljcomputing.sr2/net.ljcomputing.sr2-service/src/main/java'
+'/home/jim/git/net.ljcomputing.sr2.git/net.ljcomputing.sr2/net.ljcomputing.sr2-service/src/main/java'
 -inferrel -inferdep -quiet -hide java.*
       -collpackages java.util.* -qualify
       -postfixpackage
@@ -20,13 +20,13 @@
 -charset
 'UTF-8'
 -d
-'/home/jim/workspace/net.ljcomputing.sr2/net.ljcomputing.sr2-service/docs/javadoc/apidocs'
+'/home/jim/git/net.ljcomputing.sr2.git/net.ljcomputing.sr2/net.ljcomputing.sr2-service/docs/javadoc/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
 'LJ Computing - Status Reporter - Service 1.0.0-SNAPSHOT API'
 -linkoffline
-'http://docs.oracle.com/javase/8/docs/api' '/home/jim/workspace/net.ljcomputing.sr2/net.ljcomputing.sr2-service/target/javadoc-bundle-options'
+'http://docs.oracle.com/javase/8/docs/api' '/home/jim/git/net.ljcomputing.sr2.git/net.ljcomputing.sr2/net.ljcomputing.sr2-service/target/javadoc-bundle-options'
 -linksource
 -tag
 "todo:a:To Do:"

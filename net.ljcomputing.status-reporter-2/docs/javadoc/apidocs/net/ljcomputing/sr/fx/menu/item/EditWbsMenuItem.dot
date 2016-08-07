@@ -10,37 +10,37 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem
-	c4176 [label=<<table title="net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EditWbsMenuItem.html">
+	c900 [label=<<table title="net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EditWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EditWbsMenuItem </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EditWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem
-	c4178 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWbsMenuItem.html">
+	c902 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractWbsMenuItem </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c4193 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../treeview/WbsTreeView.html">
+	c917 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../treeview/WbsTreeView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeView </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.treeview </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../treeview/WbsTreeView.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.model.Model
-	c4206 [label=<<table title="net.ljcomputing.sr.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../model/Model.html">
+	//net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem extends net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem
+	c902:p -> c900:p [dir=back,arrowtail=empty];
+	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem NAVASSOC net.ljcomputing.model.Model
+	c900:p -> c927:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
+	c900:p -> c917:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.model.Model
+	c927 [label=<<table title="net.ljcomputing.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Model </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.model </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../../../model/Model.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	//net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem extends net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem
-	c4178:p -> c4176:p [dir=back,arrowtail=empty];
-	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem NAVASSOC net.ljcomputing.sr.model.Model
-	c4176:p -> c4206:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c4176:p -> c4193:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 }
 

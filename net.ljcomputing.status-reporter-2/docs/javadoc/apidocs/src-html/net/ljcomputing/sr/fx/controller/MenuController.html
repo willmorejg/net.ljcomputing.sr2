@@ -32,7 +32,7 @@
 <span class="sourceLineNo">024</span>import net.ljcomputing.sr.fx.table.WbsTableView;<a name="line.24"></a>
 <span class="sourceLineNo">025</span>import net.ljcomputing.sr.model.Activity;<a name="line.25"></a>
 <span class="sourceLineNo">026</span>import net.ljcomputing.sr.model.WorkBreakdownStructure;<a name="line.26"></a>
-<span class="sourceLineNo">027</span>import net.ljcomputing.sr.service.ModelServiceFactory;<a name="line.27"></a>
+<span class="sourceLineNo">027</span>import net.ljcomputing.sr.service.SrModelServiceFactory;<a name="line.27"></a>
 <span class="sourceLineNo">028</span><a name="line.28"></a>
 <span class="sourceLineNo">029</span>import org.slf4j.Logger;<a name="line.29"></a>
 <span class="sourceLineNo">030</span>import org.slf4j.LoggerFactory;<a name="line.30"></a>
@@ -164,7 +164,7 @@
 <span class="sourceLineNo">156</span>    ModelTableCells&lt;WorkBreakdownStructure&gt; cells = new ModelTableCells&lt;WorkBreakdownStructure&gt;();<a name="line.156"></a>
 <span class="sourceLineNo">157</span><a name="line.157"></a>
 <span class="sourceLineNo">158</span>    try {<a name="line.158"></a>
-<span class="sourceLineNo">159</span>      cells.addAll(ModelServiceFactory.WorkBreakdownStructure.getServiceInstance().readAll());<a name="line.159"></a>
+<span class="sourceLineNo">159</span>      cells.addAll(SrModelServiceFactory.WorkBreakdownStructure.getServiceInstance().readAll());<a name="line.159"></a>
 <span class="sourceLineNo">160</span>      new WbsTableView(cells.getAll());<a name="line.160"></a>
 <span class="sourceLineNo">161</span>    } catch (Exception e) {<a name="line.161"></a>
 <span class="sourceLineNo">162</span>      new ErrorAlert().show(e);<a name="line.162"></a>
@@ -179,7 +179,7 @@
 <span class="sourceLineNo">171</span>    ModelTableCells&lt;Activity&gt; cells = new ModelTableCells&lt;Activity&gt;();<a name="line.171"></a>
 <span class="sourceLineNo">172</span><a name="line.172"></a>
 <span class="sourceLineNo">173</span>    try {<a name="line.173"></a>
-<span class="sourceLineNo">174</span>      cells.addAll(ModelServiceFactory.Activity.getServiceInstance().readAll());<a name="line.174"></a>
+<span class="sourceLineNo">174</span>      cells.addAll(SrModelServiceFactory.Activity.getServiceInstance().readAll());<a name="line.174"></a>
 <span class="sourceLineNo">175</span>      new ActivityTableView(cells.getAll());<a name="line.175"></a>
 <span class="sourceLineNo">176</span>    } catch (Exception e) {<a name="line.176"></a>
 <span class="sourceLineNo">177</span>      new ErrorAlert().show(e);<a name="line.177"></a>

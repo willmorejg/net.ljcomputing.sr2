@@ -1,16 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../treeview/WbsTreeView.html" title="net.ljcomputing.sr.fx.treeview.WbsTreeView" alt="" coords="432,313,573,351"/>
-<area shape="rect" id="node1" href="../treeview/WbsTreeView.html" title="&lt;TABLE&gt;" alt="" coords="421,307,584,357"/>
-<area shape="rect" id="node2_1" href="./WbsTreeViewController.html" title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" alt="" coords="219,214,368,239"/>
-<area shape="rect" id="node2" href="./WbsTreeViewController.html" title="&lt;TABLE&gt;" alt="" coords="208,203,379,251"/>
-<area shape="rect" id="node6_2" href="../../service/ActivityService.html" title="net.ljcomputing.sr.service.ActivityService" alt="" coords="16,305,141,359"/>
-<area shape="rect" id="node6" href="../../service/ActivityService.html" title="&lt;TABLE&gt;" alt="" coords="5,299,152,365"/>
-<area shape="rect" id="node7_3" href="../../service/WorkBreakdownStructureService.html" title="net.ljcomputing.sr.service.WorkBreakdownStructureService" alt="" coords="187,305,386,359"/>
-<area shape="rect" id="node7" href="../../service/WorkBreakdownStructureService.html" title="&lt;TABLE&gt;" alt="" coords="177,299,397,365"/>
-<area shape="rect" id="node3_4" href="./AbstractComponentController.html" title="net.ljcomputing.sr.fx.controller.AbstractComponentController" alt="" coords="205,118,387,143"/>
-<area shape="rect" id="node3" href="./AbstractComponentController.html" title="&lt;TABLE&gt;" alt="" coords="195,107,397,155"/>
-<area shape="rect" id="node4_5" href="./ComponentController.html" title="net.ljcomputing.sr.fx.controller.ComponentController" alt="" coords="158,11,295,53"/>
-<area shape="rect" id="node4" href="./ComponentController.html" title="&lt;TABLE&gt;" alt="" coords="147,6,306,58"/>
-<area shape="rect" id="node5_6" href="./MainController.html" title="net.ljcomputing.sr.fx.controller.MainController" alt="" coords="437,118,537,143"/>
-<area shape="rect" id="node5" href="./MainController.html" title="&lt;TABLE&gt;" alt="" coords="426,107,547,155"/>
+<area shape="rect" id="node1_0" href="../treeview/WbsTreeView.html" title="net.ljcomputing.sr.fx.treeview.WbsTreeView" alt="" coords="160,305,301,343"/>
+<area shape="rect" id="node1" href="../treeview/WbsTreeView.html" title="&lt;TABLE&gt;" alt="" coords="149,299,312,349"/>
+<area shape="rect" id="node2_1" href="./WbsTreeViewController.html" title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" alt="" coords="95,214,244,239"/>
+<area shape="rect" id="node2" href="./WbsTreeViewController.html" title="&lt;TABLE&gt;" alt="" coords="84,203,255,251"/>
+<area shape="rect" id="node3_2" href="./AbstractComponentController.html" title="net.ljcomputing.sr.fx.controller.AbstractComponentController" alt="" coords="63,118,244,143"/>
+<area shape="rect" id="node3" href="./AbstractComponentController.html" title="&lt;TABLE&gt;" alt="" coords="52,107,255,155"/>
+<area shape="rect" id="node4_3" href="./ComponentController.html" title="net.ljcomputing.sr.fx.controller.ComponentController" alt="" coords="15,11,153,53"/>
+<area shape="rect" id="node4" href="./ComponentController.html" title="&lt;TABLE&gt;" alt="" coords="5,6,163,58"/>
+<area shape="rect" id="node5_4" href="./MainController.html" title="net.ljcomputing.sr.fx.controller.MainController" alt="" coords="290,118,390,143"/>
+<area shape="rect" id="node5" href="./MainController.html" title="&lt;TABLE&gt;" alt="" coords="279,107,401,155"/>
 </map>

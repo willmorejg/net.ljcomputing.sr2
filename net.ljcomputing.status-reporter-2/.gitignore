@@ -1,3 +1,4 @@
 /db/
 /derby.log
 /working.tar.gz
+/target/

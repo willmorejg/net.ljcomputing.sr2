@@ -10,28 +10,28 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.controller.MenuController
-	c4819 [label=<<table title="net.ljcomputing.sr.fx.controller.MenuController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MenuController.html">
+	c1029 [label=<<table title="net.ljcomputing.sr.fx.controller.MenuController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MenuController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MenuController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MenuController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.fx.action.ExitAction
-	c4840 [label=<<table title="net.ljcomputing.fx.action.ExitAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../fx/action/ExitAction.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExitAction </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.fx.action </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../fx/action/ExitAction.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sr.fx.controller.MenuController NAVASSOC net.ljcomputing.fx.alert.AboutAlert
+	c1029:p -> c1030:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// net.ljcomputing.sr.fx.controller.MenuController NAVASSOC net.ljcomputing.fx.action.ExitAction
+	c1029:p -> c1031:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.fx.alert.AboutAlert
-	c4843 [label=<<table title="net.ljcomputing.fx.alert.AboutAlert" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../fx/alert/AboutAlert.html">
+	c1030 [label=<<table title="net.ljcomputing.fx.alert.AboutAlert" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AboutAlert </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.fx.alert </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../../../fx/alert/AboutAlert.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.sr.fx.controller.MenuController NAVASSOC net.ljcomputing.fx.alert.AboutAlert
-	c4819:p -> c4843:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.controller.MenuController NAVASSOC net.ljcomputing.fx.action.ExitAction
-	c4819:p -> c4840:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.fx.action.ExitAction
+	c1031 [label=<<table title="net.ljcomputing.fx.action.ExitAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExitAction </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.fx.action </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 }
 
