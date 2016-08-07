@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../WbsConverter.html" title="net.ljcomputing.sr.WbsConverter" alt="" coords="15,113,113,151"/>
+<area shape="rect" id="node1" href="../WbsConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,123,157"/>
+<area shape="rect" id="node6_1" href="./WorkBreakdownStructure.html" title="net.ljcomputing.sr.model.WorkBreakdownStructure" alt="" coords="349,217,507,242"/>
+<area shape="rect" id="node6" href="./WorkBreakdownStructure.html" title="&lt;TABLE&gt;" alt="" coords="339,205,517,253"/>
+<area shape="rect" id="node2_2" href="../persistence/EntityPopulator.html" title="net.ljcomputing.sr.persistence.EntityPopulator" alt="" coords="601,307,745,362"/>
+<area shape="rect" id="node2" href="../persistence/EntityPopulator.html" title="&lt;TABLE&gt;" alt="" coords="591,302,756,367"/>
+<area shape="rect" id="node3_3" href="../fx/dialog/impl/WbsDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" alt="" coords="353,113,503,151"/>
+<area shape="rect" id="node3" href="../fx/dialog/impl/WbsDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="342,107,514,157"/>
+<area shape="rect" id="node4_4" href="../fx/dialog/impl/ActivityDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" alt="" coords="549,113,699,151"/>
+<area shape="rect" id="node4" href="../fx/dialog/impl/ActivityDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="538,107,710,157"/>
+<area shape="rect" id="node5_5" href="../fx/table/ActivityTableView.html" title="net.ljcomputing.sr.fx.table.ActivityTableView" alt="" coords="745,113,871,151"/>
+<area shape="rect" id="node5" href="../fx/table/ActivityTableView.html" title="&lt;TABLE&gt;" alt="" coords="734,107,882,157"/>
+<area shape="rect" id="node7_6" href="./Model.html" title="net.ljcomputing.sr.model.Model" alt="" coords="219,11,299,53"/>
+<area shape="rect" id="node7" href="./Model.html" title="&lt;TABLE&gt;" alt="" coords="208,6,309,58"/>
+<area shape="rect" id="node8_7" href="./AbstractModel.html" title="net.ljcomputing.sr.model.AbstractModel" alt="" coords="210,119,307,145"/>
+<area shape="rect" id="node8" href="./AbstractModel.html" title="&lt;TABLE&gt;" alt="" coords="199,108,318,156"/>
+</map>

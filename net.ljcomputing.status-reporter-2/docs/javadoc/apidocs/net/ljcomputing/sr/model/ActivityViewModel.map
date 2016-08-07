@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../ActivityViewConverter.html" title="net.ljcomputing.sr.ActivityViewConverter" alt="" coords="15,113,153,151"/>
+<area shape="rect" id="node1" href="../ActivityViewConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,163,157"/>
+<area shape="rect" id="node7_1" href="./ActivityViewModel.html" title="net.ljcomputing.sr.model.ActivityViewModel" alt="" coords="359,217,476,242"/>
+<area shape="rect" id="node7" href="./ActivityViewModel.html" title="&lt;TABLE&gt;" alt="" coords="348,205,487,253"/>
+<area shape="rect" id="node2_2" href="../repository/impl/ActivityViewModelRepositoryImpl.html" title="net.ljcomputing.sr.repository.impl.ActivityViewModelRepositoryImpl" alt="" coords="392,113,592,151"/>
+<area shape="rect" id="node2" href="../repository/impl/ActivityViewModelRepositoryImpl.html" title="&lt;TABLE&gt;" alt="" coords="381,107,603,157"/>
+<area shape="rect" id="node3_3" href="../persistence/EntityPopulator.html" title="net.ljcomputing.sr.persistence.EntityPopulator" alt="" coords="592,307,736,362"/>
+<area shape="rect" id="node3" href="../persistence/EntityPopulator.html" title="&lt;TABLE&gt;" alt="" coords="581,302,747,367"/>
+<area shape="rect" id="node4_4" href="../fx/dialog/impl/TaskDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" alt="" coords="638,113,789,151"/>
+<area shape="rect" id="node4" href="../fx/dialog/impl/TaskDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="627,107,799,157"/>
+<area shape="rect" id="node5_5" href="./Model.html" title="net.ljcomputing.sr.model.Model" alt="" coords="304,11,384,53"/>
+<area shape="rect" id="node5" href="./Model.html" title="&lt;TABLE&gt;" alt="" coords="293,6,395,58"/>
+<area shape="rect" id="node6_6" href="./AbstractModel.html" title="net.ljcomputing.sr.model.AbstractModel" alt="" coords="198,119,295,145"/>
+<area shape="rect" id="node6" href="./AbstractModel.html" title="&lt;TABLE&gt;" alt="" coords="187,108,306,156"/>
+</map>

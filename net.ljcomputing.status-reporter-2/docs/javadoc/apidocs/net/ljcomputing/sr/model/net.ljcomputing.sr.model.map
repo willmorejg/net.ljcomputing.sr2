@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./WorkBreakdownStructure.html" title="net.ljcomputing.sr.model.WorkBreakdownStructure" alt="" coords="16,214,173,239"/>
+<area shape="rect" id="node1" href="./WorkBreakdownStructure.html" title="&lt;TABLE&gt;" alt="" coords="5,203,184,251"/>
+<area shape="rect" id="node2_1" href="./TaskViewModel.html" title="net.ljcomputing.sr.model.TaskViewModel" alt="" coords="219,214,325,239"/>
+<area shape="rect" id="node2" href="./TaskViewModel.html" title="&lt;TABLE&gt;" alt="" coords="209,203,335,251"/>
+<area shape="rect" id="node3_2" href="./Task.html" title="net.ljcomputing.sr.model.Task" alt="" coords="373,214,419,239"/>
+<area shape="rect" id="node3" href="./Task.html" title="&lt;TABLE&gt;" alt="" coords="360,203,432,251"/>
+<area shape="rect" id="node4_3" href="./Model.html" title="net.ljcomputing.sr.model.Model" alt="" coords="367,11,447,53"/>
+<area shape="rect" id="node4" href="./Model.html" title="&lt;TABLE&gt;" alt="" coords="356,6,457,58"/>
+<area shape="rect" id="node5_4" href="./Activity.html" title="net.ljcomputing.sr.model.Activity" alt="" coords="467,214,525,239"/>
+<area shape="rect" id="node5" href="./Activity.html" title="&lt;TABLE&gt;" alt="" coords="457,203,535,251"/>
+<area shape="rect" id="node6_5" href="./AbstractModel.html" title="net.ljcomputing.sr.model.AbstractModel" alt="" coords="310,118,407,143"/>
+<area shape="rect" id="node6" href="./AbstractModel.html" title="&lt;TABLE&gt;" alt="" coords="299,107,418,155"/>
+<area shape="rect" id="node7_6" href="./ActivityViewModel.html" title="net.ljcomputing.sr.model.ActivityViewModel" alt="" coords="571,214,688,239"/>
+<area shape="rect" id="node7" href="./ActivityViewModel.html" title="&lt;TABLE&gt;" alt="" coords="560,203,699,251"/>
+</map>

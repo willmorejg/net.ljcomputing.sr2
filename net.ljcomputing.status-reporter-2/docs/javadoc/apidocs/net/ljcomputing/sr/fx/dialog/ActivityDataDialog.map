@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ActivityDataDialog.html" title="net.ljcomputing.sr.fx.dialog.ActivityDataDialog" alt="" coords="310,113,429,138"/>
+<area shape="rect" id="node1" href="./ActivityDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="299,101,439,149"/>
+<area shape="rect" id="node3_1" href="../../model/WorkBreakdownStructure.html" title="net.ljcomputing.sr.model.WorkBreakdownStructure" alt="" coords="16,211,173,250"/>
+<area shape="rect" id="node3" href="../../model/WorkBreakdownStructure.html" title="&lt;TABLE&gt;" alt="" coords="5,206,184,255"/>
+<area shape="rect" id="node4_2" href="../../model/Activity.html" title="net.ljcomputing.sr.model.Activity" alt="" coords="97,318,218,357"/>
+<area shape="rect" id="node4" href="../../model/Activity.html" title="&lt;TABLE&gt;" alt="" coords="86,313,229,362"/>
+<area shape="rect" id="node5_3" href="../../service/WorkBreakdownStructureService.html" title="net.ljcomputing.sr.service.WorkBreakdownStructureService" alt="" coords="270,203,469,258"/>
+<area shape="rect" id="node5" href="../../service/WorkBreakdownStructureService.html" title="&lt;TABLE&gt;" alt="" coords="259,198,479,263"/>
+<area shape="rect" id="node6_4" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="org.slf4j.Logger" alt="" coords="515,203,595,258"/>
+<area shape="rect" id="node6" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="&lt;TABLE&gt;" alt="" coords="504,198,605,263"/>
+<area shape="rect" id="node2_5" href="./AbstractModelDataDialog.html" title="net.ljcomputing.sr.fx.dialog.AbstractModelDataDialog" alt="" coords="205,17,640,42"/>
+<area shape="rect" id="node2" href="./AbstractModelDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="195,5,651,53"/>
+</map>

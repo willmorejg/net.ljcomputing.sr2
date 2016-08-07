@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../repository/impl/ModelRepository.html" title="net.ljcomputing.sr.repository.impl.ModelRepository" alt="" coords="437,214,789,269"/>
+<area shape="rect" id="node1" href="../repository/impl/ModelRepository.html" title="&lt;TABLE&gt;" alt="" coords="426,209,800,274"/>
+<area shape="rect" id="node2_1" href="../model/Model.html" title="net.ljcomputing.sr.model.Model" alt="" coords="552,329,674,383"/>
+<area shape="rect" id="node2" href="../model/Model.html" title="&lt;TABLE&gt;" alt="" coords="542,323,684,389"/>
+<area shape="rect" id="node3_2" href="./TaskViewService.html" title="net.ljcomputing.sr.service.TaskViewService" alt="" coords="63,113,176,154"/>
+<area shape="rect" id="node3" href="./TaskViewService.html" title="&lt;TABLE&gt;" alt="" coords="52,107,187,159"/>
+<area shape="rect" id="node4_3" href="./ActivityViewService.html" title="net.ljcomputing.sr.service.ActivityViewService" alt="" coords="222,113,348,154"/>
+<area shape="rect" id="node4" href="./ActivityViewService.html" title="&lt;TABLE&gt;" alt="" coords="212,107,358,159"/>
+<area shape="rect" id="node5_4" href="./ModelService.html" title="net.ljcomputing.sr.service.ModelService" alt="" coords="176,11,552,53"/>
+<area shape="rect" id="node5" href="./ModelService.html" title="&lt;TABLE&gt;" alt="" coords="165,6,562,58"/>
+<area shape="rect" id="node6_5" href="./ActivityService.html" title="net.ljcomputing.sr.service.ActivityService" alt="" coords="394,113,491,154"/>
+<area shape="rect" id="node6" href="./ActivityService.html" title="&lt;TABLE&gt;" alt="" coords="383,107,502,159"/>
+<area shape="rect" id="node7_6" href="./WorkBreakdownStructureService.html" title="net.ljcomputing.sr.service.WorkBreakdownStructureService" alt="" coords="536,113,735,154"/>
+<area shape="rect" id="node7" href="./WorkBreakdownStructureService.html" title="&lt;TABLE&gt;" alt="" coords="526,107,746,159"/>
+<area shape="rect" id="node8_7" href="./TaskService.html" title="net.ljcomputing.sr.service.TaskService" alt="" coords="781,113,866,154"/>
+<area shape="rect" id="node8" href="./TaskService.html" title="&lt;TABLE&gt;" alt="" coords="770,107,877,159"/>
+<area shape="rect" id="node9_8" href="./impl/AbstractService.html" title="net.ljcomputing.sr.service.impl.AbstractService" alt="" coords="912,114,1616,153"/>
+<area shape="rect" id="node9" href="./impl/AbstractService.html" title="&lt;TABLE&gt;" alt="" coords="901,109,1626,158"/>
+</map>

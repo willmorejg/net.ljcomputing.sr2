@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./MenuController.html" title="net.ljcomputing.sr.fx.controller.MenuController" alt="" coords="105,17,209,42"/>
+<area shape="rect" id="node1" href="./MenuController.html" title="&lt;TABLE&gt;" alt="" coords="95,5,220,53"/>
+<area shape="rect" id="node2_1" href="../../../fx/action/ExitAction.html" title="net.ljcomputing.fx.action.ExitAction" alt="" coords="15,107,137,146"/>
+<area shape="rect" id="node2" href="../../../fx/action/ExitAction.html" title="&lt;TABLE&gt;" alt="" coords="5,102,147,151"/>
+<area shape="rect" id="node3_2" href="../../../fx/alert/AboutAlert.html" title="net.ljcomputing.fx.alert.AboutAlert" alt="" coords="182,107,295,146"/>
+<area shape="rect" id="node3" href="../../../fx/alert/AboutAlert.html" title="&lt;TABLE&gt;" alt="" coords="171,102,306,151"/>
+</map>

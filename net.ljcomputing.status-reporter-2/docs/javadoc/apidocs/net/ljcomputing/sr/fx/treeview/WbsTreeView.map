@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../menu/item/EditWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem" alt="" coords="15,110,166,149"/>
+<area shape="rect" id="node1" href="../menu/item/EditWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="5,105,177,154"/>
+<area shape="rect" id="node5_1" href="./WbsTreeView.html" title="net.ljcomputing.sr.fx.treeview.WbsTreeView" alt="" coords="486,214,581,239"/>
+<area shape="rect" id="node5" href="./WbsTreeView.html" title="&lt;TABLE&gt;" alt="" coords="475,203,591,251"/>
+<area shape="rect" id="node2_2" href="../menu/item/AddWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AddWbsMenuItem" alt="" coords="458,110,609,149"/>
+<area shape="rect" id="node2" href="../menu/item/AddWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="447,105,619,154"/>
+<area shape="rect" id="node3_3" href="../menu/item/AddNewWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem" alt="" coords="654,110,805,149"/>
+<area shape="rect" id="node3" href="../menu/item/AddNewWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="643,105,815,154"/>
+<area shape="rect" id="node4_4" href="../menu/item/DeleteWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.DeleteWbsMenuItem" alt="" coords="850,110,1001,149"/>
+<area shape="rect" id="node4" href="../menu/item/DeleteWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="839,105,1011,154"/>
+<area shape="rect" id="node6_5" href="../controller/TaskTableController.html" title="net.ljcomputing.sr.fx.controller.TaskTableController" alt="" coords="541,313,686,351"/>
+<area shape="rect" id="node6" href="../controller/TaskTableController.html" title="&lt;TABLE&gt;" alt="" coords="530,307,697,357"/>
+<area shape="rect" id="node9_6" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="org.slf4j.Logger" alt="" coords="415,305,495,359"/>
+<area shape="rect" id="node9" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html" title="&lt;TABLE&gt;" alt="" coords="404,299,505,365"/>
+<area shape="rect" id="node7_7" href="../controller/WbsTreeViewController.html" title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" alt="" coords="263,110,412,149"/>
+<area shape="rect" id="node7" href="../controller/WbsTreeViewController.html" title="&lt;TABLE&gt;" alt="" coords="252,105,423,154"/>
+<area shape="rect" id="node8_8" href="../controller/MainController.html" title="net.ljcomputing.sr.fx.controller.MainController" alt="" coords="265,11,410,50"/>
+<area shape="rect" id="node8" href="../controller/MainController.html" title="&lt;TABLE&gt;" alt="" coords="254,6,421,55"/>
+</map>

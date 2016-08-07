@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ErrorAlert.html" title="net.ljcomputing.fx.alert.ErrorAlert" alt="" coords="15,17,86,42"/>
+<area shape="rect" id="node1" href="./ErrorAlert.html" title="&lt;TABLE&gt;" alt="" coords="5,5,97,53"/>
+<area shape="rect" id="node2_1" href="./FileSaveSuccessfulAlert.html" title="net.ljcomputing.fx.alert.FileSaveSuccessfulAlert" alt="" coords="131,17,282,42"/>
+<area shape="rect" id="node2" href="./FileSaveSuccessfulAlert.html" title="&lt;TABLE&gt;" alt="" coords="121,5,293,53"/>
+<area shape="rect" id="node3_2" href="./AboutAlert.html" title="net.ljcomputing.fx.alert.AboutAlert" alt="" coords="327,17,403,42"/>
+<area shape="rect" id="node3" href="./AboutAlert.html" title="&lt;TABLE&gt;" alt="" coords="317,5,414,53"/>
+</map>

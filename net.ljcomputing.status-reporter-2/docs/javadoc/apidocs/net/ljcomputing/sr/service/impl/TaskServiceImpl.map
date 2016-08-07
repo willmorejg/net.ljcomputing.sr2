@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../TaskService.html" title="net.ljcomputing.sr.service.TaskService" alt="" coords="16,11,141,66"/>
+<area shape="rect" id="node1" href="../TaskService.html" title="&lt;TABLE&gt;" alt="" coords="5,6,152,71"/>
+<area shape="rect" id="node2_1" href="./TaskServiceImpl.html" title="net.ljcomputing.sr.service.impl.TaskServiceImpl" alt="" coords="175,131,284,157"/>
+<area shape="rect" id="node2" href="./TaskServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="164,120,295,168"/>
+<area shape="rect" id="node3_2" href="./AbstractService.html" title="net.ljcomputing.sr.service.impl.AbstractService" alt="" coords="187,26,573,51"/>
+<area shape="rect" id="node3" href="./AbstractService.html" title="&lt;TABLE&gt;" alt="" coords="177,15,583,63"/>
+</map>

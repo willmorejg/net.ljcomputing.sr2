@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../fx/controller/WbsTreeViewController.html" title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" alt="" coords="16,13,165,51"/>
+<area shape="rect" id="node1" href="../fx/controller/WbsTreeViewController.html" title="&lt;TABLE&gt;" alt="" coords="5,7,176,57"/>
+<area shape="rect" id="node3_1" href="./ActivityService.html" title="net.ljcomputing.sr.service.ActivityService" alt="" coords="195,113,293,154"/>
+<area shape="rect" id="node3" href="./ActivityService.html" title="&lt;TABLE&gt;" alt="" coords="185,107,303,159"/>
+<area shape="rect" id="node2_2" href="./ModelService.html" title="net.ljcomputing.sr.service.ModelService" alt="" coords="211,11,587,53"/>
+<area shape="rect" id="node2" href="./ModelService.html" title="&lt;TABLE&gt;" alt="" coords="200,6,597,58"/>
+<area shape="rect" id="node4_3" href="./impl/ActivityServiceImpl.html" title="net.ljcomputing.sr.service.impl.ActivityServiceImpl" alt="" coords="171,214,317,253"/>
+<area shape="rect" id="node4" href="./impl/ActivityServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="161,209,327,258"/>
+</map>

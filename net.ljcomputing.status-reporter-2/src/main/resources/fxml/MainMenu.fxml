@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.MenuBar?>
+
+<MenuBar fx:id="menuBar" onKeyPressed="#handleKeyInput" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.ljcomputing.sr.fx.controller.MenuController">
+  <menus>
+    <Menu mnemonicParsing="false" text="File">
+      <items>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExitAction" text="Exit" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Data Management">
+      <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleDataWbsAction" text="Work Breakdown Structures" />
+            <MenuItem mnemonicParsing="false" onAction="#handleDataActivityAction" text="Activities" />
+      </items>
+    </Menu>
+      <Menu mnemonicParsing="false" text="Help">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleAboutAction" text="About" />
+         </items>
+      </Menu>
+  </menus>
+</MenuBar>

@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../persistence/EntityPopulator.html" title="net.ljcomputing.sr.persistence.EntityPopulator" alt="" coords="288,307,432,362"/>
+<area shape="rect" id="node1" href="../persistence/EntityPopulator.html" title="&lt;TABLE&gt;" alt="" coords="277,302,443,367"/>
+<area shape="rect" id="node2_1" href="../fx/dialog/impl/TaskDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" alt="" coords="15,113,166,151"/>
+<area shape="rect" id="node2" href="../fx/dialog/impl/TaskDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="5,107,177,157"/>
+<area shape="rect" id="node3_2" href="./Task.html" title="net.ljcomputing.sr.model.Task" alt="" coords="240,217,285,242"/>
+<area shape="rect" id="node3" href="./Task.html" title="&lt;TABLE&gt;" alt="" coords="227,205,299,253"/>
+<area shape="rect" id="node4_3" href="./Model.html" title="net.ljcomputing.sr.model.Model" alt="" coords="272,11,352,53"/>
+<area shape="rect" id="node4" href="./Model.html" title="&lt;TABLE&gt;" alt="" coords="261,6,363,58"/>
+<area shape="rect" id="node5_4" href="./AbstractModel.html" title="net.ljcomputing.sr.model.AbstractModel" alt="" coords="263,119,361,145"/>
+<area shape="rect" id="node5" href="./AbstractModel.html" title="&lt;TABLE&gt;" alt="" coords="253,108,371,156"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./TaskViewService.html" title="net.ljcomputing.sr.service.TaskViewService" alt="" coords="15,11,129,53"/>
+<area shape="rect" id="node1" href="./TaskViewService.html" title="&lt;TABLE&gt;" alt="" coords="5,6,139,58"/>
+<area shape="rect" id="node2_1" href="./ActivityViewService.html" title="net.ljcomputing.sr.service.ActivityViewService" alt="" coords="175,11,300,53"/>
+<area shape="rect" id="node2" href="./ActivityViewService.html" title="&lt;TABLE&gt;" alt="" coords="164,6,311,58"/>
+<area shape="rect" id="node3_2" href="./SrModelServiceFactory.html" title="net.ljcomputing.sr.service.SrModelServiceFactory" alt="" coords="346,11,491,53"/>
+<area shape="rect" id="node3" href="./SrModelServiceFactory.html" title="&lt;TABLE&gt;" alt="" coords="335,6,502,58"/>
+<area shape="rect" id="node4_3" href="./ActivityService.html" title="net.ljcomputing.sr.service.ActivityService" alt="" coords="537,11,634,53"/>
+<area shape="rect" id="node4" href="./ActivityService.html" title="&lt;TABLE&gt;" alt="" coords="526,6,645,58"/>
+<area shape="rect" id="node5_4" href="./WorkBreakdownStructureService.html" title="net.ljcomputing.sr.service.WorkBreakdownStructureService" alt="" coords="679,11,878,53"/>
+<area shape="rect" id="node5" href="./WorkBreakdownStructureService.html" title="&lt;TABLE&gt;" alt="" coords="669,6,889,58"/>
+<area shape="rect" id="node6_5" href="./TaskService.html" title="net.ljcomputing.sr.service.TaskService" alt="" coords="924,11,1009,53"/>
+<area shape="rect" id="node6" href="./TaskService.html" title="&lt;TABLE&gt;" alt="" coords="913,6,1020,58"/>
+</map>

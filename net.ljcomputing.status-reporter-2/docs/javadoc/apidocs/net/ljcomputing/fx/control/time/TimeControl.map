@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../sr/fx/dialog/impl/TaskDataDialog.html" title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" alt="" coords="15,11,166,50"/>
+<area shape="rect" id="node1" href="../../../sr/fx/dialog/impl/TaskDataDialog.html" title="&lt;TABLE&gt;" alt="" coords="5,6,177,55"/>
+<area shape="rect" id="node5_1" href="./TimeControl.html" title="net.ljcomputing.fx.control.time.TimeControl" alt="" coords="241,115,327,141"/>
+<area shape="rect" id="node5" href="./TimeControl.html" title="&lt;TABLE&gt;" alt="" coords="231,104,337,152"/>
+<area shape="rect" id="node2_2" href="../../../sr/fx/controller/MainController.html" title="net.ljcomputing.sr.fx.controller.MainController" alt="" coords="211,11,357,50"/>
+<area shape="rect" id="node2" href="../../../sr/fx/controller/MainController.html" title="&lt;TABLE&gt;" alt="" coords="201,6,367,55"/>
+<area shape="rect" id="node3_3" href="./TimeSpinner.html" title="net.ljcomputing.fx.control.time.TimeSpinner" alt="" coords="239,211,329,237"/>
+<area shape="rect" id="node3" href="./TimeSpinner.html" title="&lt;TABLE&gt;" alt="" coords="229,200,339,248"/>
+<area shape="rect" id="node4_4" href="./DateTimeControls.html" title="net.ljcomputing.fx.control.time.DateTimeControls" alt="" coords="403,18,520,43"/>
+<area shape="rect" id="node4" href="./DateTimeControls.html" title="&lt;TABLE&gt;" alt="" coords="392,7,531,55"/>
+</map>

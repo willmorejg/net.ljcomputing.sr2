@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../configuration/StatusReporterConfig.html" title="net.ljcomputing.sr.configuration.StatusReporterConfig" alt="" coords="160,11,309,50"/>
+<area shape="rect" id="node1" href="../../configuration/StatusReporterConfig.html" title="&lt;TABLE&gt;" alt="" coords="149,6,320,55"/>
+<area shape="rect" id="node5_1" href="./MainController.html" title="net.ljcomputing.sr.fx.controller.MainController" alt="" coords="184,115,284,141"/>
+<area shape="rect" id="node5" href="./MainController.html" title="&lt;TABLE&gt;" alt="" coords="174,104,295,152"/>
+<area shape="rect" id="node2_2" href="../treeview/WbsTreeView.html" title="net.ljcomputing.sr.fx.treeview.WbsTreeView" alt="" coords="41,305,182,343"/>
+<area shape="rect" id="node2" href="../treeview/WbsTreeView.html" title="&lt;TABLE&gt;" alt="" coords="30,299,193,349"/>
+<area shape="rect" id="node3_3" href="./TaskTableController.html" title="net.ljcomputing.sr.fx.controller.TaskTableController" alt="" coords="47,409,176,434"/>
+<area shape="rect" id="node3" href="./TaskTableController.html" title="&lt;TABLE&gt;" alt="" coords="36,397,187,445"/>
+<area shape="rect" id="node4_4" href="./WbsTreeViewController.html" title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" alt="" coords="37,213,186,238"/>
+<area shape="rect" id="node4" href="./WbsTreeViewController.html" title="&lt;TABLE&gt;" alt="" coords="26,201,197,249"/>
+<area shape="rect" id="node6_5" href="../../../fx/control/time/TimeControl.html" title="net.ljcomputing.fx.control.time.TimeControl" alt="" coords="283,206,428,245"/>
+<area shape="rect" id="node6" href="../../../fx/control/time/TimeControl.html" title="&lt;TABLE&gt;" alt="" coords="272,201,439,250"/>
+</map>

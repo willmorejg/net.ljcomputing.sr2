@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./AddTaskMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AddTaskMenuItem" alt="" coords="15,113,137,138"/>
+<area shape="rect" id="node1" href="./AddTaskMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="5,101,147,149"/>
+<area shape="rect" id="node2_1" href="./AddElapsedTaskMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AddElapsedTaskMenuItem" alt="" coords="183,113,348,138"/>
+<area shape="rect" id="node2" href="./AddElapsedTaskMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="172,101,359,149"/>
+<area shape="rect" id="node3_2" href="./EditWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem" alt="" coords="393,113,511,138"/>
+<area shape="rect" id="node3" href="./EditWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="383,101,521,149"/>
+<area shape="rect" id="node4_3" href="./AddWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AddWbsMenuItem" alt="" coords="557,113,675,138"/>
+<area shape="rect" id="node4" href="./AddWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="546,101,686,149"/>
+<area shape="rect" id="node5_4" href="./AbstractWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem" alt="" coords="463,17,604,42"/>
+<area shape="rect" id="node5" href="./AbstractWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="452,5,615,53"/>
+<area shape="rect" id="node6_5" href="./AddNewWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem" alt="" coords="721,113,865,138"/>
+<area shape="rect" id="node6" href="./AddNewWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="711,101,876,149"/>
+<area shape="rect" id="node7_6" href="./DeleteWbsMenuItem.html" title="net.ljcomputing.sr.fx.menu.item.DeleteWbsMenuItem" alt="" coords="911,113,1044,138"/>
+<area shape="rect" id="node7" href="./DeleteWbsMenuItem.html" title="&lt;TABLE&gt;" alt="" coords="900,101,1055,149"/>
+</map>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import net.ljcomputing.fx.control.time.TimeControl?>
+<?import net.ljcomputing.sr.fx.treeview.WbsTreeView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox fx:id="mainPane" VBox.vgrow="ALWAYS" minHeight="600" minWidth="1000" prefHeight="600" prefWidth="1000" maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.ljcomputing.sr.fx.controller.MainController">
+   <children>
+      <fx:include source="MainMenu.fxml" />
+      <BorderPane VBox.vgrow="ALWAYS">
+         <left>
+            <WbsTreeView fx:id="wbsTree" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <TableView fx:id="taskTable" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn maxWidth="100.0" minWidth="10.0" prefWidth="50.0" text="ID">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="300.0" minWidth="100.0" prefWidth="150.0" text="WBS">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="wbsName" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="300.0" minWidth="100.0" prefWidth="150.0" text="Activity">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="activityName" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="200.0" minWidth="185.0" prefWidth="185.0" text="Start Time">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="startTime" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="200.0" minWidth="185.0" prefWidth="185.0" text="End Time">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="endTime" />
+                  </cellValueFactory>
+                </TableColumn>
+              </columns>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TableView>
+         </center>
+         <top>
+            <HBox alignment="TOP_CENTER" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </opaqueInsets>
+               <children>
+                  <HBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label text="From">
+                                 <font>
+                                    <Font name="Verdana Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="fromDateSelector" maxWidth="125" minWidth="125" prefWidth="125" />
+                              <HBox>
+                                 <children>
+                                    <TimeControl fx:id="fromTimeControl" minWidth="125" maxWidth="125" prefWidth="125"  />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator disable="true" orientation="VERTICAL">
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                        </Separator>
+                        <VBox>
+                           <children>
+                              <Label text="To">
+                                 <font>
+                                    <Font name="Verdana Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="toDateSelector" maxWidth="125" minWidth="125" prefWidth="125" />
+                              <HBox>
+                                 <children>
+                                    <TimeControl fx:id="toTimeControl" minWidth="125" maxWidth="125" prefWidth="125" />
+                                 </children>
+                              </HBox>
+                             <Button fx:id="refreshData" mnemonicParsing="false" text="Refresh data">
+                                <font>
+                                   <Font size="10.0" />
+                                </font>
+                             </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+          <StackPane minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+            <BorderPane.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+            <children>
+              <TextField fx:id="statusBar" disable="true" editable="false" />
+            </children>
+          </StackPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</VBox>
