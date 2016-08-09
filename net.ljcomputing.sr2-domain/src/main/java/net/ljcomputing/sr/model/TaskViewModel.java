@@ -27,7 +27,9 @@ import java.sql.ResultSet;
 import java.text.DecimalFormat;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -325,13 +327,26 @@ public class TaskViewModel extends AbstractModel implements Model, Entity {
   }
 
   /**
-   * To string.
-   *
-   * @return the string
    * @see java.lang.Object#toString()
    */
   @Override
   public String toString() {
     return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
+  }
+  
+  /**
+   * To values list.
+   *
+   * @return the list
+   */
+  public List<String> toValuesList() {
+    List<String> values = new ArrayList<String>();
+    
+    values.add(wbsName);
+    values.add(activityName);
+    values.add(df.format(elapsedHours));
+    values.add(comments);
+    
+    return values;
   }
 }

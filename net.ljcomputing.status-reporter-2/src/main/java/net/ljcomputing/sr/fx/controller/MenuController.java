@@ -30,14 +30,20 @@ import net.ljcomputing.sr.service.SrModelServiceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+import org.apache.commons.csv.QuoteMode;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableView;
 import javafx.scene.input.InputEvent;
@@ -46,7 +52,6 @@ import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 /**
  * The menu bar controller.
@@ -85,6 +90,9 @@ public class MenuController implements Initializable {
   
   /** The close action. */
   private ExitAction exitAction = new ExitAction();
+  
+  /** The task table. */
+  private TableView<TaskViewModel> taskTable;
 
   /**
    * Handle action related to "About" menu item.
@@ -157,53 +165,42 @@ public class MenuController implements Initializable {
     }
   }
 
-  //TODO - refactor
-  /**
-   * Gets the task table.
-   *
-   * @return the task table
-   */
-  @SuppressWarnings("unchecked")
-  private TableView<TaskViewModel> getTaskTable() {
-    TableView<TaskViewModel> taskTable = null;
-    Stage stage = (Stage) menuBar.getScene().getWindow();
-    Parent scene = stage.getScene().getRoot();
-    
-    for (Node node : scene.getChildrenUnmodifiable()) {
-      
+  private void initTaskTable() {
+    Scene stage = (Scene) menuBar.getScene();
+    Parent parent = stage.getRoot();
+
+    for (Node node : parent.getChildrenUnmodifiable()) {
       if ("borderPane".equals(node.getId())) {
         BorderPane bp = (BorderPane) node;
-        
         for (Node node1 : bp.getChildrenUnmodifiable()) {
-          
           if ("taskTable".equals(node1.getId())) {
             taskTable = (TableView<TaskViewModel>) node1;
           }
-
         }
-      
       }
-
     }
-    
-    return taskTable;
   }
   
   /**
    * Provide export functionality.
    */
   private void provideExportFunctionality() {
-    LOGGER.debug("  BEGIN export ...");
-    
-    TableView<TaskViewModel> taskTable = getTaskTable();
-
-    LOGGER.debug(" taskTable: {}", taskTable);
-    
-    for(TaskViewModel taskItem : taskTable.getItems()) {
-      LOGGER.debug("  taskItem: {}", taskItem.toString());
+    if(null == taskTable) {
+      initTaskTable();
     }
-    
-    LOGGER.debug("  END export ...");
+
+    try {
+      CSVPrinter printer = new CSVPrinter(System.out, CSVFormat.DEFAULT.withQuoteMode(QuoteMode.ALL).withRecordSeparator(System.getProperty("line.separator")));
+      
+      printer.printRecord("WBS Name", "Activity Name", "Duration", "Comments");
+
+      for(TaskViewModel taskItem : taskTable.getItems()) {
+        printer.printRecord(taskItem.toValuesList());
+      }
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
   /**
