@@ -24,9 +24,6 @@ import net.ljcomputing.persistence.Entity;
 import net.ljcomputing.persistence.EntityPopulator;
 
 import java.sql.ResultSet;
-import java.text.DecimalFormat;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -39,8 +36,6 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *
  */
 public class Task extends AbstractModel implements Model, Entity {
-  private static final DecimalFormat df = new DecimalFormat("#.##");
-  
   /** The associated activity. */
   private Integer activity;
   
@@ -49,12 +44,6 @@ public class Task extends AbstractModel implements Model, Entity {
   
   /** The end time. */
   private Date endTime;
-  
-  /** The elapsed time. */
-  private long elapsedTime;
-  
-  /** The elapsed time in hours. */
-  private double elapsedHours;
   
   /** The comments. */
   private String comments;
@@ -75,7 +64,6 @@ public class Task extends AbstractModel implements Model, Entity {
    */
   public void populate(EntityPopulator ep, ResultSet rs) throws PersistenceException {
     ep.populate(this, rs);
-    calculateElapsedTime();
   }
   
   /**
@@ -139,56 +127,6 @@ public class Task extends AbstractModel implements Model, Entity {
    */
   public void setEndTime(Date endTime) {
     this.endTime = endTime;
-    calculateElapsedTime();
-  }
-  
-  /**
-   * Calculate elapsed time.
-   *
-   * @return the long
-   */
-  private long calculateElapsedTime() {
-    elapsedTime = 0;
-    
-    if(null != getEndTime() && null != getStartTime()) {
-      Instant end = getEndTime().toInstant();
-      Instant start = getStartTime().toInstant();
-      elapsedTime = ChronoUnit.MINUTES.between(start, end);
-      elapsedHours = (double) (elapsedTime / 60d);
-    }
-    
-    return elapsedTime;
-  }
-
-  /**
-   * Gets the elapsed time.
-   *
-   * @return the elapsed time
-   */
-  public long getElapsedTime() {
-    return calculateElapsedTime();
-  }
-  
-  /**
-   * Gets the elapsed hours.
-   *
-   * @return the elapsed hours
-   */
-  public double getElapsedHours() {
-    if(elapsedHours <= 0) {
-      calculateElapsedTime();
-    }
-    
-    return elapsedHours;
-  }
-  
-  /**
-   * Get formated elapsed hours as a String.
-   *
-   * @return the string
-   */
-  public String getFormatedElapsedHours() {
-    return df.format(getElapsedHours());
   }
 
   /**

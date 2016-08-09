@@ -8,6 +8,7 @@
   <menus>
     <Menu mnemonicParsing="false" text="File">
       <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleExportAction" text="Export" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#handleExitAction" text="Exit" />
       </items>

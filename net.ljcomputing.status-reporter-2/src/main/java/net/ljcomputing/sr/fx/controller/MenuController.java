@@ -23,6 +23,7 @@ import net.ljcomputing.sr.fx.table.ActivityTableView;
 import net.ljcomputing.sr.fx.table.ModelTableCells;
 import net.ljcomputing.sr.fx.table.WbsTableView;
 import net.ljcomputing.sr.model.Activity;
+import net.ljcomputing.sr.model.TaskViewModel;
 import net.ljcomputing.sr.model.WorkBreakdownStructure;
 import net.ljcomputing.sr.service.SrModelServiceFactory;
 
@@ -35,12 +36,17 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.TableView;
 import javafx.scene.input.InputEvent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 /**
  * The menu bar controller.
@@ -50,8 +56,7 @@ import javafx.scene.input.KeyEvent;
  */
 public class MenuController implements Initializable {
   /** The logger. */
-  @SuppressWarnings("unused")
-  private static Logger logger = LoggerFactory.getLogger(MenuController.class);
+  private static Logger LOGGER = LoggerFactory.getLogger(MenuController.class);
   
 //  /** The file editor id. */
 //  private String fileEditorId;
@@ -76,10 +81,10 @@ public class MenuController implements Initializable {
   private MenuBar menuBar;
   
   /** The about alert. */
-  private AboutAlert aboutAlert;
+  private AboutAlert aboutAlert = new AboutAlert("Status Reporter");
   
   /** The close action. */
-  private ExitAction exitAction;
+  private ExitAction exitAction = new ExitAction();
 
   /**
    * Handle action related to "About" menu item.
@@ -112,6 +117,16 @@ public class MenuController implements Initializable {
   }
 
   /**
+   * Handle export action.
+   *
+   * @param event the event
+   */
+  @FXML
+  private void handleExportAction(final ActionEvent event) {
+    provideExportFunctionality();
+  }
+
+  /**
    * Handle exit action.
    *
    * @param event the event
@@ -119,6 +134,7 @@ public class MenuController implements Initializable {
   @FXML
   private void handleExitAction(final ActionEvent event) {
     exitAction.exit();
+    System.exit(0);
   }
 
   /**
@@ -139,6 +155,55 @@ public class MenuController implements Initializable {
         exitAction.exit();
       }
     }
+  }
+
+  //TODO - refactor
+  /**
+   * Gets the task table.
+   *
+   * @return the task table
+   */
+  @SuppressWarnings("unchecked")
+  private TableView<TaskViewModel> getTaskTable() {
+    TableView<TaskViewModel> taskTable = null;
+    Stage stage = (Stage) menuBar.getScene().getWindow();
+    Parent scene = stage.getScene().getRoot();
+    
+    for (Node node : scene.getChildrenUnmodifiable()) {
+      
+      if ("borderPane".equals(node.getId())) {
+        BorderPane bp = (BorderPane) node;
+        
+        for (Node node1 : bp.getChildrenUnmodifiable()) {
+          
+          if ("taskTable".equals(node1.getId())) {
+            taskTable = (TableView<TaskViewModel>) node1;
+          }
+
+        }
+      
+      }
+
+    }
+    
+    return taskTable;
+  }
+  
+  /**
+   * Provide export functionality.
+   */
+  private void provideExportFunctionality() {
+    LOGGER.debug("  BEGIN export ...");
+    
+    TableView<TaskViewModel> taskTable = getTaskTable();
+
+    LOGGER.debug(" taskTable: {}", taskTable);
+    
+    for(TaskViewModel taskItem : taskTable.getItems()) {
+      LOGGER.debug("  taskItem: {}", taskItem.toString());
+    }
+    
+    LOGGER.debug("  END export ...");
   }
 
   /**
