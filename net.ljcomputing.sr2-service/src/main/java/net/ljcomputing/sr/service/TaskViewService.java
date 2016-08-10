@@ -48,4 +48,13 @@ public interface TaskViewService extends ModelService<TaskViewModel, TaskViewMod
    */
   public List<TaskViewModel> readByTimes(
       LocalDateTime startTime, LocalDateTime endTime) throws ServiceException;
+  
+  /**
+   * To CSV format.
+   *
+   * @param out the out
+   * @param taskViewModels the task view models
+   * @throws ServiceException the service exception
+   */
+  public void toCsv(Appendable out, List<TaskViewModel> taskViewModels) throws ServiceException;
 }

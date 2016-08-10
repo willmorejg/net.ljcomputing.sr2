@@ -40,9 +40,12 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * @author James G. Willmore
  *
  */
-public class TaskViewModel extends AbstractModel implements Model, Entity {
+public class TaskViewModel extends AbstractModel implements Comparable<TaskViewModel>, Model, Entity {
   
-  /** The deciaml format. */
+  /** The header. */
+  public static final String[] CVS_RECORD_HEADER = {"WBS Name", "Activity Name", "Duration", "Comments"};
+  
+  /** The decimal format. */
   private static final DecimalFormat df = new DecimalFormat("#.##");
   
   /** The start time. */
@@ -344,9 +347,50 @@ public class TaskViewModel extends AbstractModel implements Model, Entity {
     
     values.add(wbsName);
     values.add(activityName);
-    values.add(df.format(elapsedHours));
+    values.add(getFormatedElapsedHours());
     values.add(comments);
     
     return values;
+  }
+
+  /**
+   * @see java.lang.Comparable#compareTo(java.lang.Object)
+   */
+  public int compareTo(TaskViewModel o) {
+    int finalOrder = 0;
+    
+    finalOrder = compareStrings(wbsName, o.getWbsName());
+      
+    if(finalOrder == 0) {
+      finalOrder = compareStrings(activityName, o.getActivityName());
+    }
+      
+    if(finalOrder == 0) {
+      finalOrder = Double.valueOf(elapsedHours).compareTo(Double.valueOf(o.getElapsedHours()));
+    }
+
+    return finalOrder;
+  }
+
+  //TODO - move to utility class
+  /**
+   * Compare two Strings.
+   *
+   * @param left the left
+   * @param right the right
+   * @return the int
+   */
+  private int compareStrings(String left, String right) {
+    int finalOrder = 0;
+    
+    if(null == left && null != right) {
+      finalOrder = -1;
+    } else if(null != left && null == right) {
+      finalOrder = 1;
+    } else {
+      finalOrder = left.compareToIgnoreCase(right);
+    }
+    
+    return finalOrder;
   }
 }

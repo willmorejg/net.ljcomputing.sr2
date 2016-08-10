@@ -23,9 +23,16 @@ import net.ljcomputing.sr.model.TaskViewModel;
 import net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl;
 import net.ljcomputing.sr.service.TaskViewService;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+import org.apache.commons.csv.QuoteMode;
 
 /**
  * Task view service implementation.
@@ -61,6 +68,35 @@ public class TaskViewServiceImpl extends AbstractService<TaskViewModel, TaskView
 
       return repository.readByTimes(startTimestamp, endTimestamp);
     } catch (PersistenceException exception) {
+      throw new ServiceException(exception);
+    }
+  }
+
+  /**
+   * @see net.ljcomputing.sr.service.TaskViewService#toCsv(java.lang.Appendable, java.util.List)
+   */
+  public void toCsv(Appendable out, final List<TaskViewModel> taskViewModels)
+      throws ServiceException {
+    try {
+      CSVFormat format = CSVFormat.DEFAULT.withQuoteMode(QuoteMode.ALL)
+          .withRecordSeparator(System.getProperty("line.separator"));
+      //TODO - refactor, so annotation is no longer needed
+      @SuppressWarnings("resource")
+      CSVPrinter printer = new CSVPrinter(out, format);
+
+      printer.printRecord((Object[])TaskViewModel.CVS_RECORD_HEADER);
+
+      List<TaskViewModel> list = new LinkedList<TaskViewModel>();
+      list.addAll(taskViewModels);
+      Collections.sort(list);
+      
+      for (TaskViewModel taskItem : taskViewModels) {
+        printer.printRecord(taskItem.toValuesList());
+      }
+
+      //TODO - when write to file is implemented
+      //printer.close();
+    } catch (IOException exception) {
       throw new ServiceException(exception);
     }
   }

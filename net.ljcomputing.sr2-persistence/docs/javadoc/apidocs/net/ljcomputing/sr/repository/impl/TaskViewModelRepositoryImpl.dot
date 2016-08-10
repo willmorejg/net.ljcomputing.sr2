@@ -18,7 +18,7 @@ digraph G {
 	//net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl extends net.ljcomputing.repository.impl.AbstractRepository<net.ljcomputing.sr.model.TaskViewModel>
 	c114:p -> c112:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl DEPEND net.ljcomputing.sr.model.TaskViewModel
-	c112:p -> c115:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c112:p -> c116:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.repository.impl.AbstractRepository<T extends net.ljcomputing.model.Model>
 	c114 [label=<<table title="net.ljcomputing.repository.impl.AbstractRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/repository/impl/AbstractRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/repository/impl/AbstractRepository.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.TaskViewModel
-	c115 [label=<<table title="net.ljcomputing.sr.model.TaskViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/sr/model/TaskViewModel.html">
+	c116 [label=<<table title="net.ljcomputing.sr.model.TaskViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/sr/model/TaskViewModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskViewModel </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

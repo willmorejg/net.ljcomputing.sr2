@@ -10,23 +10,23 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog
-	c1317 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsDataDialog.html">
+	c1318 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model>
-	c1319 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
+	c1320 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractModelDataDialog&lt;T extends Model&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractModelDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.WorkBreakdownStructure>
-	c1319:p -> c1317:p [dir=back,arrowtail=empty];
+	c1320:p -> c1318:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog DEPEND net.ljcomputing.sr.model.WorkBreakdownStructure
-	c1317:p -> c1339:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1318:p -> c1340:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.WorkBreakdownStructure
-	c1339 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1340 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WorkBreakdownStructure </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

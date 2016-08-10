@@ -16,6 +16,7 @@
 
 package net.ljcomputing.sr.fx.controller;
 
+import net.ljcomputing.exception.ServiceException;
 import net.ljcomputing.fx.action.ExitAction;
 import net.ljcomputing.fx.alert.AboutAlert;
 import net.ljcomputing.fx.alert.ErrorAlert;
@@ -26,17 +27,13 @@ import net.ljcomputing.sr.model.Activity;
 import net.ljcomputing.sr.model.TaskViewModel;
 import net.ljcomputing.sr.model.WorkBreakdownStructure;
 import net.ljcomputing.sr.service.SrModelServiceFactory;
+import net.ljcomputing.sr.service.TaskViewService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVPrinter;
-import org.apache.commons.csv.QuoteMode;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -61,6 +58,7 @@ import javafx.scene.layout.BorderPane;
  */
 public class MenuController implements Initializable {
   /** The logger. */
+  @SuppressWarnings("unused")
   private static Logger LOGGER = LoggerFactory.getLogger(MenuController.class);
   
 //  /** The file editor id. */
@@ -165,6 +163,8 @@ public class MenuController implements Initializable {
     }
   }
 
+  //TODO - refactor - better way to do this?
+  @SuppressWarnings("unchecked")
   private void initTaskTable() {
     Scene stage = (Scene) menuBar.getScene();
     Parent parent = stage.getRoot();
@@ -175,6 +175,7 @@ public class MenuController implements Initializable {
         for (Node node1 : bp.getChildrenUnmodifiable()) {
           if ("taskTable".equals(node1.getId())) {
             taskTable = (TableView<TaskViewModel>) node1;
+            break;
           }
         }
       }
@@ -185,21 +186,15 @@ public class MenuController implements Initializable {
    * Provide export functionality.
    */
   private void provideExportFunctionality() {
-    if(null == taskTable) {
+    if (null == taskTable) {
       initTaskTable();
     }
 
     try {
-      CSVPrinter printer = new CSVPrinter(System.out, CSVFormat.DEFAULT.withQuoteMode(QuoteMode.ALL).withRecordSeparator(System.getProperty("line.separator")));
-      
-      printer.printRecord("WBS Name", "Activity Name", "Duration", "Comments");
-
-      for(TaskViewModel taskItem : taskTable.getItems()) {
-        printer.printRecord(taskItem.toValuesList());
-      }
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+      TaskViewService service = (TaskViewService) SrModelServiceFactory.TaskView.getServiceInstance();
+      service.toCsv(System.out, taskTable.getItems());
+    } catch (ServiceException e) {
+      new ErrorAlert().show(e);
     }
   }
 

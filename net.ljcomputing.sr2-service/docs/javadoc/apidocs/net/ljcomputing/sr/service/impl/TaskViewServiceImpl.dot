@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.service.TaskViewService
-	c141 [label=<<table title="net.ljcomputing.sr.service.TaskViewService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TaskViewService.html">
+	c142 [label=<<table title="net.ljcomputing.sr.service.TaskViewService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TaskViewService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TaskViewService </td></tr>
@@ -18,21 +18,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../TaskViewService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.service.impl.TaskViewServiceImpl
-	c150 [label=<<table title="net.ljcomputing.sr.service.impl.TaskViewServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TaskViewServiceImpl.html">
+	c151 [label=<<table title="net.ljcomputing.sr.service.impl.TaskViewServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TaskViewServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskViewServiceImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TaskViewServiceImpl.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.service.impl.TaskViewServiceImpl extends net.ljcomputing.service.impl.AbstractService<net.ljcomputing.sr.model.TaskViewModel, net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl>
-	c152:p -> c150:p [dir=back,arrowtail=empty];
+	c153:p -> c151:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sr.service.impl.TaskViewServiceImpl implements net.ljcomputing.sr.service.TaskViewService
-	c141:p -> c150:p [dir=back,arrowtail=empty,style=dashed];
+	c142:p -> c151:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.service.impl.AbstractService<T extends net.ljcomputing.model.Model, R extends net.ljcomputing.repository.impl.ModelRepository<T>>
-	c152 [label=<<table title="net.ljcomputing.service.impl.AbstractService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/service/impl/AbstractService.html">
+	c153 [label=<<table title="net.ljcomputing.service.impl.AbstractService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractService&lt;T extends net.ljcomputing.model.Model, R extends net.ljcomputing.repository.impl.ModelRepository&lt;T&gt;&gt; </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.service.impl </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/service/impl/AbstractService.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 }
 

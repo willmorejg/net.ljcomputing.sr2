@@ -30,8 +30,6 @@
 -link
 'http://commons.apache.org/proper/commons-lang/apidocs'
 -link
-'http://commons.apache.org/proper/commons-csv/apidocs'
--link
 'http://www.slf4j.org/apidocs'
 -linkoffline
 'http://docs.oracle.com/javase/8/docs/api' '/home/jim/git/net.ljcomputing.sr2.git/net.ljcomputing.sr2/net.ljcomputing.status-reporter-2/target/javadoc-bundle-options'
