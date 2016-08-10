@@ -6,6 +6,7 @@ net.ljcomputing.sr.fx.dialog.impl
 net.ljcomputing.sr.fx.dialog
 net.ljcomputing.sr.fx.table
 net.ljcomputing.sr.fx.table.cell
+net.ljcomputing.sr.fx.action
 net.ljcomputing.sr.fx.tree.item
 net.ljcomputing.sr.fx.treeview
 net.ljcomputing.sr.fx.controller

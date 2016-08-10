@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.treeview.WbsTreeCell
-	c286 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeCell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeCell.html">
+	c349 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeCell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeCell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeCell </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeCell.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c287 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeView.html">
+	c350 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeView </td></tr>
 		</table></td></tr>

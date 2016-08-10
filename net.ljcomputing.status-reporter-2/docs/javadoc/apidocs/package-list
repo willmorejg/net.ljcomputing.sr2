@@ -1,5 +1,6 @@
 net.ljcomputing.sr
 net.ljcomputing.sr.configuration
+net.ljcomputing.sr.fx.action
 net.ljcomputing.sr.fx.controller
 net.ljcomputing.sr.fx.dialog
 net.ljcomputing.sr.fx.dialog.impl

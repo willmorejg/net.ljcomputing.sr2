@@ -16,10 +16,10 @@
 
 package net.ljcomputing.sr.fx.controller;
 
-import net.ljcomputing.exception.ServiceException;
 import net.ljcomputing.fx.action.ExitAction;
 import net.ljcomputing.fx.alert.AboutAlert;
 import net.ljcomputing.fx.alert.ErrorAlert;
+import net.ljcomputing.sr.fx.action.SaveCsvAction;
 import net.ljcomputing.sr.fx.table.ActivityTableView;
 import net.ljcomputing.sr.fx.table.ModelTableCells;
 import net.ljcomputing.sr.fx.table.WbsTableView;
@@ -32,6 +32,8 @@ import net.ljcomputing.sr.service.TaskViewService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -191,9 +193,17 @@ public class MenuController implements Initializable {
     }
 
     try {
-      TaskViewService service = (TaskViewService) SrModelServiceFactory.TaskView.getServiceInstance();
-      service.toCsv(System.out, taskTable.getItems());
-    } catch (ServiceException e) {
+      File file = new SaveCsvAction().setTextToFile("Export to file ...", true);
+      LOGGER.debug("file: {}", file);
+      
+      if(null != file) {
+        FileWriter writer = new FileWriter(file);
+        TaskViewService service = (TaskViewService) SrModelServiceFactory.TaskView.getServiceInstance();
+        service.toCsv(writer, taskTable.getItems());
+        writer.flush();
+        writer.close();
+      }
+    } catch (Exception e) {
       new ErrorAlert().show(e);
     }
   }
