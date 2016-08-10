@@ -42,11 +42,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  */
 public class TaskViewModel extends AbstractModel implements Comparable<TaskViewModel>, Model, Entity {
   
-  /** The header. */
-  public static final String[] CVS_RECORD_HEADER = {"WBS Name", "Activity Name", "Duration", "Comments"};
-  
   /** The decimal format. */
-  private static final DecimalFormat df = new DecimalFormat("#.##");
+  public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("###.0##");
   
   /** The start time. */
   private Date startTime;
@@ -265,6 +262,15 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
   }
   
   /**
+   * Gets the record key.
+   *
+   * @return the record key
+   */
+  public String getRecordKey() {
+    return getWbsName() + "," + getActivityName();
+  }
+  
+  /**
    * Gets the task.
    *
    * @return the task
@@ -326,7 +332,7 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
    * @return the string
    */
   public String getFormatedElapsedHours() {
-    return df.format(getElapsedHours());
+    return DECIMAL_FORMAT.format(getElapsedHours());
   }
 
   /**

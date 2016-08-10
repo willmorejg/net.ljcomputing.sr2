@@ -20,6 +20,7 @@ import net.ljcomputing.exception.PersistenceException;
 import net.ljcomputing.exception.ServiceException;
 import net.ljcomputing.service.impl.AbstractService;
 import net.ljcomputing.sr.model.TaskViewModel;
+import net.ljcomputing.sr.model.TaskViewReport;
 import net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl;
 import net.ljcomputing.sr.service.TaskViewService;
 
@@ -28,8 +29,10 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -79,18 +82,30 @@ public class TaskViewServiceImpl extends AbstractService<TaskViewModel, TaskView
   public void toCsv(FileWriter out, final List<TaskViewModel> taskViewModels)
       throws ServiceException {
     try {
-      CSVFormat format = CSVFormat.DEFAULT.withQuoteMode(QuoteMode.ALL)
+      CSVFormat format = CSVFormat.RFC4180.withQuoteMode(QuoteMode.ALL)
           .withRecordSeparator(System.getProperty("line.separator"));
       CSVPrinter printer = new CSVPrinter(out, format);
 
-      printer.printRecord((Object[])TaskViewModel.CVS_RECORD_HEADER);
+      printer.printRecord((Object[]) TaskViewReport.CVS_RECORD_HEADER);
 
       List<TaskViewModel> list = new LinkedList<TaskViewModel>();
       list.addAll(taskViewModels);
       Collections.sort(list);
-      
-      for (TaskViewModel taskItem : taskViewModels) {
-        printer.printRecord(taskItem.toValuesList());
+
+      Map<String, TaskViewReport> finalReport = new LinkedHashMap<String, TaskViewReport>();
+
+      for (TaskViewModel taskItem : list) {
+        if (finalReport.containsKey(taskItem.getRecordKey())) {
+          finalReport.get(taskItem.getRecordKey())
+              .addElapsedHours(taskItem.getElapsedHours());
+        } else {
+          finalReport.put(taskItem.getRecordKey(),
+              new TaskViewReport(taskItem));
+        }
+      }
+
+      for (TaskViewReport reportItem : finalReport.values()) {
+        printer.printRecord(reportItem.toValuesList());
       }
 
       out.flush();

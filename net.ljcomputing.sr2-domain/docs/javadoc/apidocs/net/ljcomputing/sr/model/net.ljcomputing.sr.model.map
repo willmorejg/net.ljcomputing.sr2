@@ -7,6 +7,8 @@
 <area shape="rect" id="node3" href="./Task.html" title="&lt;TABLE&gt;" alt="" coords="360,5,432,53"/>
 <area shape="rect" id="node4_3" href="./Activity.html" title="net.ljcomputing.sr.model.Activity" alt="" coords="467,17,525,42"/>
 <area shape="rect" id="node4" href="./Activity.html" title="&lt;TABLE&gt;" alt="" coords="457,5,535,53"/>
-<area shape="rect" id="node5_4" href="./ActivityViewModel.html" title="net.ljcomputing.sr.model.ActivityViewModel" alt="" coords="571,17,688,42"/>
-<area shape="rect" id="node5" href="./ActivityViewModel.html" title="&lt;TABLE&gt;" alt="" coords="560,5,699,53"/>
+<area shape="rect" id="node5_4" href="./TaskViewReport.html" title="net.ljcomputing.sr.model.TaskViewReport" alt="" coords="571,17,680,42"/>
+<area shape="rect" id="node5" href="./TaskViewReport.html" title="&lt;TABLE&gt;" alt="" coords="560,5,691,53"/>
+<area shape="rect" id="node6_5" href="./ActivityViewModel.html" title="net.ljcomputing.sr.model.ActivityViewModel" alt="" coords="725,17,843,42"/>
+<area shape="rect" id="node6" href="./ActivityViewModel.html" title="&lt;TABLE&gt;" alt="" coords="715,5,853,53"/>
 </map>

@@ -33,8 +33,14 @@ digraph G {
 <tr><td align="center" balign="center"> Activity </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Activity.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sr.model.TaskViewReport
+	c4 [label=<<table title="net.ljcomputing.sr.model.TaskViewReport" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskViewReport.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TaskViewReport </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TaskViewReport.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.ActivityViewModel
-	c4 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivityViewModel.html">
+	c5 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivityViewModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityViewModel </td></tr>
 		</table></td></tr>
