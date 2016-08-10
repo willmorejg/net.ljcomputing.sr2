@@ -10,36 +10,36 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog
-	c655 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActivityDataDialog.html">
+	c637 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActivityDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ActivityDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model>
-	c657 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
+	c638 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractModelDataDialog&lt;T extends Model&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractModelDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.Activity>
-	c657:p -> c655:p [dir=back,arrowtail=empty];
+	c638:p -> c637:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog NAVASSOC org.slf4j.Logger
-	c655:p -> c679:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c637:p -> c660:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model> NAVASSOC org.slf4j.Logger
-	c657:p -> c679:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog DEPEND net.ljcomputing.sr.model.WorkBreakdownStructure
-	c655:p -> c680:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c638:p -> c660:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog DEPEND net.ljcomputing.sr.model.Activity
-	c655:p -> c681:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c637:p -> c661:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog DEPEND net.ljcomputing.sr.model.WorkBreakdownStructure
+	c637:p -> c662:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.WorkBreakdownStructure
-	c680 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c662 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WorkBreakdownStructure </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// org.slf4j.Logger
-	c679 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c660 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://www.slf4j.org/apidocs/org/slf4j/Logger.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.Activity
-	c681 [label=<<table title="net.ljcomputing.sr.model.Activity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c661 [label=<<table title="net.ljcomputing.sr.model.Activity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Activity </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

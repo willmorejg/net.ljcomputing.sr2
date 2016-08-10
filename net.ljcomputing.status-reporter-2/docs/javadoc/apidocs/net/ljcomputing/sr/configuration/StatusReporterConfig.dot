@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.configuration.StatusReporterConfig
-	c1380 [label=<<table title="net.ljcomputing.sr.configuration.StatusReporterConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StatusReporterConfig.html">
+	c1307 [label=<<table title="net.ljcomputing.sr.configuration.StatusReporterConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StatusReporterConfig.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StatusReporterConfig </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StatusReporterConfig.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.MainController
-	c1414 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../fx/controller/MainController.html">
+	c1340 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../fx/controller/MainController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MainController </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.controller </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../fx/controller/MainController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.configuration.StatusReporterConfig DEPEND net.ljcomputing.sr.fx.controller.MainController
-	c1380:p -> c1414:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1307:p -> c1340:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

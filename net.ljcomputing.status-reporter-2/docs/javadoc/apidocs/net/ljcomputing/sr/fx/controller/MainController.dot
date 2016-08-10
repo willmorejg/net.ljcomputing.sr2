@@ -10,57 +10,57 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.configuration.StatusReporterConfig
-	c1157 [label=<<table title="net.ljcomputing.sr.configuration.StatusReporterConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../configuration/StatusReporterConfig.html">
+	c1090 [label=<<table title="net.ljcomputing.sr.configuration.StatusReporterConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../configuration/StatusReporterConfig.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StatusReporterConfig </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.configuration </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../configuration/StatusReporterConfig.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1183 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../treeview/WbsTreeView.html">
+	c1115 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../treeview/WbsTreeView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeView </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.treeview </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../treeview/WbsTreeView.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.TaskTableController
-	c1185 [label=<<table title="net.ljcomputing.sr.fx.controller.TaskTableController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskTableController.html">
+	c1117 [label=<<table title="net.ljcomputing.sr.fx.controller.TaskTableController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskTableController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskTableController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TaskTableController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c1187 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeViewController.html">
+	c1119 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeViewController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeViewController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeViewController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.MainController
-	c1191 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MainController.html">
+	c1123 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MainController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MainController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MainController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView NAVASSOC net.ljcomputing.sr.fx.controller.TaskTableController
-	c1183:p -> c1185:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1115:p -> c1117:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1187:p -> c1183:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1119:p -> c1115:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.fx.control.time.TimeControl
-	c1191:p -> c1194:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1123:p -> c1126:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.fx.control.time.TimeControl
-	c1191:p -> c1194:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1123:p -> c1126:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1191:p -> c1183:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1123:p -> c1115:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c1191:p -> c1187:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1123:p -> c1119:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.controller.TaskTableController
-	c1191:p -> c1185:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1123:p -> c1117:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.configuration.StatusReporterConfig DEPEND net.ljcomputing.sr.fx.controller.MainController
-	c1157:p -> c1191:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1090:p -> c1123:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView DEPEND net.ljcomputing.sr.fx.controller.TaskTableController
-	c1183:p -> c1185:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1115:p -> c1117:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.fx.control.time.TimeControl
-	c1194 [label=<<table title="net.ljcomputing.fx.control.time.TimeControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1126 [label=<<table title="net.ljcomputing.fx.control.time.TimeControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TimeControl </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.fx.control.time </font></td></tr>

@@ -21,6 +21,7 @@ import net.ljcomputing.service.ModelService;
 import net.ljcomputing.sr.model.TaskViewModel;
 import net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl;
 
+import java.io.FileWriter;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -56,5 +57,5 @@ public interface TaskViewService extends ModelService<TaskViewModel, TaskViewMod
    * @param taskViewModels the task view models
    * @throws ServiceException the service exception
    */
-  public void toCsv(Appendable out, List<TaskViewModel> taskViewModels) throws ServiceException;
+  public void toCsv(FileWriter out, List<TaskViewModel> taskViewModels) throws ServiceException;
 }

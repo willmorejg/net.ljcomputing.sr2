@@ -19,6 +19,7 @@ package net.ljcomputing.sr.fx.controller;
 import net.ljcomputing.fx.action.ExitAction;
 import net.ljcomputing.fx.alert.AboutAlert;
 import net.ljcomputing.fx.alert.ErrorAlert;
+import net.ljcomputing.fx.alert.FileSaveSuccessfulAlert;
 import net.ljcomputing.sr.fx.action.SaveCsvAction;
 import net.ljcomputing.sr.fx.table.ActivityTableView;
 import net.ljcomputing.sr.fx.table.ModelTableCells;
@@ -193,15 +194,13 @@ public class MenuController implements Initializable {
     }
 
     try {
-      File file = new SaveCsvAction().setTextToFile("Export to file ...", true);
-      LOGGER.debug("file: {}", file);
+      File file = new SaveCsvAction().selectFile("Export to file ...", true);
       
       if(null != file) {
         FileWriter writer = new FileWriter(file);
         TaskViewService service = (TaskViewService) SrModelServiceFactory.TaskView.getServiceInstance();
         service.toCsv(writer, taskTable.getItems());
-        writer.flush();
-        writer.close();
+        new FileSaveSuccessfulAlert().show(file.getAbsolutePath());
       }
     } catch (Exception e) {
       new ErrorAlert().show(e);

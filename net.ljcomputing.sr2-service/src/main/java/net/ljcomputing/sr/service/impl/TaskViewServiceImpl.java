@@ -23,6 +23,7 @@ import net.ljcomputing.sr.model.TaskViewModel;
 import net.ljcomputing.sr.repository.impl.TaskViewModelRepositoryImpl;
 import net.ljcomputing.sr.service.TaskViewService;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -73,15 +74,13 @@ public class TaskViewServiceImpl extends AbstractService<TaskViewModel, TaskView
   }
 
   /**
-   * @see net.ljcomputing.sr.service.TaskViewService#toCsv(java.lang.Appendable, java.util.List)
+   * @see net.ljcomputing.sr.service.TaskViewService#toCsv(java.io.FileWriter, java.util.List)
    */
-  public void toCsv(Appendable out, final List<TaskViewModel> taskViewModels)
+  public void toCsv(FileWriter out, final List<TaskViewModel> taskViewModels)
       throws ServiceException {
     try {
       CSVFormat format = CSVFormat.DEFAULT.withQuoteMode(QuoteMode.ALL)
           .withRecordSeparator(System.getProperty("line.separator"));
-      //TODO - refactor, so annotation is no longer needed
-      @SuppressWarnings("resource")
       CSVPrinter printer = new CSVPrinter(out, format);
 
       printer.printRecord((Object[])TaskViewModel.CVS_RECORD_HEADER);
@@ -94,8 +93,9 @@ public class TaskViewServiceImpl extends AbstractService<TaskViewModel, TaskView
         printer.printRecord(taskItem.toValuesList());
       }
 
-      //TODO - when write to file is implemented
-      //printer.close();
+      out.flush();
+      out.close();
+      printer.close();
     } catch (IOException exception) {
       throw new ServiceException(exception);
     }

@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.ActivityViewConverter
-	c756 [label=<<table title="net.ljcomputing.sr.ActivityViewConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActivityViewConverter.html">
+	c735 [label=<<table title="net.ljcomputing.sr.ActivityViewConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActivityViewConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityViewConverter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ActivityViewConverter.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.ActivityViewConverter DEPEND net.ljcomputing.sr.model.ActivityViewModel
-	c756:p -> c791:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c735:p -> c769:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.ActivityViewModel
-	c791 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c769 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityViewModel </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

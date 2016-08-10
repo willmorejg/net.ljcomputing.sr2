@@ -10,17 +10,17 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.treeview.WbsTreeCell
-	c1701 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeCell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeCell.html">
+	c1619 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeCell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeCell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeCell </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeCell.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeCell NAVASSOC org.slf4j.Logger
-	c1701:p -> c1712:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1619:p -> c1630:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeCell DEPEND net.ljcomputing.model.Model
-	c1701:p -> c1713:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1619:p -> c1631:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.model.Model
-	c1713 [label=<<table title="net.ljcomputing.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1631 [label=<<table title="net.ljcomputing.model.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Model </td></tr>
@@ -28,7 +28,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// org.slf4j.Logger
-	c1712 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c1630 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>

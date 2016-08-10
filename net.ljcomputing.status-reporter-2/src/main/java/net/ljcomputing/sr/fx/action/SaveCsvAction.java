@@ -41,13 +41,13 @@ public class SaveCsvAction extends AbstractFileAction {
   }
 
   /**
-   * Sets the text to file.
+   * Select a File to save.
    *
    * @param title the title
    * @param showAllFileTypes the show all file types
    * @return the string
    */
-  public File setTextToFile(String title, boolean showAllFileTypes) {
+  public File selectFile(String title, boolean showAllFileTypes) {
     File file = showFileChooser(title, showAllFileTypes);
     
     return file;

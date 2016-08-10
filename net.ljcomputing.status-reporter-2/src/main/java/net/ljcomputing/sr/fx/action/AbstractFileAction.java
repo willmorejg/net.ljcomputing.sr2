@@ -18,7 +18,6 @@
 package net.ljcomputing.sr.fx.action;
 
 import net.ljcomputing.fx.alert.ErrorAlert;
-import net.ljcomputing.fx.alert.FileSaveSuccessfulAlert;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -37,9 +36,6 @@ public abstract class AbstractFileAction {
   
   /** The error alert. */
   protected ErrorAlert errorAlert = new ErrorAlert();
-  
-  /** The success alert. */
-  protected FileSaveSuccessfulAlert successAlert = new FileSaveSuccessfulAlert();
   
   /**
    * Show file chooser.
@@ -83,8 +79,8 @@ public abstract class AbstractFileAction {
   protected List<ExtensionFilter> getTextFileExtensions() {
     List<ExtensionFilter> textFileExtensions = new ArrayList<ExtensionFilter>();
     
-    textFileExtensions.add(new ExtensionFilter("Text files (*.txt)", "*.txt"));
     textFileExtensions.add(new ExtensionFilter("CSV files (*.csv)", "*.csv"));
+    textFileExtensions.add(new ExtensionFilter("Text files (*.txt)", "*.txt"));
 
     return textFileExtensions;
   }

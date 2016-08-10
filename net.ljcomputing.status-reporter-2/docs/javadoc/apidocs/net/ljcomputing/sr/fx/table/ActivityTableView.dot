@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.table.ActivityTableView
-	c736 [label=<<table title="net.ljcomputing.sr.fx.table.ActivityTableView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActivityTableView.html">
+	c715 [label=<<table title="net.ljcomputing.sr.fx.table.ActivityTableView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActivityTableView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityTableView </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ActivityTableView.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.table.ActivityTableView DEPEND net.ljcomputing.sr.model.WorkBreakdownStructure
-	c736:p -> c754:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c715:p -> c733:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.WorkBreakdownStructure
-	c754 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c733 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WorkBreakdownStructure </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

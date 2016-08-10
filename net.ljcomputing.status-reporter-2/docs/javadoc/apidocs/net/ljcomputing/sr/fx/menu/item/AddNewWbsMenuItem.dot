@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem
-	c836 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWbsMenuItem.html">
+	c813 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractWbsMenuItem </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem
-	c837 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AddNewWbsMenuItem.html">
+	c814 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AddNewWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AddNewWbsMenuItem </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AddNewWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c854 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../treeview/WbsTreeView.html">
+	c830 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../treeview/WbsTreeView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeView </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.treeview </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../treeview/WbsTreeView.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem extends net.ljcomputing.sr.fx.menu.item.AbstractWbsMenuItem
-	c836:p -> c837:p [dir=back,arrowtail=empty];
+	c813:p -> c814:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c837:p -> c854:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c814:p -> c830:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 
