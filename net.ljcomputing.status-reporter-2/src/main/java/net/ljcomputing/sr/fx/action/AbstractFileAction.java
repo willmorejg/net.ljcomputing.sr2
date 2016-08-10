@@ -84,7 +84,7 @@ public abstract class AbstractFileAction {
     List<ExtensionFilter> textFileExtensions = new ArrayList<ExtensionFilter>();
     
     textFileExtensions.add(new ExtensionFilter("Text files (*.txt)", "*.txt"));
-    textFileExtensions.add(new ExtensionFilter("CSV files (*.csv)", "*.cvs"));
+    textFileExtensions.add(new ExtensionFilter("CSV files (*.csv)", "*.csv"));
 
     return textFileExtensions;
   }
