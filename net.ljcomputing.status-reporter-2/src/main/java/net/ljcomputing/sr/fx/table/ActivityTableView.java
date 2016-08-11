@@ -206,7 +206,7 @@ public class ActivityTableView extends TableView<Activity> {
    */
   private Integer getWbsIdByName(String name) {
     WorkBreakdownStructure wbs = getWbsByName(name);
-    return null != wbs ? wbs.getId() : 0;
+    return wbs != null ? wbs.getId() : 0;
   }
 
   /**
@@ -233,7 +233,7 @@ public class ActivityTableView extends TableView<Activity> {
    */
   private String getWbsNameById(Integer id) {
     WorkBreakdownStructure wbs = getWbsById(id);
-    return null != wbs ? wbs.getName() : "";
+    return wbs != null ? wbs.getName() : "";
   }
 
   /**

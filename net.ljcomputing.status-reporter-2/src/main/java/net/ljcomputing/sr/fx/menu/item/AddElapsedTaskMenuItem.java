@@ -84,7 +84,7 @@ public class AddElapsedTaskMenuItem extends AbstractWbsMenuItem {
           endTimeControl.spinnerProperty().valueProperty().addListener((obs, oldValue, newValue) -> {
             Button okButton = (Button) endTimeDialog.getDialogPane().lookupButton(ButtonType.OK);
             
-            if(null == newValue) {
+            if(newValue == null) {
               okButton.setDisable(false);
               return;
             }

@@ -14,7 +14,6 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.sr.model;
 
 import net.ljcomputing.exception.PersistenceException;
@@ -35,55 +34,57 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *
  */
 public class Activity extends AbstractModel implements Model, Entity {
-  
+
   /** The name. */
-  private String name;
-  
+  private transient String name;
+
   /** The description. */
   private String description;
-  
+
   /** The associated work breakdown structure. */
-  private Integer wbs;
-  
+  private transient Integer wbs;
+
   /**
    * Instantiates a new activity.
    *
-   * @param ep the ep
-   * @param rs the rs
+   * @param entityPopulator the entity populator
+   * @param resultSet the result set
    * @throws PersistenceException the persistence exception
    */
-  public Activity(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    populate(ep, rs);
+  public Activity(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    super();
+    populate(entityPopulator, resultSet);
   }
-  
+
   /**
    * Instantiates a new work breakdown structure.
    *
-   * @param name the name
+   * @param name the name @param wbs the wbs
    * @param wbs the wbs
    */
-  public Activity(String name, Integer wbs) {
+  public Activity(final String name, final Integer wbs) {
     this(name, null, wbs);
   }
-  
+
   /**
    * Instantiates a new work breakdown structure.
    *
-   * @param name the name
+   * @param name the name @param description the description @param wbs the wbs
    * @param description the description
    * @param wbs the wbs
    */
-  public Activity(String name, String description, Integer wbs) {
+  public Activity(final String name, final String description, final Integer wbs) {
+    super();
     this.name = name;
     this.description = description;
     this.wbs = wbs;
   }
-  
+
   /**
-   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.sr.persistence.EntityPopulator, java.sql.ResultSet)
+   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
    */
-  public void populate(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    ep.populate(this, rs);
+  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    entityPopulator.populate(this, resultSet);
   }
 
   /**
@@ -103,13 +104,13 @@ public class Activity extends AbstractModel implements Model, Entity {
   public String getDescription() {
     return description;
   }
-  
+
   /**
    * Sets the description.
    *
    * @param description the new description
    */
-  public void setDescription(String description) {
+  public void setDescription(final String description) {
     this.description = description;
   }
 
@@ -127,10 +128,10 @@ public class Activity extends AbstractModel implements Model, Entity {
    *
    * @param wbs the wbs
    */
-  public void newWbs(Integer wbs) {
+  public void newWbs(final Integer wbs) {
     this.wbs = wbs;
   }
-  
+
   /**
    * @see java.lang.Object#toString()
    */

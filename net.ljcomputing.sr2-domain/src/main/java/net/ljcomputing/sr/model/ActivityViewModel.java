@@ -14,7 +14,6 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.sr.model;
 
 import net.ljcomputing.exception.PersistenceException;
@@ -38,10 +37,10 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
 
   /** The name. */
   private String name;
-  
+
   /** The description. */
   private String description;
-  
+
   /** The wbs id. */
   private Integer wbsId;
 
@@ -50,23 +49,25 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
 
   /** The wbs description. */
   private String wbsDescription;
-  
+
   /**
-   * Instantiates a new task view model.
+   * Instantiates a new activity view model.
    *
-   * @param ep the ep
-   * @param rs the rs
+   * @param entityPopulator the entity populator
+   * @param resultSet the result set
    * @throws PersistenceException the persistence exception
    */
-  public ActivityViewModel(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    populate(ep, rs);
+  public ActivityViewModel(final EntityPopulator entityPopulator, final ResultSet resultSet)
+      throws PersistenceException {
+    super();
+    populate(entityPopulator, resultSet);
   }
 
   /**
-   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.sr.persistence.EntityPopulator, java.sql.ResultSet)
+   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
    */
-  public void populate(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    ep.populate(this, rs);
+  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    entityPopulator.populate(this, resultSet);
   }
 
   /**
@@ -83,7 +84,7 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
    *
    * @param name the new name
    */
-  public void setName(String name) {
+  public void setName(final String name) {
     this.name = name;
   }
 
@@ -99,10 +100,10 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
   /**
    * Sets the description.
    *
-   * @param activityDescription the new description
+   * @param description the new description
    */
-  public void setDescription(String activityDescription) {
-    this.description = activityDescription;
+  public void setDescription(final String description) {
+    this.description = description;
   }
 
   /**
@@ -119,7 +120,7 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
    *
    * @param wbsId the new wbs id
    */
-  public void setWbsId(Integer wbsId) {
+  public void setWbsId(final Integer wbsId) {
     this.wbsId = wbsId;
   }
 
@@ -137,7 +138,7 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
    *
    * @param wbsName the new wbs name
    */
-  public void setWbsName(String wbsName) {
+  public void setWbsName(final String wbsName) {
     this.wbsName = wbsName;
   }
 
@@ -155,15 +156,14 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
    *
    * @param wbsDescription the new wbs description
    */
-  public void setWbsDescription(String wbsDescription) {
+  public void setWbsDescription(final String wbsDescription) {
     this.wbsDescription = wbsDescription;
   }
 
   /**
    * To string.
    *
-   * @return the string
-   * @see java.lang.Object#toString()
+   * @return the string @see java.lang.Object#toString()
    */
   @Override
   public String toString() {

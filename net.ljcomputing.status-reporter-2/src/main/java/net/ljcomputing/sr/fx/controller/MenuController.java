@@ -189,14 +189,14 @@ public class MenuController implements Initializable {
    * Provide export functionality.
    */
   private void provideExportFunctionality() {
-    if (null == taskTable) {
+    if (taskTable == null) {
       initTaskTable();
     }
 
     try {
       File file = new SaveCsvAction().selectFile("Export to file ...", true);
       
-      if(null != file) {
+      if(file != null) {
         FileWriter writer = new FileWriter(file);
         TaskViewService service = (TaskViewService) SrModelServiceFactory.TaskView.getServiceInstance();
         service.toCsv(writer, taskTable.getItems());

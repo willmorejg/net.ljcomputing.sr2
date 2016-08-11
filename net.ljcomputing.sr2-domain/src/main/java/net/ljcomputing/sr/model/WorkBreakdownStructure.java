@@ -36,27 +36,21 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class WorkBreakdownStructure extends AbstractModel implements Model, Entity {
 
   /** The name. */
-  private String name;
+  private transient String name;
 
   /** The description. */
   private String description;
-  
+
   /**
    * Instantiates a new work breakdown structure.
    *
-   * @param ep the ep
-   * @param rs the rs
+   * @param entityPopulator the entity populator
+   * @param resultSet the result set
    * @throws PersistenceException the persistence exception
    */
-  public WorkBreakdownStructure(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    populate(ep, rs);
-  }
-
-  /**
-   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.sr.persistence.EntityPopulator, java.sql.ResultSet)
-   */
-  public void populate(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    ep.populate(this, rs);
+  public WorkBreakdownStructure(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    super();
+    populate(entityPopulator, resultSet);
   }
 
   /**
@@ -64,7 +58,7 @@ public class WorkBreakdownStructure extends AbstractModel implements Model, Enti
    *
    * @param name the name
    */
-  public WorkBreakdownStructure(String name) {
+  public WorkBreakdownStructure(final String name) {
     this(name, null);
   }
 
@@ -74,10 +68,17 @@ public class WorkBreakdownStructure extends AbstractModel implements Model, Enti
    * @param name the name
    * @param description the description
    */
-  public WorkBreakdownStructure(String name, String description) {
+  public WorkBreakdownStructure(final String name, final String description) {
     super();
     this.name = name;
     this.description = description;
+  }
+
+  /**
+   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
+   */
+  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    entityPopulator.populate(this, resultSet);
   }
 
   /**
@@ -103,10 +104,10 @@ public class WorkBreakdownStructure extends AbstractModel implements Model, Enti
    *
    * @param description the new description
    */
-  public void setDescription(String description) {
+  public void setDescription(final String description) {
     this.description = description;
   }
-  
+
   /**
    * @see java.lang.Object#toString()
    */

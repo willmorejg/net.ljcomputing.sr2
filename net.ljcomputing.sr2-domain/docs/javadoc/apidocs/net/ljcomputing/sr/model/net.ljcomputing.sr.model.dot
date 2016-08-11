@@ -45,5 +45,13 @@ digraph G {
 <tr><td align="center" balign="center"> ActivityViewModel </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ActivityViewModel.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.sr.model.SrConstants
+	c6 [label=<<table title="net.ljcomputing.sr.model.SrConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SrConstants.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SrConstants </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SrConstants.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.sr.model.TaskViewReport extends net.ljcomputing.sr.model.SrConstants
+	c6:p -> c4:p [dir=back,arrowtail=empty];
 }
 

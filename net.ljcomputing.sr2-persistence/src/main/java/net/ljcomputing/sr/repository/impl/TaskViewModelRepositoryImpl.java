@@ -112,7 +112,7 @@ public class TaskViewModelRepositoryImpl extends AbstractRepository<TaskViewMode
       throw new PersistenceException(exception);
     } finally {
       try {
-        if (null != rs) {
+        if (rs != null) {
           rs.close();
         }
       } catch (SQLException e) {

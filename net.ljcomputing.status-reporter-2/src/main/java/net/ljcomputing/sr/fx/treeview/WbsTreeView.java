@@ -61,7 +61,7 @@ public class WbsTreeView extends TreeView<Model> {
        */
       @Override
       public void handle(TreeModificationEvent<Model> event) {
-        if(null != taskTableController) {
+        if(taskTableController != null) {
           try {
             taskTableController.populateTaskTask();
           } catch (Exception e) {

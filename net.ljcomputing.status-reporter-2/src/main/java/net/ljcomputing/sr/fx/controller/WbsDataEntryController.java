@@ -59,7 +59,7 @@ public class WbsDataEntryController {
       if(response.get().equals(ButtonType.OK)) {
         item = dialog.getItem();
         
-        if(null != item.getId()) {
+        if(item.getId() != null) {
           SrModelServiceFactory.WorkBreakdownStructure.getServiceInstance().update(item);
         } else {
           SrModelServiceFactory.WorkBreakdownStructure.getServiceInstance().create(item);

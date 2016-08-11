@@ -14,7 +14,6 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.sr.model;
 
 import net.ljcomputing.exception.PersistenceException;
@@ -24,7 +23,6 @@ import net.ljcomputing.persistence.Entity;
 import net.ljcomputing.persistence.EntityPopulator;
 
 import java.sql.ResultSet;
-import java.text.DecimalFormat;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -40,29 +38,27 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * @author James G. Willmore
  *
  */
-public class TaskViewModel extends AbstractModel implements Comparable<TaskViewModel>, Model, Entity {
-  
-  /** The decimal format. */
-  public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("###.0##");
-  
+public class TaskViewModel extends AbstractModel 
+    implements Comparable<TaskViewModel>, Model, Entity {
+
   /** The start time. */
   private Date startTime;
-  
+
   /** The end time. */
   private Date endTime;
-  
+
   /** The comments. */
   private String comments;
-  
+
   /** The activity id. */
   private Integer activityId;
 
   /** The activity name. */
   private String activityName;
-  
+
   /** The activity description. */
   private String activityDescription;
-  
+
   /** The wbs id. */
   private Integer wbsId;
 
@@ -71,32 +67,33 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
 
   /** The wbs description. */
   private String wbsDescription;
-  
+
   /** The elapsed time. */
   private long elapsedTime;
-  
+
   /** The elapsed time in hours. */
   private double elapsedHours;
-  
+
   /**
    * Instantiates a new task view model.
    *
-   * @param ep the ep
-   * @param rs the rs
+   * @param entityPopulator the entity populator
+   * @param resultSet the result set
    * @throws PersistenceException the persistence exception
    */
-  public TaskViewModel(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    populate(ep, rs);
+  public TaskViewModel(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    populate(entityPopulator, resultSet);
   }
 
+
   /**
-   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.sr.persistence.EntityPopulator, java.sql.ResultSet)
+   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
    */
-  public void populate(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    ep.populate(this, rs);
+  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    entityPopulator.populate(this, resultSet);
     calculateElapsedTime();
   }
-  
+
   /**
    * Gets the start time.
    *
@@ -260,7 +257,7 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
   public void setWbsDescription(String wbsDescription) {
     this.wbsDescription = wbsDescription;
   }
-  
+
   /**
    * Gets the record key.
    *
@@ -269,7 +266,7 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
   public String getRecordKey() {
     return getWbsName() + "," + getActivityName();
   }
-  
+
   /**
    * Gets the task.
    *
@@ -277,7 +274,7 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
    */
   public Task getTask() {
     Task task = new Task(getActivityId());
-    
+
     task.setId(getId());
     task.setStartTime(getStartTime());
     task.setEndTime(getEndTime());
@@ -285,7 +282,7 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
 
     return task;
   }
-  
+
   /**
    * Calculate elapsed time.
    *
@@ -293,14 +290,14 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
    */
   private long calculateElapsedTime() {
     elapsedTime = 0;
-    
-    if(null != getEndTime() && null != getStartTime()) {
+
+    if (getEndTime() != null && getStartTime() != null) {
       Instant end = getEndTime().toInstant();
       Instant start = getStartTime().toInstant();
       elapsedTime = ChronoUnit.MINUTES.between(start, end);
       elapsedHours = (double) (elapsedTime / 60d);
     }
-    
+
     return elapsedTime;
   }
 
@@ -312,27 +309,27 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
   public long getElapsedTime() {
     return calculateElapsedTime();
   }
-  
+
   /**
    * Gets the elapsed hours.
    *
    * @return the elapsed hours
    */
   public double getElapsedHours() {
-    if(elapsedHours <= 0) {
+    if (elapsedHours <= 0) {
       calculateElapsedTime();
     }
-    
+
     return elapsedHours;
   }
-  
+
   /**
    * Get formated elapsed hours as a String.
    *
    * @return the string
    */
   public String getFormatedElapsedHours() {
-    return DECIMAL_FORMAT.format(getElapsedHours());
+    return SrConstants.DECIMAL_FORMAT.format(getElapsedHours());
   }
 
   /**
@@ -342,7 +339,7 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
   public String toString() {
     return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
   }
-  
+
   /**
    * To values list.
    *
@@ -350,35 +347,35 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
    */
   public List<String> toValuesList() {
     List<String> values = new ArrayList<String>();
-    
+
     values.add(wbsName);
     values.add(activityName);
     values.add(getFormatedElapsedHours());
     values.add(comments);
-    
+
     return values;
   }
 
   /**
    * @see java.lang.Comparable#compareTo(java.lang.Object)
    */
-  public int compareTo(TaskViewModel o) {
+  public int compareTo(TaskViewModel obj) {
     int finalOrder = 0;
-    
-    finalOrder = compareStrings(wbsName, o.getWbsName());
-      
-    if(finalOrder == 0) {
-      finalOrder = compareStrings(activityName, o.getActivityName());
+
+    finalOrder = compareStrings(wbsName, obj.getWbsName());
+
+    if (finalOrder == 0) {
+      finalOrder = compareStrings(activityName, obj.getActivityName());
     }
-      
-    if(finalOrder == 0) {
-      finalOrder = Double.valueOf(elapsedHours).compareTo(Double.valueOf(o.getElapsedHours()));
+
+    if (finalOrder == 0) {
+      finalOrder = Double.valueOf(elapsedHours).compareTo(Double.valueOf(obj.getElapsedHours()));
     }
 
     return finalOrder;
   }
 
-  //TODO - move to utility class
+  // TODO - move to utility class
   /**
    * Compare two Strings.
    *
@@ -388,15 +385,15 @@ public class TaskViewModel extends AbstractModel implements Comparable<TaskViewM
    */
   private int compareStrings(String left, String right) {
     int finalOrder = 0;
-    
-    if(null == left && null != right) {
+
+    if (left == null && right != null) {
       finalOrder = -1;
-    } else if(null != left && null == right) {
+    } else if (left != null && right == null) {
       finalOrder = 1;
     } else {
       finalOrder = left.compareToIgnoreCase(right);
     }
-    
+
     return finalOrder;
   }
 }

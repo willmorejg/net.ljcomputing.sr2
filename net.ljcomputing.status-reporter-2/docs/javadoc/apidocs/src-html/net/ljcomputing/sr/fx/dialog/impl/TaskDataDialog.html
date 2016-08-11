@@ -152,7 +152,7 @@
 <span class="sourceLineNo">144</span>      }<a name="line.144"></a>
 <span class="sourceLineNo">145</span>    });<a name="line.145"></a>
 <span class="sourceLineNo">146</span>    <a name="line.146"></a>
-<span class="sourceLineNo">147</span>    if(null == previousItem) {<a name="line.147"></a>
+<span class="sourceLineNo">147</span>    if(previousItem == null) {<a name="line.147"></a>
 <span class="sourceLineNo">148</span>      adjustStartTimeButton.setVisible(false);<a name="line.148"></a>
 <span class="sourceLineNo">149</span>    }<a name="line.149"></a>
 <span class="sourceLineNo">150</span>    <a name="line.150"></a>
@@ -162,7 +162,7 @@
 <span class="sourceLineNo">154</span>      ReadOnlyProperty&lt;LocalTime&gt; endValue = endSpinner.valueProperty();<a name="line.154"></a>
 <span class="sourceLineNo">155</span>      LocalTime end = endValue.getValue();<a name="line.155"></a>
 <span class="sourceLineNo">156</span>      <a name="line.156"></a>
-<span class="sourceLineNo">157</span>      if(null == end) {<a name="line.157"></a>
+<span class="sourceLineNo">157</span>      if(end == null) {<a name="line.157"></a>
 <span class="sourceLineNo">158</span>        okButton.setDisable(false);<a name="line.158"></a>
 <span class="sourceLineNo">159</span>        return;<a name="line.159"></a>
 <span class="sourceLineNo">160</span>      }<a name="line.160"></a>
@@ -174,7 +174,7 @@
 <span class="sourceLineNo">166</span>    startDateField.valueProperty().addListener((obs, oldValue, newValue) -&gt; {<a name="line.166"></a>
 <span class="sourceLineNo">167</span>      Button okButton = (Button) super.alert.getDialogPane().lookupButton(ButtonType.OK);<a name="line.167"></a>
 <span class="sourceLineNo">168</span><a name="line.168"></a>
-<span class="sourceLineNo">169</span>      if(null != endDateField.getValue() &amp;&amp; newValue.isAfter(endDateField.getValue())) {<a name="line.169"></a>
+<span class="sourceLineNo">169</span>      if(endDateField.getValue() != null &amp;&amp; newValue.isAfter(endDateField.getValue())) {<a name="line.169"></a>
 <span class="sourceLineNo">170</span>        okButton.setDisable(true);<a name="line.170"></a>
 <span class="sourceLineNo">171</span>      } else {<a name="line.171"></a>
 <span class="sourceLineNo">172</span>        okButton.setDisable(false);<a name="line.172"></a>
@@ -185,7 +185,7 @@
 <span class="sourceLineNo">177</span>    startHbox.getChildren().addAll(startDateField, startTimeField, adjustStartTimeButton);<a name="line.177"></a>
 <span class="sourceLineNo">178</span>    <a name="line.178"></a>
 <span class="sourceLineNo">179</span>    HBox endHbox = new HBox();<a name="line.179"></a>
-<span class="sourceLineNo">180</span>    LocalDate endDateLocal = null != item.getEndTime() ? LocalDateTime.ofInstant(item.getEndTime().toInstant(), ZoneId.systemDefault()).toLocalDate() : null;<a name="line.180"></a>
+<span class="sourceLineNo">180</span>    LocalDate endDateLocal = item.getEndTime() != null ? LocalDateTime.ofInstant(item.getEndTime().toInstant(), ZoneId.systemDefault()).toLocalDate() : null;<a name="line.180"></a>
 <span class="sourceLineNo">181</span>    endDateField = new DatePicker();<a name="line.181"></a>
 <span class="sourceLineNo">182</span>    endDateField.setValue(endDateLocal);<a name="line.182"></a>
 <span class="sourceLineNo">183</span>    endTimeField = new TimeControl(item.getEndTime());<a name="line.183"></a>
@@ -198,13 +198,13 @@
 <span class="sourceLineNo">190</span>        endTimeField.setVisible(false);<a name="line.190"></a>
 <span class="sourceLineNo">191</span>    });<a name="line.191"></a>
 <span class="sourceLineNo">192</span>    <a name="line.192"></a>
-<span class="sourceLineNo">193</span>    if(null == item.getEndTime()) {<a name="line.193"></a>
+<span class="sourceLineNo">193</span>    if(item.getEndTime() == null) {<a name="line.193"></a>
 <span class="sourceLineNo">194</span>      endTimeField.setVisible(false);<a name="line.194"></a>
 <span class="sourceLineNo">195</span>      clearButton.setVisible(false);<a name="line.195"></a>
 <span class="sourceLineNo">196</span>    }<a name="line.196"></a>
 <span class="sourceLineNo">197</span>    <a name="line.197"></a>
 <span class="sourceLineNo">198</span>    endDateField.valueProperty().addListener((obs, oldValue, newValue) -&gt; {<a name="line.198"></a>
-<span class="sourceLineNo">199</span>      if(null != newValue) {<a name="line.199"></a>
+<span class="sourceLineNo">199</span>      if(newValue != null) {<a name="line.199"></a>
 <span class="sourceLineNo">200</span>        endTimeField.setVisible(true);<a name="line.200"></a>
 <span class="sourceLineNo">201</span>        endTimeField.setLocalTime(startTimeField.getLocalTime().plusSeconds(1));<a name="line.201"></a>
 <span class="sourceLineNo">202</span>        clearButton.setVisible(true);<a name="line.202"></a>
@@ -215,7 +215,7 @@
 <span class="sourceLineNo">207</span>      <a name="line.207"></a>
 <span class="sourceLineNo">208</span>      Button okButton = (Button) super.alert.getDialogPane().lookupButton(ButtonType.OK);<a name="line.208"></a>
 <span class="sourceLineNo">209</span>      <a name="line.209"></a>
-<span class="sourceLineNo">210</span>      if(null != newValue &amp;&amp; newValue.isBefore(startDateField.getValue())) {<a name="line.210"></a>
+<span class="sourceLineNo">210</span>      if(newValue != null &amp;&amp; newValue.isBefore(startDateField.getValue())) {<a name="line.210"></a>
 <span class="sourceLineNo">211</span>        okButton.setDisable(true);<a name="line.211"></a>
 <span class="sourceLineNo">212</span>      } else {<a name="line.212"></a>
 <span class="sourceLineNo">213</span>        okButton.setDisable(false);<a name="line.213"></a>
@@ -227,7 +227,7 @@
 <span class="sourceLineNo">219</span>      Button okButton = (Button) super.alert.getDialogPane().lookupButton(ButtonType.OK);<a name="line.219"></a>
 <span class="sourceLineNo">220</span>      TimeSpinner startSpinner = startTimeField.spinnerProperty();<a name="line.220"></a>
 <span class="sourceLineNo">221</span>      <a name="line.221"></a>
-<span class="sourceLineNo">222</span>      if(null == newValue) {<a name="line.222"></a>
+<span class="sourceLineNo">222</span>      if(newValue == null) {<a name="line.222"></a>
 <span class="sourceLineNo">223</span>        okButton.setDisable(false);<a name="line.223"></a>
 <span class="sourceLineNo">224</span>        return;<a name="line.224"></a>
 <span class="sourceLineNo">225</span>      }<a name="line.225"></a>
@@ -257,7 +257,7 @@
 <span class="sourceLineNo">249</span>    LocalDateTime startLdt = LocalDateTime.of(startDateField.getValue(), startTimeField.getLocalTime());<a name="line.249"></a>
 <span class="sourceLineNo">250</span>    item.setStartTime(Date.from(startLdt.atZone(ZoneId.systemDefault()).toInstant()));<a name="line.250"></a>
 <span class="sourceLineNo">251</span><a name="line.251"></a>
-<span class="sourceLineNo">252</span>    if(null != endDateField.getValue() &amp;&amp; null != endTimeField.getLocalTime()) {<a name="line.252"></a>
+<span class="sourceLineNo">252</span>    if(endDateField.getValue() != null &amp;&amp; endTimeField.getLocalTime() != null) {<a name="line.252"></a>
 <span class="sourceLineNo">253</span>      LocalDateTime endLdt = LocalDateTime.of(endDateField.getValue(), endTimeField.getLocalTime());<a name="line.253"></a>
 <span class="sourceLineNo">254</span>      item.setEndTime(Date.from(endLdt.atZone(ZoneId.systemDefault()).toInstant()));<a name="line.254"></a>
 <span class="sourceLineNo">255</span>    } else {<a name="line.255"></a>

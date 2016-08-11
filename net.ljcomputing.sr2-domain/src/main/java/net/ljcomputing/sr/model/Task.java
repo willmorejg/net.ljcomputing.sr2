@@ -14,7 +14,6 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.sr.model;
 
 import net.ljcomputing.exception.PersistenceException;
@@ -37,41 +36,43 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  */
 public class Task extends AbstractModel implements Model, Entity {
   /** The associated activity. */
-  private Integer activity;
-  
+  private transient Integer activity;
+
   /** The start time. */
   private Date startTime = new Date();
-  
+
   /** The end time. */
   private Date endTime;
-  
+
   /** The comments. */
   private String comments;
-  
+
   /**
    * Instantiates a new task.
    *
-   * @param ep the ep
-   * @param rs the rs
+   * @param entityPopulator the entity populator
+   * @param resultSet the result set
    * @throws PersistenceException the persistence exception
    */
-  public Task(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    populate(ep, rs);
+  public Task(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    super();
+    populate(entityPopulator, resultSet);
   }
-  
+
   /**
-   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.sr.persistence.EntityPopulator, java.sql.ResultSet)
+   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
    */
-  public void populate(EntityPopulator ep, ResultSet rs) throws PersistenceException {
-    ep.populate(this, rs);
+  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    entityPopulator.populate(this, resultSet);
   }
-  
+
   /**
    * Instantiates a new task.
    *
    * @param activity the activity
    */
-  public Task(Integer activity) {
+  public Task(final Integer activity) {
+    super();
     this.activity = activity;
   }
 
@@ -89,7 +90,7 @@ public class Task extends AbstractModel implements Model, Entity {
    *
    * @param activity the activity
    */
-  public void newActivity(Integer activity) {
+  public void newActivity(final Integer activity) {
     this.activity = activity;
   }
 
@@ -107,7 +108,7 @@ public class Task extends AbstractModel implements Model, Entity {
    *
    * @param startTime the new start time
    */
-  public void setStartTime(Date startTime) {
+  public void setStartTime(final Date startTime) {
     this.startTime = startTime;
   }
 
@@ -125,7 +126,7 @@ public class Task extends AbstractModel implements Model, Entity {
    *
    * @param endTime the new end time
    */
-  public void setEndTime(Date endTime) {
+  public void setEndTime(final Date endTime) {
     this.endTime = endTime;
   }
 
@@ -143,10 +144,10 @@ public class Task extends AbstractModel implements Model, Entity {
    *
    * @param comments the new comments
    */
-  public void setComments(String comments) {
+  public void setComments(final String comments) {
     this.comments = comments;
   }
-  
+
   /**
    * @see java.lang.Object#toString()
    */

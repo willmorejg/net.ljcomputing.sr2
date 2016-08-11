@@ -14,7 +14,6 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.sr.model;
 
 import java.util.ArrayList;
@@ -29,53 +28,53 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * @author James G. Willmore
  *
  */
-public class TaskViewReport  {
-  
+public class TaskViewReport extends SrConstants {
+
   /** The header. */
-  public static final String[] CVS_RECORD_HEADER = {"WBS Name", "Activity Name", "Duration"};
+  public static final String[] CVS_RECORD_HEADER = { "WBS Name", "Activity Name", "Duration" };
 
   /** The activity name. */
-  private String activityName;
+  private transient final String activityName;
 
   /** The wbs name. */
-  private String wbsName;
-  
+  private transient final String wbsName;
+
   /** The elapsed time in hours. */
-  private double elapsedHours;
-  
+  private transient double elapsedHours;
+
   /**
    * Instantiates a new task view report.
    *
    * @param model the model
    */
-  public TaskViewReport(TaskViewModel model) {
+  public TaskViewReport(final TaskViewModel model) {
     super();
     wbsName = model.getWbsName();
     activityName = model.getActivityName();
     addElapsedHours(model.getElapsedHours());
   }
-  
+
   /**
    * Adds the elapsed hours.
    *
    * @param elapsedHours the elapsed hours
    */
-  public void addElapsedHours(double elapsedHours) {
+  public void addElapsedHours(final double elapsedHours) {
     this.elapsedHours += elapsedHours;
   }
-  
+
   /**
    * To values list.
    *
    * @return the list
    */
   public List<String> toValuesList() {
-    List<String> values = new ArrayList<String>();
-    
+    final List<String> values = new ArrayList<String>();
+
     values.add(wbsName);
     values.add(activityName);
-    values.add(TaskViewModel.DECIMAL_FORMAT.format(elapsedHours));
-    
+    values.add(DECIMAL_FORMAT.format(elapsedHours));
+
     return values;
   }
 

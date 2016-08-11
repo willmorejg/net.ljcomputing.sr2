@@ -79,7 +79,7 @@ public class ActivityRepositoryImpl extends AbstractRepository<Activity> {
       throw new PersistenceException(exception);
     } finally {
       try {
-        if (null != rs) {
+        if (rs != null) {
           rs.close();
         }
       } catch (SQLException e) {

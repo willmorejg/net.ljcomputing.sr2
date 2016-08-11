@@ -72,7 +72,7 @@ public class TaskRepositoryImpl extends AbstractRepository<Task> {
       rs = ps.executeQuery();
 
       while(rs.next()) {
-        if(null != rs.getTimestamp(1) && now.before(rs.getTimestamp(1))) {
+        if(rs.getTimestamp(1) != null && now.before(rs.getTimestamp(1))) {
           maxTimestamp = rs.getTimestamp(1);
         }
       }
@@ -83,7 +83,7 @@ public class TaskRepositoryImpl extends AbstractRepository<Task> {
       throw new PersistenceException(exception);
     } finally {
       try {
-        if (null != rs) {
+        if (rs != null) {
           rs.close();
         }
       } catch (SQLException e) {

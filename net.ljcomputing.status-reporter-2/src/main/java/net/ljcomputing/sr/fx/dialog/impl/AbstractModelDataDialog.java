@@ -124,7 +124,7 @@ public abstract class AbstractModelDataDialog<T extends Model> implements ModelD
   public Optional<ButtonType> showAndWait(T item) throws Exception {
     createDialog(item);
     
-    if(null != item.getId()) {
+    if(item.getId() != null) {
       idField.setText(item.getId().toString());
     }
     return alert.showAndWait();

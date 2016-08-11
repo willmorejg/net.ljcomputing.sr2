@@ -64,7 +64,7 @@ public class ActivityDataEntryController {
       if(response.get().equals(ButtonType.OK)) {
         item = dialog.getItem();
         
-        if(null != item.getId()) {
+        if(item.getId() != null) {
           SrModelServiceFactory.Activity.getServiceInstance().update(item);
         } else {
           SrModelServiceFactory.Activity.getServiceInstance().create(item);

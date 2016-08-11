@@ -144,7 +144,7 @@ public class TaskDataDialog
       }
     });
     
-    if(null == previousItem) {
+    if(previousItem == null) {
       adjustStartTimeButton.setVisible(false);
     }
     
@@ -154,7 +154,7 @@ public class TaskDataDialog
       ReadOnlyProperty<LocalTime> endValue = endSpinner.valueProperty();
       LocalTime end = endValue.getValue();
       
-      if(null == end) {
+      if(end == null) {
         okButton.setDisable(false);
         return;
       }
@@ -166,7 +166,7 @@ public class TaskDataDialog
     startDateField.valueProperty().addListener((obs, oldValue, newValue) -> {
       Button okButton = (Button) super.alert.getDialogPane().lookupButton(ButtonType.OK);
 
-      if(null != endDateField.getValue() && newValue.isAfter(endDateField.getValue())) {
+      if(endDateField.getValue() != null && newValue.isAfter(endDateField.getValue())) {
         okButton.setDisable(true);
       } else {
         okButton.setDisable(false);
@@ -177,7 +177,7 @@ public class TaskDataDialog
     startHbox.getChildren().addAll(startDateField, startTimeField, adjustStartTimeButton);
     
     HBox endHbox = new HBox();
-    LocalDate endDateLocal = null != item.getEndTime() ? LocalDateTime.ofInstant(item.getEndTime().toInstant(), ZoneId.systemDefault()).toLocalDate() : null;
+    LocalDate endDateLocal = item.getEndTime() != null ? LocalDateTime.ofInstant(item.getEndTime().toInstant(), ZoneId.systemDefault()).toLocalDate() : null;
     endDateField = new DatePicker();
     endDateField.setValue(endDateLocal);
     endTimeField = new TimeControl(item.getEndTime());
@@ -190,13 +190,13 @@ public class TaskDataDialog
         endTimeField.setVisible(false);
     });
     
-    if(null == item.getEndTime()) {
+    if(item.getEndTime() == null) {
       endTimeField.setVisible(false);
       clearButton.setVisible(false);
     }
     
     endDateField.valueProperty().addListener((obs, oldValue, newValue) -> {
-      if(null != newValue) {
+      if(newValue != null) {
         endTimeField.setVisible(true);
         endTimeField.setLocalTime(startTimeField.getLocalTime().plusSeconds(1));
         clearButton.setVisible(true);
@@ -207,7 +207,7 @@ public class TaskDataDialog
       
       Button okButton = (Button) super.alert.getDialogPane().lookupButton(ButtonType.OK);
       
-      if(null != newValue && newValue.isBefore(startDateField.getValue())) {
+      if(newValue != null && newValue.isBefore(startDateField.getValue())) {
         okButton.setDisable(true);
       } else {
         okButton.setDisable(false);
@@ -219,7 +219,7 @@ public class TaskDataDialog
       Button okButton = (Button) super.alert.getDialogPane().lookupButton(ButtonType.OK);
       TimeSpinner startSpinner = startTimeField.spinnerProperty();
       
-      if(null == newValue) {
+      if(newValue == null) {
         okButton.setDisable(false);
         return;
       }
@@ -249,7 +249,7 @@ public class TaskDataDialog
     LocalDateTime startLdt = LocalDateTime.of(startDateField.getValue(), startTimeField.getLocalTime());
     item.setStartTime(Date.from(startLdt.atZone(ZoneId.systemDefault()).toInstant()));
 
-    if(null != endDateField.getValue() && null != endTimeField.getLocalTime()) {
+    if(endDateField.getValue() != null && endTimeField.getLocalTime() != null) {
       LocalDateTime endLdt = LocalDateTime.of(endDateField.getValue(), endTimeField.getLocalTime());
       item.setEndTime(Date.from(endLdt.atZone(ZoneId.systemDefault()).toInstant()));
     } else {
