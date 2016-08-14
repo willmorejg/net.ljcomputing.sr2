@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.Main
-	c1026 [label=<<table title="net.ljcomputing.sr.Main" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Main.html">
+	c1091 [label=<<table title="net.ljcomputing.sr.Main" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Main.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Main </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Main.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.Main NAVASSOC org.slf4j.Logger
-	c1026:p -> c1058:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1091:p -> c1092:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// org.slf4j.Logger
-	c1058 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c1092 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>

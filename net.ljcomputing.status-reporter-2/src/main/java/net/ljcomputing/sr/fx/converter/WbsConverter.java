@@ -15,33 +15,32 @@
  */
 
 
-package net.ljcomputing.sr;
+package net.ljcomputing.sr.fx.converter;
 
-import net.ljcomputing.sr.model.ActivityViewModel;
+import net.ljcomputing.sr.model.WorkBreakdownStructure;
 
 import javafx.collections.ObservableList;
 import javafx.util.StringConverter;
 
 /**
- * Activity view model converter.
+ * Work breakdown structure converter.
  * <p>
- * Used with a ComboBox to convert an ActivityViewModel.
+ * Used with a ComboBox to convert a WorkBreakdownStructure.
  * 
  * @author James G. Willmore
  *
  */
-public class ActivityViewConverter extends StringConverter<ActivityViewModel> {
+public class WbsConverter extends StringConverter<WorkBreakdownStructure> {
   
   /** The list. */
-  private transient final ObservableList<ActivityViewModel> list;
+  private ObservableList<WorkBreakdownStructure> list;
   
   /**
-   * Instantiates a new activity view converter.
+   * Instantiates a new wbs converter.
    *
    * @param list the list
    */
-  public ActivityViewConverter(final ObservableList<ActivityViewModel> list) {
-    super();
+  public WbsConverter(ObservableList<WorkBreakdownStructure> list) {
     this.list = list;
   }
 
@@ -49,28 +48,21 @@ public class ActivityViewConverter extends StringConverter<ActivityViewModel> {
    * @see javafx.util.StringConverter#toString(java.lang.Object)
    */
   @Override
-  public String toString(final ActivityViewModel object) {
-    return String.format("Activity %s (WBS %s)", object.getName(), object.getWbsName());
+  public String toString(WorkBreakdownStructure object) {
+    return object.getName();
   }
 
   /**
    * @see javafx.util.StringConverter#fromString(java.lang.String)
    */
   @Override
-  public ActivityViewModel fromString(final String string) {
-    ActivityViewModel result = null;
-    
-    for(final ActivityViewModel item : list) {
-      final String name = item.getName();
-      final String wbsName = item.getWbsName();
-      final String formatedName = String.format("Activity %s (WBS %s)", name, wbsName);
-      
-      if(formatedName.equals(string)) {
-        result = item;
-        break;
+  public WorkBreakdownStructure fromString(String string) {
+    for(WorkBreakdownStructure item : list) {
+      if(item.getName().equals(string)) {
+        return item;
       }
     }
     
-    return result;
+    return null;
   }
 }

@@ -19,6 +19,7 @@ package net.ljcomputing.sr.fx.controller;
 import net.ljcomputing.fx.alert.ErrorAlert;
 import net.ljcomputing.fx.control.time.DateTimeControls;
 import net.ljcomputing.fx.control.time.TimeControl;
+import net.ljcomputing.sr.configuration.PersistenceValidator;
 import net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog;
 import net.ljcomputing.sr.fx.treeview.WbsTreeView;
 import net.ljcomputing.sr.model.ActivityViewModel;
@@ -37,6 +38,7 @@ import java.time.LocalTime;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -44,6 +46,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ContextMenu;
@@ -117,23 +121,33 @@ public class MainController implements Initializable {
    * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
    */
   public void initialize(URL arg0, ResourceBundle arg1) {
-    initTimeControls();
-    initTaskTable();    
-    wbsTreeViewController = new WbsTreeViewController(wbsTree);
-    wbsTree.setTaskTableController(taskTableController);
-    populateTreeRoot();
-    
-    refreshData.setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        populateTreeRoot();
-        populateTaskTable();
-      }
-    });
-    
-    statusBar.setText("Initialized");
-    
-    LOGGER.debug("initialized");
+    if (PersistenceValidator.initialize()) {
+      initTimeControls();
+      initTaskTable();
+
+      wbsTreeViewController = new WbsTreeViewController(wbsTree);
+      wbsTree.setTaskTableController(taskTableController);
+      
+      populateTreeRoot();
+      
+      refreshData.setOnAction(new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+          populateTreeRoot();
+          populateTaskTable();
+        }
+      });
+      
+      statusBar.setText("Initialized");
+      LOGGER.debug("initialized");
+    } else {
+      LOGGER.error("Failed to initialize database (another instance running?)");
+      Alert alert = new Alert(AlertType.ERROR);
+      alert.setContentText("An error occured initializing the database\n (is another instance running?)");
+      alert.showAndWait();
+      Platform.exit();
+      System.exit(1);
+    }
   }
   
   /**

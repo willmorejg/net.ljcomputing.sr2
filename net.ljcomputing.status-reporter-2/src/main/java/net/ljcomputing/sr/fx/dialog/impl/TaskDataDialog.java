@@ -18,7 +18,7 @@ package net.ljcomputing.sr.fx.dialog.impl;
 
 import net.ljcomputing.fx.control.time.TimeControl;
 import net.ljcomputing.fx.control.time.TimeSpinner;
-import net.ljcomputing.sr.ActivityViewConverter;
+import net.ljcomputing.sr.fx.converter.ActivityViewConverter;
 import net.ljcomputing.sr.model.ActivityViewModel;
 import net.ljcomputing.sr.model.Task;
 import net.ljcomputing.sr.model.TaskViewModel;

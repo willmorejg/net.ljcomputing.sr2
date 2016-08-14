@@ -16,7 +16,7 @@
 
 package net.ljcomputing.sr.fx.dialog.impl;
 
-import net.ljcomputing.sr.WbsConverter;
+import net.ljcomputing.sr.fx.converter.WbsConverter;
 import net.ljcomputing.sr.model.Activity;
 import net.ljcomputing.sr.model.WorkBreakdownStructure;
 

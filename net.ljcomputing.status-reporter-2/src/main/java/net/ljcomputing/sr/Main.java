@@ -1,7 +1,6 @@
 package net.ljcomputing.sr;
 
 import net.ljcomputing.fx.alert.ErrorAlert;
-import net.ljcomputing.sr.configuration.PersistenceValidator;
 import net.ljcomputing.sr.configuration.StatusReporterConfig;
 
 import org.slf4j.Logger;
@@ -20,8 +19,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -73,16 +70,6 @@ public class Main extends Application {
     });
 
     setScreen(primaryStage);
-
-    primaryStage.setOnShown(e -> {
-      if(!PersistenceValidator.initialize()) {
-        Alert alert = new Alert(AlertType.ERROR);
-        alert.setContentText("An error occured initializing the database\n (is another instance running?)");
-        alert.showAndWait();
-        Platform.exit();
-        System.exit(1);
-      }
-    });
 
     primaryStage.show();
 

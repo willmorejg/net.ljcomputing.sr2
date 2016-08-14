@@ -10,51 +10,51 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model>
-	c1282 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
+	c1313 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractModelDataDialog&lt;T extends Model&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractModelDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog
-	c1283 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TaskDataDialog.html">
+	c1314 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TaskDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TaskDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.TaskViewModel>
-	c1282:p -> c1283:p [dir=back,arrowtail=empty];
+	c1313:p -> c1314:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model> NAVASSOC org.slf4j.Logger
-	c1282:p -> c1303:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1313:p -> c1337:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC org.slf4j.Logger
-	c1283:p -> c1303:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1314:p -> c1337:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC net.ljcomputing.sr.model.TaskViewModel
-	c1283:p -> c1304:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1314:p -> c1338:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC net.ljcomputing.fx.control.time.TimeControl
-	c1283:p -> c1305:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1314:p -> c1339:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC net.ljcomputing.fx.control.time.TimeControl
-	c1283:p -> c1305:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1314:p -> c1339:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.ActivityViewModel
-	c1283:p -> c1306:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.Task
-	c1283:p -> c1307:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1314:p -> c1340:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.TaskViewModel
-	c1283:p -> c1304:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1314:p -> c1338:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.Task
+	c1314:p -> c1341:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.ActivityViewModel
-	c1306 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1340 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityViewModel </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.Task
-	c1307 [label=<<table title="net.ljcomputing.sr.model.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1341 [label=<<table title="net.ljcomputing.sr.model.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// org.slf4j.Logger
-	c1303 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c1337 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>
@@ -62,14 +62,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://www.slf4j.org/apidocs/org/slf4j/Logger.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.TaskViewModel
-	c1304 [label=<<table title="net.ljcomputing.sr.model.TaskViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1338 [label=<<table title="net.ljcomputing.sr.model.TaskViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskViewModel </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.fx.control.time.TimeControl
-	c1305 [label=<<table title="net.ljcomputing.fx.control.time.TimeControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1339 [label=<<table title="net.ljcomputing.fx.control.time.TimeControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TimeControl </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.fx.control.time </font></td></tr>
