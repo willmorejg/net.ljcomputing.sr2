@@ -35,10 +35,10 @@
   <slf4j.version>1.7.21</slf4j.version>
   <logback.version>1.1.7</logback.version>
 
-  <local.net.ljcomputing.model.version>1.0.1-SNAPSHOT</local.net.ljcomputing.model.version>
-  <local.net.ljcomputing.persistence.version>1.0.3-SNAPSHOT</local.net.ljcomputing.persistence.version>
-  <local.net.ljcomputing.service.version>1.0.2-SNAPSHOT</local.net.ljcomputing.service.version>
-  <local.net.ljcomputing.utility.version>1.0.1-SNAPSHOT</local.net.ljcomputing.utility.version>
+  <!-- <local.net.ljcomputing.model.version>1.0.1-SNAPSHOT</local.net.ljcomputing.model.version> -->
+  <!-- <local.net.ljcomputing.persistence.version>1.0.3-SNAPSHOT</local.net.ljcomputing.persistence.version> -->
+  <!-- <local.net.ljcomputing.service.version>1.0.2-SNAPSHOT</local.net.ljcomputing.service.version> -->
+  <!-- <local.net.ljcomputing.utility.version>1.0.1-SNAPSHOT</local.net.ljcomputing.utility.version> -->
  </properties>
 
  <!-- Contact and License Information -->
@@ -103,17 +103,17 @@
   <!-- <version>${local.net.ljcomputing.utility.version}</version> -->
   <!-- </dependency> -->
 
-  <!-- <dependency> -->
-  <!-- <groupId>com.github.willmorejg</groupId> -->
-  <!-- <artifactId>net.ljcomputing.model</artifactId> -->
-  <!-- <version>${net.ljcomputing.model.version}</version> -->
-  <!-- </dependency> -->
-
   <dependency>
-   <groupId>net.ljcomputing</groupId>
-   <artifactId>model</artifactId>
-   <version>${local.net.ljcomputing.model.version}</version>
+   <groupId>com.github.willmorejg</groupId>
+   <artifactId>net.ljcomputing.model</artifactId>
+   <version>${net.ljcomputing.model.version}</version>
   </dependency>
+
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>model</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.model.version}</version> -->
+  <!-- </dependency> -->
 
   <dependency>
    <groupId>com.github.willmorejg</groupId>
