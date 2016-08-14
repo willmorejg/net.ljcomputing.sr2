@@ -4,7 +4,7 @@
  <parent>
   <artifactId>sr2</artifactId>
   <groupId>net.ljcomputing</groupId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
  </parent>
 
  <artifactId>sr2-service</artifactId>
@@ -140,13 +140,13 @@
   <dependency>
    <groupId>net.ljcomputing</groupId>
    <artifactId>sr2-domain</artifactId>
-   <version>1.0.1-SNAPSHOT</version>
+   <version>1.0.2-SNAPSHOT</version>
   </dependency>
 
   <dependency>
    <groupId>net.ljcomputing</groupId>
    <artifactId>sr2-persistence</artifactId>
-   <version>1.0.1-SNAPSHOT</version>
+   <version>1.0.2-SNAPSHOT</version>
   </dependency>
 
   <dependency>

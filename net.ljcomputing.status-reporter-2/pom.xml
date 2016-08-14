@@ -5,7 +5,7 @@
  <parent>
   <groupId>net.ljcomputing</groupId>
   <artifactId>sr2</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
  </parent>
 
  <artifactId>status-reporter-2</artifactId>
@@ -26,9 +26,9 @@
   <net.ljcomputing.persistence.version>persistence-1.0.3</net.ljcomputing.persistence.version>
   <net.ljcomputing.service.version>service-1.0.1</net.ljcomputing.service.version>
   <net.ljcomputing.fx.version>fx-1.0.0</net.ljcomputing.fx.version>
-  <net.ljcomputing.sr2-domain.version>1.0.1-SNAPSHOT</net.ljcomputing.sr2-domain.version>
-  <net.ljcomputing.sr2-persistence.version>1.0.1-SNAPSHOT</net.ljcomputing.sr2-persistence.version>
-  <net.ljcomputing.sr2-service.version>1.0.1-SNAPSHOT</net.ljcomputing.sr2-service.version>
+  <net.ljcomputing.sr2-domain.version>1.0.2-SNAPSHOT</net.ljcomputing.sr2-domain.version>
+  <net.ljcomputing.sr2-persistence.version>1.0.2-SNAPSHOT</net.ljcomputing.sr2-persistence.version>
+  <net.ljcomputing.sr2-service.version>1.0.2-SNAPSHOT</net.ljcomputing.sr2-service.version>
   <derby.version>10.12.1.1</derby.version>
   <commons-dbcp2.version>2.0.1</commons-dbcp2.version>
   <commons-lang3.version>3.4</commons-lang3.version>

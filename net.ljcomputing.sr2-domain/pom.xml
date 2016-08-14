@@ -5,7 +5,7 @@
  <parent>
   <groupId>net.ljcomputing</groupId>
   <artifactId>sr2</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
  </parent>
 
  <artifactId>sr2-domain</artifactId>
