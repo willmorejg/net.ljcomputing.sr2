@@ -36,11 +36,16 @@ import javafx.scene.control.TreeCell;
  * @author James G. Willmore
  *
  */
-public class WbsTreeCell extends TreeCell<Model> {
+class WbsTreeCell extends TreeCell<Model> {
   @SuppressWarnings("unused")
   private final Logger logger = LoggerFactory.getLogger(WbsTreeCell.class);
   
-  public WbsTreeCell(WbsTreeView treeView) {
+  /**
+   * Instantiates a new wbs tree cell.
+   *
+   * @param treeView the tree view
+   */
+  WbsTreeCell(WbsTreeView treeView) {
     super();
 
     selectedProperty().addListener(listener -> {

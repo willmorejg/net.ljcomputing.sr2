@@ -16,8 +16,6 @@
 
 package net.ljcomputing.sr.configuration;
 
-import net.ljcomputing.sr.fx.controller.MainController;
-
 /**
  * Status Reporter configuration.
  * 
@@ -31,13 +29,4 @@ public class StatusReporterConfig {
 
   /** The main FXML file (path relative from location of SpringFxmlLoader). */
   public static final String MAIN_FXML = "/fxml/Index.fxml";
-
-  /**
-   * Root layout.
-   *
-   * @return the main controller
-   */
-  public MainController mainController() {
-    return new MainController();
-  }
 }

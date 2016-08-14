@@ -10,84 +10,84 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem
-	c1673 [label=<<table title="net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/EditWbsMenuItem.html">
+	c1591 [label=<<table title="net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/EditWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EditWbsMenuItem </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.menu.item </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../menu/item/EditWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.menu.item.AddWbsMenuItem
-	c1674 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AddWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/AddWbsMenuItem.html">
+	c1592 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AddWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/AddWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AddWbsMenuItem </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.menu.item </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../menu/item/AddWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem
-	c1676 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/AddNewWbsMenuItem.html">
+	c1594 [label=<<table title="net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/AddNewWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AddNewWbsMenuItem </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.menu.item </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../menu/item/AddNewWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.menu.item.DeleteWbsMenuItem
-	c1677 [label=<<table title="net.ljcomputing.sr.fx.menu.item.DeleteWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/DeleteWbsMenuItem.html">
+	c1595 [label=<<table title="net.ljcomputing.sr.fx.menu.item.DeleteWbsMenuItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../menu/item/DeleteWbsMenuItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeleteWbsMenuItem </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.menu.item </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../menu/item/DeleteWbsMenuItem.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1692 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeView.html">
+	c1609 [label=<<table title="net.ljcomputing.sr.fx.treeview.WbsTreeView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WbsTreeView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeView </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeView.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.TaskTableController
-	c1694 [label=<<table title="net.ljcomputing.sr.fx.controller.TaskTableController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../controller/TaskTableController.html">
+	c1611 [label=<<table title="net.ljcomputing.sr.fx.controller.TaskTableController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../controller/TaskTableController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskTableController </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.controller </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../controller/TaskTableController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c1696 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../controller/WbsTreeViewController.html">
+	c1613 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../controller/WbsTreeViewController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeViewController </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.controller </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../controller/WbsTreeViewController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.MainController
-	c1700 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../controller/MainController.html">
+	c1617 [label=<<table title="net.ljcomputing.sr.fx.controller.MainController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../controller/MainController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MainController </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.fx.controller </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../controller/MainController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.menu.item.EditWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1673:p -> c1692:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1591:p -> c1609:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.menu.item.AddWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1674:p -> c1692:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1592:p -> c1609:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.menu.item.AddNewWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1676:p -> c1692:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1594:p -> c1609:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.menu.item.DeleteWbsMenuItem NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1677:p -> c1692:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1595:p -> c1609:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView NAVASSOC org.slf4j.Logger
-	c1692:p -> c1702:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1609:p -> c1619:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView NAVASSOC net.ljcomputing.sr.fx.controller.TaskTableController
-	c1692:p -> c1694:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1609:p -> c1611:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1696:p -> c1692:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1613:p -> c1609:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.treeview.WbsTreeView
-	c1700:p -> c1692:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1617:p -> c1609:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c1700:p -> c1696:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1617:p -> c1613:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.controller.MainController NAVASSOC net.ljcomputing.sr.fx.controller.TaskTableController
-	c1700:p -> c1694:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1617:p -> c1611:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.treeview.WbsTreeView DEPEND net.ljcomputing.sr.fx.controller.TaskTableController
-	c1692:p -> c1694:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1609:p -> c1611:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// org.slf4j.Logger
-	c1702 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
+	c1619 [label=<<table title="org.slf4j.Logger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://www.slf4j.org/apidocs/org/slf4j/Logger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Logger </td></tr>

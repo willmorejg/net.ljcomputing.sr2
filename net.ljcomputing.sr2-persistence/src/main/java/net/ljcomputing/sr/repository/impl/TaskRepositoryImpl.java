@@ -67,9 +67,9 @@ public class TaskRepositoryImpl extends AbstractRepository<Task> {
     ResultSet rs = null;
     
     try {
-      ps = obtainPreparedStatement(sql);
+      preparedStatement = obtainPreparedStatement(sql);
       
-      rs = ps.executeQuery();
+      rs = preparedStatement.executeQuery();
 
       while(rs.next()) {
         if(rs.getTimestamp(1) != null && now.before(rs.getTimestamp(1))) {
@@ -106,9 +106,9 @@ public class TaskRepositoryImpl extends AbstractRepository<Task> {
         + sdf.format(endTime) + "' where end_time is null";
 
     try {
-      ps = obtainPreparedStatement(sql);
+      preparedStatement = obtainPreparedStatement(sql);
 
-      ps.executeUpdate();
+      preparedStatement.executeUpdate();
       
       closePreparedStatement();
       closeConnection();

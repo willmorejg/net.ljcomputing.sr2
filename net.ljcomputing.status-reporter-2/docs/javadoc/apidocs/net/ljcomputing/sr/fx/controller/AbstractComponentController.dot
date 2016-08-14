@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.controller.WbsTreeViewController
-	c487 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeViewController.html">
+	c472 [label=<<table title="net.ljcomputing.sr.fx.controller.WbsTreeViewController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsTreeViewController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsTreeViewController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsTreeViewController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.AbstractComponentController
-	c488 [label=<<table title="net.ljcomputing.sr.fx.controller.AbstractComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractComponentController.html">
+	c473 [label=<<table title="net.ljcomputing.sr.fx.controller.AbstractComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractComponentController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractComponentController </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractComponentController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.controller.ComponentController
-	c491 [label=<<table title="net.ljcomputing.sr.fx.controller.ComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComponentController.html">
+	c476 [label=<<table title="net.ljcomputing.sr.fx.controller.ComponentController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComponentController.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ComponentController </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ComponentController.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.controller.WbsTreeViewController extends net.ljcomputing.sr.fx.controller.AbstractComponentController
-	c488:p -> c487:p [dir=back,arrowtail=empty];
+	c473:p -> c472:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sr.fx.controller.WbsTreeViewController implements net.ljcomputing.sr.fx.controller.ComponentController
-	c491:p -> c487:p [dir=back,arrowtail=empty,style=dashed];
+	c476:p -> c472:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.sr.fx.controller.AbstractComponentController implements net.ljcomputing.sr.fx.controller.ComponentController
-	c491:p -> c488:p [dir=back,arrowtail=empty,style=dashed];
+	c476:p -> c473:p [dir=back,arrowtail=empty,style=dashed];
 }
 

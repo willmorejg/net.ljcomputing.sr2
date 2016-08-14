@@ -10,34 +10,34 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog
-	c116 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsDataDialog.html">
+	c113 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WbsDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WbsDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WbsDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog
-	c117 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivityDataDialog.html">
+	c114 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivityDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ActivityDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model>
-	c118 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
+	c115 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractModelDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractModelDataDialog&lt;T extends Model&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractModelDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog
-	c119 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskDataDialog.html">
+	c116 [label=<<table title="net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskDataDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskDataDialog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TaskDataDialog.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.dialog.impl.WbsDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.WorkBreakdownStructure>
-	c118:p -> c116:p [dir=back,arrowtail=empty];
+	c115:p -> c113:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.Activity>
-	c118:p -> c117:p [dir=back,arrowtail=empty];
+	c115:p -> c114:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog extends net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<net.ljcomputing.sr.model.TaskViewModel>
-	c118:p -> c119:p [dir=back,arrowtail=empty];
+	c115:p -> c116:p [dir=back,arrowtail=empty];
 }
 

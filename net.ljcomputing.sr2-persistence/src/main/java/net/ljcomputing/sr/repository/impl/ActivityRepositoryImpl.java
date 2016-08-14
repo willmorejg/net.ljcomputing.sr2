@@ -61,14 +61,16 @@ public class ActivityRepositoryImpl extends AbstractRepository<Activity> {
     ResultSet rs = null;
     
     try {
-      ps = obtainPreparedStatement(sql);
+      preparedStatement = obtainPreparedStatement(sql);
       
-      ps.setObject(1, wbs);
+      preparedStatement.setObject(1, wbs);
       
-      rs = ps.executeQuery();
+      rs = preparedStatement.executeQuery();
       
       while(rs.next()) {
-        list.add(getConstructor().newInstance(ep, rs));
+        Activity entity = getModelInstance();
+        entity.populate(entityPopulator, rs);
+        list.add(entity);
       }
       
       closePreparedStatement();

@@ -75,9 +75,9 @@
 <span class="sourceLineNo">067</span>    ResultSet rs = null;<a name="line.67"></a>
 <span class="sourceLineNo">068</span>    <a name="line.68"></a>
 <span class="sourceLineNo">069</span>    try {<a name="line.69"></a>
-<span class="sourceLineNo">070</span>      ps = obtainPreparedStatement(sql);<a name="line.70"></a>
+<span class="sourceLineNo">070</span>      preparedStatement = obtainPreparedStatement(sql);<a name="line.70"></a>
 <span class="sourceLineNo">071</span>      <a name="line.71"></a>
-<span class="sourceLineNo">072</span>      rs = ps.executeQuery();<a name="line.72"></a>
+<span class="sourceLineNo">072</span>      rs = preparedStatement.executeQuery();<a name="line.72"></a>
 <span class="sourceLineNo">073</span><a name="line.73"></a>
 <span class="sourceLineNo">074</span>      while(rs.next()) {<a name="line.74"></a>
 <span class="sourceLineNo">075</span>        if(rs.getTimestamp(1) != null &amp;&amp; now.before(rs.getTimestamp(1))) {<a name="line.75"></a>
@@ -114,9 +114,9 @@
 <span class="sourceLineNo">106</span>        + sdf.format(endTime) + "' where end_time is null";<a name="line.106"></a>
 <span class="sourceLineNo">107</span><a name="line.107"></a>
 <span class="sourceLineNo">108</span>    try {<a name="line.108"></a>
-<span class="sourceLineNo">109</span>      ps = obtainPreparedStatement(sql);<a name="line.109"></a>
+<span class="sourceLineNo">109</span>      preparedStatement = obtainPreparedStatement(sql);<a name="line.109"></a>
 <span class="sourceLineNo">110</span><a name="line.110"></a>
-<span class="sourceLineNo">111</span>      ps.executeUpdate();<a name="line.111"></a>
+<span class="sourceLineNo">111</span>      preparedStatement.executeUpdate();<a name="line.111"></a>
 <span class="sourceLineNo">112</span>      <a name="line.112"></a>
 <span class="sourceLineNo">113</span>      closePreparedStatement();<a name="line.113"></a>
 <span class="sourceLineNo">114</span>      closeConnection();<a name="line.114"></a>

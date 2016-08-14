@@ -93,15 +93,17 @@ public class TaskViewModelRepositoryImpl extends AbstractRepository<TaskViewMode
     ResultSet rs = null;
     
     try {
-      ps = obtainPreparedStatement(sql);
+      preparedStatement = obtainPreparedStatement(sql);
       
-      ps.setObject(1, startTime);
-      ps.setObject(2, endTime);
+      preparedStatement.setObject(1, startTime);
+      preparedStatement.setObject(2, endTime);
       
-      rs = ps.executeQuery();
+      rs = preparedStatement.executeQuery();
       
       while(rs.next()) {
-        list.add(getConstructor().newInstance(ep, rs));
+        TaskViewModel entity = getModelInstance();
+        entity.populate(entityPopulator, rs);
+        list.add(entity);
       }
       
       closePreparedStatement();

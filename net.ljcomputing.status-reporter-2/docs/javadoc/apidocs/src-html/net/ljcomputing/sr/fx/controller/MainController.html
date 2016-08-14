@@ -73,177 +73,178 @@
 <span class="sourceLineNo">065</span>public class MainController implements Initializable {<a name="line.65"></a>
 <span class="sourceLineNo">066</span><a name="line.66"></a>
 <span class="sourceLineNo">067</span>  /** The logger. */<a name="line.67"></a>
-<span class="sourceLineNo">068</span>  private static final Logger logger = LoggerFactory.getLogger(MainController.class);<a name="line.68"></a>
+<span class="sourceLineNo">068</span>  private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);<a name="line.68"></a>
 <span class="sourceLineNo">069</span>  <a name="line.69"></a>
-<span class="sourceLineNo">070</span>  @FXML<a name="line.70"></a>
-<span class="sourceLineNo">071</span>  private VBox mainPane;<a name="line.71"></a>
-<span class="sourceLineNo">072</span><a name="line.72"></a>
-<span class="sourceLineNo">073</span>  /** The from date selector. */<a name="line.73"></a>
-<span class="sourceLineNo">074</span>  @FXML<a name="line.74"></a>
-<span class="sourceLineNo">075</span>  private DatePicker fromDateSelector;<a name="line.75"></a>
-<span class="sourceLineNo">076</span>  <a name="line.76"></a>
-<span class="sourceLineNo">077</span>  /** The from time control. */<a name="line.77"></a>
-<span class="sourceLineNo">078</span>  @FXML<a name="line.78"></a>
-<span class="sourceLineNo">079</span>  private TimeControl fromTimeControl;<a name="line.79"></a>
-<span class="sourceLineNo">080</span><a name="line.80"></a>
-<span class="sourceLineNo">081</span>  /** The to date selector. */<a name="line.81"></a>
-<span class="sourceLineNo">082</span>  @FXML<a name="line.82"></a>
-<span class="sourceLineNo">083</span>  private DatePicker toDateSelector;<a name="line.83"></a>
-<span class="sourceLineNo">084</span>  <a name="line.84"></a>
-<span class="sourceLineNo">085</span>  /** The to time control. */<a name="line.85"></a>
-<span class="sourceLineNo">086</span>  @FXML<a name="line.86"></a>
-<span class="sourceLineNo">087</span>  private TimeControl toTimeControl;<a name="line.87"></a>
-<span class="sourceLineNo">088</span>  <a name="line.88"></a>
-<span class="sourceLineNo">089</span>  /** The refresh data. */<a name="line.89"></a>
-<span class="sourceLineNo">090</span>  @FXML<a name="line.90"></a>
-<span class="sourceLineNo">091</span>  private Button refreshData;<a name="line.91"></a>
-<span class="sourceLineNo">092</span><a name="line.92"></a>
-<span class="sourceLineNo">093</span>  /** The wbs tree pane. */<a name="line.93"></a>
-<span class="sourceLineNo">094</span>  @FXML<a name="line.94"></a>
-<span class="sourceLineNo">095</span>  private Pane wbsTreePane;<a name="line.95"></a>
-<span class="sourceLineNo">096</span>  <a name="line.96"></a>
-<span class="sourceLineNo">097</span>  /** The wbs tree. */<a name="line.97"></a>
-<span class="sourceLineNo">098</span>  @FXML<a name="line.98"></a>
-<span class="sourceLineNo">099</span>  private WbsTreeView wbsTree;<a name="line.99"></a>
-<span class="sourceLineNo">100</span>  <a name="line.100"></a>
-<span class="sourceLineNo">101</span>  /** The task table. */<a name="line.101"></a>
-<span class="sourceLineNo">102</span>  @FXML<a name="line.102"></a>
-<span class="sourceLineNo">103</span>  private TableView&lt;TaskViewModel&gt; taskTable;<a name="line.103"></a>
-<span class="sourceLineNo">104</span>  <a name="line.104"></a>
-<span class="sourceLineNo">105</span>  /** The status bar. */<a name="line.105"></a>
-<span class="sourceLineNo">106</span>  @FXML<a name="line.106"></a>
-<span class="sourceLineNo">107</span>  private TextField statusBar;<a name="line.107"></a>
-<span class="sourceLineNo">108</span>  <a name="line.108"></a>
-<span class="sourceLineNo">109</span>  /** The wbs tree view controller. */<a name="line.109"></a>
-<span class="sourceLineNo">110</span>  private WbsTreeViewController wbsTreeViewController;<a name="line.110"></a>
-<span class="sourceLineNo">111</span>  <a name="line.111"></a>
-<span class="sourceLineNo">112</span>  /** The task table controller. */<a name="line.112"></a>
-<span class="sourceLineNo">113</span>  private TaskTableController taskTableController;<a name="line.113"></a>
-<span class="sourceLineNo">114</span><a name="line.114"></a>
-<span class="sourceLineNo">115</span>  /**<a name="line.115"></a>
-<span class="sourceLineNo">116</span>   * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)<a name="line.116"></a>
-<span class="sourceLineNo">117</span>   */<a name="line.117"></a>
-<span class="sourceLineNo">118</span>  public void initialize(URL arg0, ResourceBundle arg1) {<a name="line.118"></a>
-<span class="sourceLineNo">119</span>    initTimeControls();<a name="line.119"></a>
-<span class="sourceLineNo">120</span>    initTaskTable();    <a name="line.120"></a>
-<span class="sourceLineNo">121</span>    wbsTreeViewController = new WbsTreeViewController(wbsTree);<a name="line.121"></a>
-<span class="sourceLineNo">122</span>    wbsTree.setTaskTableController(taskTableController);<a name="line.122"></a>
-<span class="sourceLineNo">123</span>    populateTreeRoot();<a name="line.123"></a>
-<span class="sourceLineNo">124</span>    <a name="line.124"></a>
-<span class="sourceLineNo">125</span>    refreshData.setOnAction(new EventHandler&lt;ActionEvent&gt;() {<a name="line.125"></a>
-<span class="sourceLineNo">126</span>      @Override<a name="line.126"></a>
-<span class="sourceLineNo">127</span>      public void handle(ActionEvent event) {<a name="line.127"></a>
-<span class="sourceLineNo">128</span>        populateTreeRoot();<a name="line.128"></a>
-<span class="sourceLineNo">129</span>        populateTaskTable();<a name="line.129"></a>
-<span class="sourceLineNo">130</span>      }<a name="line.130"></a>
-<span class="sourceLineNo">131</span>    });<a name="line.131"></a>
-<span class="sourceLineNo">132</span>    <a name="line.132"></a>
-<span class="sourceLineNo">133</span>    statusBar.setText("Initialized");<a name="line.133"></a>
-<span class="sourceLineNo">134</span>    <a name="line.134"></a>
-<span class="sourceLineNo">135</span>    logger.debug("initialized");<a name="line.135"></a>
-<span class="sourceLineNo">136</span>  }<a name="line.136"></a>
-<span class="sourceLineNo">137</span>  <a name="line.137"></a>
-<span class="sourceLineNo">138</span>  /**<a name="line.138"></a>
-<span class="sourceLineNo">139</span>   * Initializes the time controls.<a name="line.139"></a>
-<span class="sourceLineNo">140</span>   */<a name="line.140"></a>
-<span class="sourceLineNo">141</span>  private void initTimeControls() {<a name="line.141"></a>
-<span class="sourceLineNo">142</span>    LocalDate today = LocalDate.now();<a name="line.142"></a>
-<span class="sourceLineNo">143</span><a name="line.143"></a>
-<span class="sourceLineNo">144</span>    fromDateSelector.setValue(today);<a name="line.144"></a>
-<span class="sourceLineNo">145</span>    fromTimeControl.setLocalTime(LocalTime.of(0, 0, 0));<a name="line.145"></a>
-<span class="sourceLineNo">146</span>    toDateSelector.setValue(today.plusDays(1));<a name="line.146"></a>
-<span class="sourceLineNo">147</span>    toTimeControl.setLocalTime(LocalTime.of(0, 0, 0));<a name="line.147"></a>
-<span class="sourceLineNo">148</span>  }<a name="line.148"></a>
-<span class="sourceLineNo">149</span>  <a name="line.149"></a>
-<span class="sourceLineNo">150</span>  /**<a name="line.150"></a>
-<span class="sourceLineNo">151</span>   * Initializes the task table.<a name="line.151"></a>
-<span class="sourceLineNo">152</span>   */<a name="line.152"></a>
-<span class="sourceLineNo">153</span>  private void initTaskTable() {<a name="line.153"></a>
-<span class="sourceLineNo">154</span>    DateTimeControls fromDateTimeControls = new DateTimeControls(fromDateSelector, fromTimeControl);<a name="line.154"></a>
-<span class="sourceLineNo">155</span>    DateTimeControls toDateTimeControls = new DateTimeControls(toDateSelector, toTimeControl);<a name="line.155"></a>
-<span class="sourceLineNo">156</span>    <a name="line.156"></a>
-<span class="sourceLineNo">157</span>    taskTableController = new TaskTableController(taskTable, fromDateTimeControls, toDateTimeControls);<a name="line.157"></a>
-<span class="sourceLineNo">158</span>    populateTaskTable();<a name="line.158"></a>
-<span class="sourceLineNo">159</span>    taskTable.setRowFactory(addContextMenu());    <a name="line.159"></a>
-<span class="sourceLineNo">160</span>  }<a name="line.160"></a>
-<span class="sourceLineNo">161</span>  <a name="line.161"></a>
-<span class="sourceLineNo">162</span>  private Callback&lt;TableView&lt;TaskViewModel&gt;, TableRow&lt;TaskViewModel&gt;&gt; addContextMenu() {<a name="line.162"></a>
-<span class="sourceLineNo">163</span>    return new Callback&lt;TableView&lt;TaskViewModel&gt;, TableRow&lt;TaskViewModel&gt;&gt;() {<a name="line.163"></a>
-<span class="sourceLineNo">164</span>      <a name="line.164"></a>
-<span class="sourceLineNo">165</span>      @Override<a name="line.165"></a>
-<span class="sourceLineNo">166</span>      public TableRow&lt;TaskViewModel&gt; call(TableView&lt;TaskViewModel&gt; param) {<a name="line.166"></a>
-<span class="sourceLineNo">167</span>        final TableRow&lt;TaskViewModel&gt; row = new TableRow&lt;&gt;();<a name="line.167"></a>
-<span class="sourceLineNo">168</span>        final ContextMenu menu = new ContextMenu();<a name="line.168"></a>
-<span class="sourceLineNo">169</span>        final MenuItem deleteMenu = new MenuItem("Delete selected Task");<a name="line.169"></a>
-<span class="sourceLineNo">170</span>        <a name="line.170"></a>
-<span class="sourceLineNo">171</span>        deleteMenu.setOnAction(event -&gt; {<a name="line.171"></a>
-<span class="sourceLineNo">172</span>          try {<a name="line.172"></a>
-<span class="sourceLineNo">173</span>            TaskService service = (TaskService) SrModelServiceFactory.Task.getServiceInstance();<a name="line.173"></a>
-<span class="sourceLineNo">174</span>            service.delete(row.getItem().getId());<a name="line.174"></a>
-<span class="sourceLineNo">175</span>            taskTable.getItems().remove(row.getItem());<a name="line.175"></a>
-<span class="sourceLineNo">176</span>            taskTableController.populateTaskTask();<a name="line.176"></a>
-<span class="sourceLineNo">177</span>          } catch (Exception e) {<a name="line.177"></a>
-<span class="sourceLineNo">178</span>            new ErrorAlert().show(e);<a name="line.178"></a>
-<span class="sourceLineNo">179</span>          }<a name="line.179"></a>
-<span class="sourceLineNo">180</span>        });<a name="line.180"></a>
-<span class="sourceLineNo">181</span><a name="line.181"></a>
-<span class="sourceLineNo">182</span>        final MenuItem editMenu = new MenuItem("Edit selected Task");<a name="line.182"></a>
-<span class="sourceLineNo">183</span>        <a name="line.183"></a>
-<span class="sourceLineNo">184</span>        editMenu.setOnAction(event -&gt; {<a name="line.184"></a>
-<span class="sourceLineNo">185</span>          try {<a name="line.185"></a>
-<span class="sourceLineNo">186</span>            ActivityViewService activityViewService = (ActivityViewService) SrModelServiceFactory.ActivityView.getServiceInstance();<a name="line.186"></a>
-<span class="sourceLineNo">187</span>            ObservableList&lt;ActivityViewModel&gt; activityViewList = FXCollections.observableArrayList(activityViewService.readAll());<a name="line.187"></a>
-<span class="sourceLineNo">188</span>            int previousIndex = row.getIndex() + 1;<a name="line.188"></a>
-<span class="sourceLineNo">189</span>            TaskViewModel preiousItem = (taskTable.getItems().size() == previousIndex) ? null : taskTable.getItems().get(previousIndex);<a name="line.189"></a>
-<span class="sourceLineNo">190</span>            TaskDataDialog dialog = new TaskDataDialog(activityViewList, preiousItem);<a name="line.190"></a>
-<span class="sourceLineNo">191</span>            Optional&lt;ButtonType&gt; response = dialog.showAndWait(row.getItem());<a name="line.191"></a>
-<span class="sourceLineNo">192</span><a name="line.192"></a>
-<span class="sourceLineNo">193</span>            if(response.get().equals(ButtonType.OK)) {<a name="line.193"></a>
-<span class="sourceLineNo">194</span>              Task model = dialog.getItem().getTask();<a name="line.194"></a>
-<span class="sourceLineNo">195</span>              TaskService service = (TaskService) SrModelServiceFactory.Task.getServiceInstance();<a name="line.195"></a>
-<span class="sourceLineNo">196</span>              service.update(model);<a name="line.196"></a>
-<span class="sourceLineNo">197</span>              taskTableController.populateTaskTask();<a name="line.197"></a>
-<span class="sourceLineNo">198</span>            }<a name="line.198"></a>
-<span class="sourceLineNo">199</span>          } catch (Exception e) {<a name="line.199"></a>
-<span class="sourceLineNo">200</span>            new ErrorAlert().show(e);<a name="line.200"></a>
-<span class="sourceLineNo">201</span>          }<a name="line.201"></a>
-<span class="sourceLineNo">202</span>        });<a name="line.202"></a>
-<span class="sourceLineNo">203</span>        <a name="line.203"></a>
-<span class="sourceLineNo">204</span>        menu.getItems().addAll(editMenu, deleteMenu);<a name="line.204"></a>
-<span class="sourceLineNo">205</span>        <a name="line.205"></a>
-<span class="sourceLineNo">206</span>        row.contextMenuProperty().bind(<a name="line.206"></a>
-<span class="sourceLineNo">207</span>            Bindings.when(row.emptyProperty())<a name="line.207"></a>
-<span class="sourceLineNo">208</span>            .then((ContextMenu)null)<a name="line.208"></a>
-<span class="sourceLineNo">209</span>            .otherwise(menu));<a name="line.209"></a>
-<span class="sourceLineNo">210</span>        <a name="line.210"></a>
-<span class="sourceLineNo">211</span>        return row;<a name="line.211"></a>
-<span class="sourceLineNo">212</span>      }<a name="line.212"></a>
-<span class="sourceLineNo">213</span>    };<a name="line.213"></a>
-<span class="sourceLineNo">214</span>  }<a name="line.214"></a>
-<span class="sourceLineNo">215</span><a name="line.215"></a>
-<span class="sourceLineNo">216</span>  /**<a name="line.216"></a>
-<span class="sourceLineNo">217</span>   * Populate tree root.<a name="line.217"></a>
-<span class="sourceLineNo">218</span>   */<a name="line.218"></a>
-<span class="sourceLineNo">219</span>  public void populateTreeRoot() {<a name="line.219"></a>
-<span class="sourceLineNo">220</span>    try {<a name="line.220"></a>
-<span class="sourceLineNo">221</span>      wbsTreeViewController.refreshComponents();<a name="line.221"></a>
-<span class="sourceLineNo">222</span>      wbsTree.init();<a name="line.222"></a>
-<span class="sourceLineNo">223</span>    } catch (Exception e) {<a name="line.223"></a>
-<span class="sourceLineNo">224</span>      new ErrorAlert().show(e);<a name="line.224"></a>
-<span class="sourceLineNo">225</span>    }<a name="line.225"></a>
-<span class="sourceLineNo">226</span>  }<a name="line.226"></a>
-<span class="sourceLineNo">227</span><a name="line.227"></a>
-<span class="sourceLineNo">228</span>  /**<a name="line.228"></a>
-<span class="sourceLineNo">229</span>   * Populate task table.<a name="line.229"></a>
-<span class="sourceLineNo">230</span>   */<a name="line.230"></a>
-<span class="sourceLineNo">231</span>  private void populateTaskTable() {<a name="line.231"></a>
-<span class="sourceLineNo">232</span>    try {<a name="line.232"></a>
-<span class="sourceLineNo">233</span>      taskTableController.populateTaskTask();<a name="line.233"></a>
-<span class="sourceLineNo">234</span>    } catch (Exception e) {<a name="line.234"></a>
-<span class="sourceLineNo">235</span>      new ErrorAlert().show(e);<a name="line.235"></a>
-<span class="sourceLineNo">236</span>    }<a name="line.236"></a>
-<span class="sourceLineNo">237</span>  }<a name="line.237"></a>
-<span class="sourceLineNo">238</span>}<a name="line.238"></a>
+<span class="sourceLineNo">070</span>  /** The main pane. */<a name="line.70"></a>
+<span class="sourceLineNo">071</span>  @FXML<a name="line.71"></a>
+<span class="sourceLineNo">072</span>  private VBox mainPane;<a name="line.72"></a>
+<span class="sourceLineNo">073</span><a name="line.73"></a>
+<span class="sourceLineNo">074</span>  /** The from date selector. */<a name="line.74"></a>
+<span class="sourceLineNo">075</span>  @FXML<a name="line.75"></a>
+<span class="sourceLineNo">076</span>  private DatePicker fromDateSelector;<a name="line.76"></a>
+<span class="sourceLineNo">077</span>  <a name="line.77"></a>
+<span class="sourceLineNo">078</span>  /** The from time control. */<a name="line.78"></a>
+<span class="sourceLineNo">079</span>  @FXML<a name="line.79"></a>
+<span class="sourceLineNo">080</span>  private TimeControl fromTimeControl;<a name="line.80"></a>
+<span class="sourceLineNo">081</span><a name="line.81"></a>
+<span class="sourceLineNo">082</span>  /** The to date selector. */<a name="line.82"></a>
+<span class="sourceLineNo">083</span>  @FXML<a name="line.83"></a>
+<span class="sourceLineNo">084</span>  private DatePicker toDateSelector;<a name="line.84"></a>
+<span class="sourceLineNo">085</span>  <a name="line.85"></a>
+<span class="sourceLineNo">086</span>  /** The to time control. */<a name="line.86"></a>
+<span class="sourceLineNo">087</span>  @FXML<a name="line.87"></a>
+<span class="sourceLineNo">088</span>  private TimeControl toTimeControl;<a name="line.88"></a>
+<span class="sourceLineNo">089</span>  <a name="line.89"></a>
+<span class="sourceLineNo">090</span>  /** The refresh data. */<a name="line.90"></a>
+<span class="sourceLineNo">091</span>  @FXML<a name="line.91"></a>
+<span class="sourceLineNo">092</span>  private Button refreshData;<a name="line.92"></a>
+<span class="sourceLineNo">093</span><a name="line.93"></a>
+<span class="sourceLineNo">094</span>  /** The wbs tree pane. */<a name="line.94"></a>
+<span class="sourceLineNo">095</span>  @FXML<a name="line.95"></a>
+<span class="sourceLineNo">096</span>  private Pane wbsTreePane;<a name="line.96"></a>
+<span class="sourceLineNo">097</span>  <a name="line.97"></a>
+<span class="sourceLineNo">098</span>  /** The wbs tree. */<a name="line.98"></a>
+<span class="sourceLineNo">099</span>  @FXML<a name="line.99"></a>
+<span class="sourceLineNo">100</span>  private WbsTreeView wbsTree;<a name="line.100"></a>
+<span class="sourceLineNo">101</span>  <a name="line.101"></a>
+<span class="sourceLineNo">102</span>  /** The task table. */<a name="line.102"></a>
+<span class="sourceLineNo">103</span>  @FXML<a name="line.103"></a>
+<span class="sourceLineNo">104</span>  private TableView&lt;TaskViewModel&gt; taskTable;<a name="line.104"></a>
+<span class="sourceLineNo">105</span>  <a name="line.105"></a>
+<span class="sourceLineNo">106</span>  /** The status bar. */<a name="line.106"></a>
+<span class="sourceLineNo">107</span>  @FXML<a name="line.107"></a>
+<span class="sourceLineNo">108</span>  private TextField statusBar;<a name="line.108"></a>
+<span class="sourceLineNo">109</span>  <a name="line.109"></a>
+<span class="sourceLineNo">110</span>  /** The wbs tree view controller. */<a name="line.110"></a>
+<span class="sourceLineNo">111</span>  private WbsTreeViewController wbsTreeViewController;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>  <a name="line.112"></a>
+<span class="sourceLineNo">113</span>  /** The task table controller. */<a name="line.113"></a>
+<span class="sourceLineNo">114</span>  private TaskTableController taskTableController;<a name="line.114"></a>
+<span class="sourceLineNo">115</span><a name="line.115"></a>
+<span class="sourceLineNo">116</span>  /**<a name="line.116"></a>
+<span class="sourceLineNo">117</span>   * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)<a name="line.117"></a>
+<span class="sourceLineNo">118</span>   */<a name="line.118"></a>
+<span class="sourceLineNo">119</span>  public void initialize(URL arg0, ResourceBundle arg1) {<a name="line.119"></a>
+<span class="sourceLineNo">120</span>    initTimeControls();<a name="line.120"></a>
+<span class="sourceLineNo">121</span>    initTaskTable();    <a name="line.121"></a>
+<span class="sourceLineNo">122</span>    wbsTreeViewController = new WbsTreeViewController(wbsTree);<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    wbsTree.setTaskTableController(taskTableController);<a name="line.123"></a>
+<span class="sourceLineNo">124</span>    populateTreeRoot();<a name="line.124"></a>
+<span class="sourceLineNo">125</span>    <a name="line.125"></a>
+<span class="sourceLineNo">126</span>    refreshData.setOnAction(new EventHandler&lt;ActionEvent&gt;() {<a name="line.126"></a>
+<span class="sourceLineNo">127</span>      @Override<a name="line.127"></a>
+<span class="sourceLineNo">128</span>      public void handle(ActionEvent event) {<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        populateTreeRoot();<a name="line.129"></a>
+<span class="sourceLineNo">130</span>        populateTaskTable();<a name="line.130"></a>
+<span class="sourceLineNo">131</span>      }<a name="line.131"></a>
+<span class="sourceLineNo">132</span>    });<a name="line.132"></a>
+<span class="sourceLineNo">133</span>    <a name="line.133"></a>
+<span class="sourceLineNo">134</span>    statusBar.setText("Initialized");<a name="line.134"></a>
+<span class="sourceLineNo">135</span>    <a name="line.135"></a>
+<span class="sourceLineNo">136</span>    LOGGER.debug("initialized");<a name="line.136"></a>
+<span class="sourceLineNo">137</span>  }<a name="line.137"></a>
+<span class="sourceLineNo">138</span>  <a name="line.138"></a>
+<span class="sourceLineNo">139</span>  /**<a name="line.139"></a>
+<span class="sourceLineNo">140</span>   * Initializes the time controls.<a name="line.140"></a>
+<span class="sourceLineNo">141</span>   */<a name="line.141"></a>
+<span class="sourceLineNo">142</span>  private void initTimeControls() {<a name="line.142"></a>
+<span class="sourceLineNo">143</span>    LocalDate today = LocalDate.now();<a name="line.143"></a>
+<span class="sourceLineNo">144</span><a name="line.144"></a>
+<span class="sourceLineNo">145</span>    fromDateSelector.setValue(today);<a name="line.145"></a>
+<span class="sourceLineNo">146</span>    fromTimeControl.setLocalTime(LocalTime.of(0, 0, 0));<a name="line.146"></a>
+<span class="sourceLineNo">147</span>    toDateSelector.setValue(today.plusDays(1));<a name="line.147"></a>
+<span class="sourceLineNo">148</span>    toTimeControl.setLocalTime(LocalTime.of(0, 0, 0));<a name="line.148"></a>
+<span class="sourceLineNo">149</span>  }<a name="line.149"></a>
+<span class="sourceLineNo">150</span>  <a name="line.150"></a>
+<span class="sourceLineNo">151</span>  /**<a name="line.151"></a>
+<span class="sourceLineNo">152</span>   * Initializes the task table.<a name="line.152"></a>
+<span class="sourceLineNo">153</span>   */<a name="line.153"></a>
+<span class="sourceLineNo">154</span>  private void initTaskTable() {<a name="line.154"></a>
+<span class="sourceLineNo">155</span>    DateTimeControls fromDateTimeControls = new DateTimeControls(fromDateSelector, fromTimeControl);<a name="line.155"></a>
+<span class="sourceLineNo">156</span>    DateTimeControls toDateTimeControls = new DateTimeControls(toDateSelector, toTimeControl);<a name="line.156"></a>
+<span class="sourceLineNo">157</span>    <a name="line.157"></a>
+<span class="sourceLineNo">158</span>    taskTableController = new TaskTableController(taskTable, fromDateTimeControls, toDateTimeControls);<a name="line.158"></a>
+<span class="sourceLineNo">159</span>    populateTaskTable();<a name="line.159"></a>
+<span class="sourceLineNo">160</span>    taskTable.setRowFactory(addContextMenu());    <a name="line.160"></a>
+<span class="sourceLineNo">161</span>  }<a name="line.161"></a>
+<span class="sourceLineNo">162</span>  <a name="line.162"></a>
+<span class="sourceLineNo">163</span>  private Callback&lt;TableView&lt;TaskViewModel&gt;, TableRow&lt;TaskViewModel&gt;&gt; addContextMenu() {<a name="line.163"></a>
+<span class="sourceLineNo">164</span>    return new Callback&lt;TableView&lt;TaskViewModel&gt;, TableRow&lt;TaskViewModel&gt;&gt;() {<a name="line.164"></a>
+<span class="sourceLineNo">165</span>      <a name="line.165"></a>
+<span class="sourceLineNo">166</span>      @Override<a name="line.166"></a>
+<span class="sourceLineNo">167</span>      public TableRow&lt;TaskViewModel&gt; call(TableView&lt;TaskViewModel&gt; param) {<a name="line.167"></a>
+<span class="sourceLineNo">168</span>        final TableRow&lt;TaskViewModel&gt; row = new TableRow&lt;&gt;();<a name="line.168"></a>
+<span class="sourceLineNo">169</span>        final ContextMenu menu = new ContextMenu();<a name="line.169"></a>
+<span class="sourceLineNo">170</span>        final MenuItem deleteMenu = new MenuItem("Delete selected Task");<a name="line.170"></a>
+<span class="sourceLineNo">171</span>        <a name="line.171"></a>
+<span class="sourceLineNo">172</span>        deleteMenu.setOnAction(event -&gt; {<a name="line.172"></a>
+<span class="sourceLineNo">173</span>          try {<a name="line.173"></a>
+<span class="sourceLineNo">174</span>            TaskService service = (TaskService) SrModelServiceFactory.Task.getServiceInstance();<a name="line.174"></a>
+<span class="sourceLineNo">175</span>            service.delete(row.getItem().getId());<a name="line.175"></a>
+<span class="sourceLineNo">176</span>            taskTable.getItems().remove(row.getItem());<a name="line.176"></a>
+<span class="sourceLineNo">177</span>            taskTableController.populateTaskTask();<a name="line.177"></a>
+<span class="sourceLineNo">178</span>          } catch (Exception e) {<a name="line.178"></a>
+<span class="sourceLineNo">179</span>            new ErrorAlert().show(e);<a name="line.179"></a>
+<span class="sourceLineNo">180</span>          }<a name="line.180"></a>
+<span class="sourceLineNo">181</span>        });<a name="line.181"></a>
+<span class="sourceLineNo">182</span><a name="line.182"></a>
+<span class="sourceLineNo">183</span>        final MenuItem editMenu = new MenuItem("Edit selected Task");<a name="line.183"></a>
+<span class="sourceLineNo">184</span>        <a name="line.184"></a>
+<span class="sourceLineNo">185</span>        editMenu.setOnAction(event -&gt; {<a name="line.185"></a>
+<span class="sourceLineNo">186</span>          try {<a name="line.186"></a>
+<span class="sourceLineNo">187</span>            ActivityViewService activityViewService = (ActivityViewService) SrModelServiceFactory.ActivityView.getServiceInstance();<a name="line.187"></a>
+<span class="sourceLineNo">188</span>            ObservableList&lt;ActivityViewModel&gt; activityViewList = FXCollections.observableArrayList(activityViewService.readAll());<a name="line.188"></a>
+<span class="sourceLineNo">189</span>            int previousIndex = row.getIndex() + 1;<a name="line.189"></a>
+<span class="sourceLineNo">190</span>            TaskViewModel preiousItem = (taskTable.getItems().size() == previousIndex) ? null : taskTable.getItems().get(previousIndex);<a name="line.190"></a>
+<span class="sourceLineNo">191</span>            TaskDataDialog dialog = new TaskDataDialog(activityViewList, preiousItem);<a name="line.191"></a>
+<span class="sourceLineNo">192</span>            Optional&lt;ButtonType&gt; response = dialog.showAndWait(row.getItem());<a name="line.192"></a>
+<span class="sourceLineNo">193</span><a name="line.193"></a>
+<span class="sourceLineNo">194</span>            if(response.get().equals(ButtonType.OK)) {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>              Task model = dialog.getItem().getTask();<a name="line.195"></a>
+<span class="sourceLineNo">196</span>              TaskService service = (TaskService) SrModelServiceFactory.Task.getServiceInstance();<a name="line.196"></a>
+<span class="sourceLineNo">197</span>              service.update(model);<a name="line.197"></a>
+<span class="sourceLineNo">198</span>              taskTableController.populateTaskTask();<a name="line.198"></a>
+<span class="sourceLineNo">199</span>            }<a name="line.199"></a>
+<span class="sourceLineNo">200</span>          } catch (Exception e) {<a name="line.200"></a>
+<span class="sourceLineNo">201</span>            new ErrorAlert().show(e);<a name="line.201"></a>
+<span class="sourceLineNo">202</span>          }<a name="line.202"></a>
+<span class="sourceLineNo">203</span>        });<a name="line.203"></a>
+<span class="sourceLineNo">204</span>        <a name="line.204"></a>
+<span class="sourceLineNo">205</span>        menu.getItems().addAll(editMenu, deleteMenu);<a name="line.205"></a>
+<span class="sourceLineNo">206</span>        <a name="line.206"></a>
+<span class="sourceLineNo">207</span>        row.contextMenuProperty().bind(<a name="line.207"></a>
+<span class="sourceLineNo">208</span>            Bindings.when(row.emptyProperty())<a name="line.208"></a>
+<span class="sourceLineNo">209</span>            .then((ContextMenu)null)<a name="line.209"></a>
+<span class="sourceLineNo">210</span>            .otherwise(menu));<a name="line.210"></a>
+<span class="sourceLineNo">211</span>        <a name="line.211"></a>
+<span class="sourceLineNo">212</span>        return row;<a name="line.212"></a>
+<span class="sourceLineNo">213</span>      }<a name="line.213"></a>
+<span class="sourceLineNo">214</span>    };<a name="line.214"></a>
+<span class="sourceLineNo">215</span>  }<a name="line.215"></a>
+<span class="sourceLineNo">216</span><a name="line.216"></a>
+<span class="sourceLineNo">217</span>  /**<a name="line.217"></a>
+<span class="sourceLineNo">218</span>   * Populate tree root.<a name="line.218"></a>
+<span class="sourceLineNo">219</span>   */<a name="line.219"></a>
+<span class="sourceLineNo">220</span>  private void populateTreeRoot() {<a name="line.220"></a>
+<span class="sourceLineNo">221</span>    try {<a name="line.221"></a>
+<span class="sourceLineNo">222</span>      wbsTreeViewController.refreshComponents();<a name="line.222"></a>
+<span class="sourceLineNo">223</span>      wbsTree.init();<a name="line.223"></a>
+<span class="sourceLineNo">224</span>    } catch (Exception e) {<a name="line.224"></a>
+<span class="sourceLineNo">225</span>      new ErrorAlert().show(e);<a name="line.225"></a>
+<span class="sourceLineNo">226</span>    }<a name="line.226"></a>
+<span class="sourceLineNo">227</span>  }<a name="line.227"></a>
+<span class="sourceLineNo">228</span><a name="line.228"></a>
+<span class="sourceLineNo">229</span>  /**<a name="line.229"></a>
+<span class="sourceLineNo">230</span>   * Populate task table.<a name="line.230"></a>
+<span class="sourceLineNo">231</span>   */<a name="line.231"></a>
+<span class="sourceLineNo">232</span>  private void populateTaskTable() {<a name="line.232"></a>
+<span class="sourceLineNo">233</span>    try {<a name="line.233"></a>
+<span class="sourceLineNo">234</span>      taskTableController.populateTaskTask();<a name="line.234"></a>
+<span class="sourceLineNo">235</span>    } catch (Exception e) {<a name="line.235"></a>
+<span class="sourceLineNo">236</span>      new ErrorAlert().show(e);<a name="line.236"></a>
+<span class="sourceLineNo">237</span>    }<a name="line.237"></a>
+<span class="sourceLineNo">238</span>  }<a name="line.238"></a>
+<span class="sourceLineNo">239</span>}<a name="line.239"></a>
 
 
 

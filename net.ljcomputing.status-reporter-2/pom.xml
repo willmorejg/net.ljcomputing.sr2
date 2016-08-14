@@ -24,9 +24,9 @@
 
   <github.username>willmorejg</github.username>
 
-  <net.ljcomputing.utility.version>utility-1.0.0</net.ljcomputing.utility.version>
-  <net.ljcomputing.model.version>model-1.0.0</net.ljcomputing.model.version>
-  <net.ljcomputing.persistence.version>persistence-1.0.2</net.ljcomputing.persistence.version>
+  <net.ljcomputing.utility.version>utility-1.0.1</net.ljcomputing.utility.version>
+  <net.ljcomputing.model.version>model-1.0.1</net.ljcomputing.model.version>
+  <net.ljcomputing.persistence.version>persistence-1.0.3</net.ljcomputing.persistence.version>
   <net.ljcomputing.service.version>service-1.0.1</net.ljcomputing.service.version>
   <net.ljcomputing.fx.version>fx-1.0.0</net.ljcomputing.fx.version>
   <net.ljcomputing.sr2-domain.version>1.0.0-SNAPSHOT</net.ljcomputing.sr2-domain.version>
@@ -37,6 +37,12 @@
   <commons-lang3.version>3.4</commons-lang3.version>
   <slf4j.version>1.7.21</slf4j.version>
   <logback.version>1.1.7</logback.version>
+
+  <local.net.ljcomputing.fx.version>1.0.1-SNAPSHOT</local.net.ljcomputing.fx.version>
+  <local.net.ljcomputing.model.version>1.0.1-SNAPSHOT</local.net.ljcomputing.model.version>
+  <local.net.ljcomputing.persistence.version>1.0.3-SNAPSHOT</local.net.ljcomputing.persistence.version>
+  <local.net.ljcomputing.service.version>1.0.2-SNAPSHOT</local.net.ljcomputing.service.version>
+  <local.net.ljcomputing.utility.version>1.0.1-SNAPSHOT</local.net.ljcomputing.utility.version>
  </properties>
 
  <!-- Contact and License Information -->
@@ -97,16 +103,28 @@
    <systemPath>/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar</systemPath>
   </dependency>
 
-  <dependency>
-   <groupId>com.github.willmorejg</groupId>
-   <artifactId>net.ljcomputing.utility</artifactId>
-   <version>${net.ljcomputing.utility.version}</version>
-  </dependency>
+  <!-- <dependency> -->
+  <!-- <groupId>com.github.willmorejg</groupId> -->
+  <!-- <artifactId>net.ljcomputing.utility</artifactId> -->
+  <!-- <version>${net.ljcomputing.utility.version}</version> -->
+  <!-- </dependency> -->
 
   <dependency>
-   <groupId>com.github.willmorejg</groupId>
-   <artifactId>net.ljcomputing.model</artifactId>
-   <version>${net.ljcomputing.model.version}</version>
+   <groupId>net.ljcomputing</groupId>
+   <artifactId>utility</artifactId>
+   <version>${local.net.ljcomputing.utility.version}</version>
+  </dependency>
+
+  <!-- <dependency> -->
+  <!-- <groupId>com.github.willmorejg</groupId> -->
+  <!-- <artifactId>net.ljcomputing.model</artifactId> -->
+  <!-- <version>${net.ljcomputing.model.version}</version> -->
+  <!-- </dependency> -->
+
+  <dependency>
+   <groupId>net.ljcomputing</groupId>
+   <artifactId>model</artifactId>
+   <version>${local.net.ljcomputing.model.version}</version>
   </dependency>
 
   <dependency>
@@ -115,17 +133,35 @@
    <version>${net.ljcomputing.persistence.version}</version>
   </dependency>
 
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>persistence</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.persistence.version}</version> -->
+  <!-- </dependency> -->
+
   <dependency>
    <groupId>com.github.willmorejg</groupId>
    <artifactId>net.ljcomputing.service</artifactId>
    <version>${net.ljcomputing.service.version}</version>
   </dependency>
 
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>service</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.service.version}</version> -->
+  <!-- </dependency> -->
+
   <dependency>
    <groupId>com.github.willmorejg</groupId>
    <artifactId>net.ljcomputing.fx</artifactId>
    <version>${net.ljcomputing.fx.version}</version>
   </dependency>
+
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>fx</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.fx.version}</version> -->
+  <!-- </dependency> -->
 
   <dependency>
    <groupId>org.apache.derby</groupId>

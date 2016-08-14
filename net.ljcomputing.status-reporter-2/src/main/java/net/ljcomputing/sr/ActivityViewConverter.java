@@ -33,14 +33,15 @@ import javafx.util.StringConverter;
 public class ActivityViewConverter extends StringConverter<ActivityViewModel> {
   
   /** The list. */
-  private ObservableList<ActivityViewModel> list;
+  private transient final ObservableList<ActivityViewModel> list;
   
   /**
    * Instantiates a new activity view converter.
    *
    * @param list the list
    */
-  public ActivityViewConverter(ObservableList<ActivityViewModel> list) {
+  public ActivityViewConverter(final ObservableList<ActivityViewModel> list) {
+    super();
     this.list = list;
   }
 
@@ -48,7 +49,7 @@ public class ActivityViewConverter extends StringConverter<ActivityViewModel> {
    * @see javafx.util.StringConverter#toString(java.lang.Object)
    */
   @Override
-  public String toString(ActivityViewModel object) {
+  public String toString(final ActivityViewModel object) {
     return String.format("Activity %s (WBS %s)", object.getName(), object.getWbsName());
   }
 
@@ -56,14 +57,20 @@ public class ActivityViewConverter extends StringConverter<ActivityViewModel> {
    * @see javafx.util.StringConverter#fromString(java.lang.String)
    */
   @Override
-  public ActivityViewModel fromString(String string) {
-    for(ActivityViewModel item : list) {
-      String formatedName = String.format("Activity %s (WBS %s)", item.getName(), item.getWbsName());
+  public ActivityViewModel fromString(final String string) {
+    ActivityViewModel result = null;
+    
+    for(final ActivityViewModel item : list) {
+      final String name = item.getName();
+      final String wbsName = item.getWbsName();
+      final String formatedName = String.format("Activity %s (WBS %s)", name, wbsName);
+      
       if(formatedName.equals(string)) {
-        return item;
+        result = item;
+        break;
       }
     }
     
-    return null;
+    return result;
   }
 }

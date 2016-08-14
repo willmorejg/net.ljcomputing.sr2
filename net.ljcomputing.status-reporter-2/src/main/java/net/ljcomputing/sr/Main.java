@@ -20,6 +20,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -46,10 +48,10 @@ import javafx.stage.Stage;
  *
  */
 public class Main extends Application {
-  
+
   /** The logger. */
   private final Logger logger = LoggerFactory.getLogger(Main.class);
-  
+
   /**
    * @see javafx.application.Application#start(javafx.stage.Stage)
    */
@@ -58,7 +60,7 @@ public class Main extends Application {
     logger.debug("starting application");
     Thread.setDefaultUncaughtExceptionHandler((t, e) -> Platform.runLater(() -> showErrorDialog(t, e)));
     Thread.currentThread().setUncaughtExceptionHandler(this::showErrorDialog);
-
+    
     setUserAgentStylesheet(STYLESHEET_MODENA);
     Parent root = (Parent) FXMLLoader.load(getClass().getResource(StatusReporterConfig.MAIN_FXML));
     Scene scene = new Scene(root);
@@ -69,20 +71,30 @@ public class Main extends Application {
       Platform.exit();
       System.exit(0);
     });
-    
+
     setScreen(primaryStage);
-    
+
+    primaryStage.setOnShown(e -> {
+      if(!PersistenceValidator.initialize()) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setContentText("An error occured initializing the database\n (is another instance running?)");
+        alert.showAndWait();
+        Platform.exit();
+        System.exit(1);
+      }
+    });
+
     primaryStage.show();
-    
+
     logger.debug("primary stage showing");
   }
-  
-  //TODO - refactor
+
+  // TODO - refactor
   private void setScreen(Stage stage) {
     ObservableList<Screen> screens = Screen.getScreens();
     Screen screen = null;
-    
-    for(Screen s : screens) {
+
+    for (Screen s : screens) {
       screen = s;
     }
 
@@ -90,20 +102,16 @@ public class Main extends Application {
 
     double sw = sbounds.getMaxY();
     double sh = sbounds.getMaxX();
-    
-    listenToSizeInitialization(stage.widthProperty(), 
-        w -> stage.setX(( sw - w) * 0.25));
-    listenToSizeInitialization(stage.heightProperty(), 
-        h -> stage.setY(( sh - h) * 0.75));
+
+    listenToSizeInitialization(stage.widthProperty(), w -> stage.setX((sw - w) * 0.25));
+    listenToSizeInitialization(stage.heightProperty(), h -> stage.setY((sh - h) * 0.75));
   }
 
-  private void listenToSizeInitialization(ObservableDoubleValue size,
-      DoubleConsumer handler) {
+  private void listenToSizeInitialization(ObservableDoubleValue size, DoubleConsumer handler) {
 
     ChangeListener<Number> listener = new ChangeListener<Number>() {
       @Override
-      public void changed(ObservableValue<? extends Number> obs, Number oldSize,
-          Number newSize) {
+      public void changed(ObservableValue<? extends Number> obs, Number oldSize, Number newSize) {
         logger.debug("{}", newSize);
         if (newSize.doubleValue() != Double.NaN) {
           handler.accept(newSize.doubleValue());
@@ -111,7 +119,7 @@ public class Main extends Application {
         }
       }
     };
-    
+
     size.addListener(listener);
   }
 
@@ -121,15 +129,13 @@ public class Main extends Application {
    * @param args the arguments
    */
   public static void main(String... args) {
-    new PersistenceValidator();
     Application.launch(Main.class, args);
   }
 
   /**
    * Show error dialog.
    *
-   * @param thread the thread
-   * @param exception the exception
+   * @param thread the thread @param exception the exception
    */
   private void showErrorDialog(Thread thread, Throwable exception) {
     new ErrorAlert().show((Exception) exception);

@@ -41,7 +41,7 @@ import javafx.scene.control.TreeItem;
  * @author James G. Willmore
  *
  */
-public class WbsTreeViewController extends AbstractComponentController implements ComponentController {
+class WbsTreeViewController extends AbstractComponentController implements ComponentController {
   
   /** The logger. */
   @SuppressWarnings("unused")
@@ -55,7 +55,7 @@ public class WbsTreeViewController extends AbstractComponentController implement
    *
    * @param wbsTree the wbs tree
    */
-  public WbsTreeViewController(WbsTreeView wbsTree) {
+  WbsTreeViewController(WbsTreeView wbsTree) {
     this.wbsTree = wbsTree;
   }
 

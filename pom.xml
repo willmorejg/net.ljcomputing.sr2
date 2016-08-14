@@ -159,6 +159,17 @@
 
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <configuration>
+      <outputDirectory>docs/pmd</outputDirectory>
+      <format>csv</format>
+      <language>java</language>
+      <targetJdk>1.8</targetJdk>
+    </configuration>
+   </plugin>
+
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-javadoc-plugin</artifactId>
     <executions>
      <execution>

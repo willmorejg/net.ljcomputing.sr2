@@ -40,17 +40,12 @@ public class WorkBreakdownStructure extends AbstractModel implements Model, Enti
 
   /** The description. */
   private String description;
-
+  
   /**
    * Instantiates a new work breakdown structure.
-   *
-   * @param entityPopulator the entity populator
-   * @param resultSet the result set
-   * @throws PersistenceException the persistence exception
    */
-  public WorkBreakdownStructure(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+  public WorkBreakdownStructure() {
     super();
-    populate(entityPopulator, resultSet);
   }
 
   /**

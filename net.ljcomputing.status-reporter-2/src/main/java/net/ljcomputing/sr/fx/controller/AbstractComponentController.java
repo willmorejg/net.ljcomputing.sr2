@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractComponentController
+abstract class AbstractComponentController
     implements ComponentController {
 
   /** The logger. */

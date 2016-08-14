@@ -61,7 +61,7 @@ public class TaskTableController {
    * @param fromDateTimeControls the from date time controls
    * @param toDateTimeControls the to date time controls
    */
-      public TaskTableController(TableView<TaskViewModel> taskTable,
+  TaskTableController(TableView<TaskViewModel> taskTable,
           DateTimeControls fromDateTimeControls,
           DateTimeControls toDateTimeControls) {
     this.taskTable = taskTable;

@@ -38,7 +38,7 @@ import javafx.scene.layout.GridPane;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractModelDataDialog<T extends Model> implements ModelDataEntry<T> {
+abstract class AbstractModelDataDialog<T extends Model> implements ModelDataEntry<T> {
   @SuppressWarnings("unused")
   private final Logger logger = LoggerFactory.getLogger(AbstractModelDataDialog.class);
 
@@ -46,13 +46,13 @@ public abstract class AbstractModelDataDialog<T extends Model> implements ModelD
   protected T item;
 
   /** The lbl id. */
-  protected Label lblId = new Label("ID");
+  private Label lblId = new Label("ID");
 
   /** The id field. */
   protected TextField idField = new TextField();
 
   /** The pane. */
-  protected GridPane pane = new GridPane();
+  private GridPane pane = new GridPane();
 
   /** The alert. */
   protected Alert alert = new Alert(AlertType.NONE);

@@ -46,7 +46,7 @@
 <span class="sourceLineNo">038</span> * @author James G. Willmore<a name="line.38"></a>
 <span class="sourceLineNo">039</span> *<a name="line.39"></a>
 <span class="sourceLineNo">040</span> */<a name="line.40"></a>
-<span class="sourceLineNo">041</span>public abstract class AbstractModelDataDialog&lt;T extends Model&gt; implements ModelDataEntry&lt;T&gt; {<a name="line.41"></a>
+<span class="sourceLineNo">041</span>abstract class AbstractModelDataDialog&lt;T extends Model&gt; implements ModelDataEntry&lt;T&gt; {<a name="line.41"></a>
 <span class="sourceLineNo">042</span>  @SuppressWarnings("unused")<a name="line.42"></a>
 <span class="sourceLineNo">043</span>  private final Logger logger = LoggerFactory.getLogger(AbstractModelDataDialog.class);<a name="line.43"></a>
 <span class="sourceLineNo">044</span><a name="line.44"></a>
@@ -54,13 +54,13 @@
 <span class="sourceLineNo">046</span>  protected T item;<a name="line.46"></a>
 <span class="sourceLineNo">047</span><a name="line.47"></a>
 <span class="sourceLineNo">048</span>  /** The lbl id. */<a name="line.48"></a>
-<span class="sourceLineNo">049</span>  protected Label lblId = new Label("ID");<a name="line.49"></a>
+<span class="sourceLineNo">049</span>  private Label lblId = new Label("ID");<a name="line.49"></a>
 <span class="sourceLineNo">050</span><a name="line.50"></a>
 <span class="sourceLineNo">051</span>  /** The id field. */<a name="line.51"></a>
 <span class="sourceLineNo">052</span>  protected TextField idField = new TextField();<a name="line.52"></a>
 <span class="sourceLineNo">053</span><a name="line.53"></a>
 <span class="sourceLineNo">054</span>  /** The pane. */<a name="line.54"></a>
-<span class="sourceLineNo">055</span>  protected GridPane pane = new GridPane();<a name="line.55"></a>
+<span class="sourceLineNo">055</span>  private GridPane pane = new GridPane();<a name="line.55"></a>
 <span class="sourceLineNo">056</span><a name="line.56"></a>
 <span class="sourceLineNo">057</span>  /** The alert. */<a name="line.57"></a>
 <span class="sourceLineNo">058</span>  protected Alert alert = new Alert(AlertType.NONE);<a name="line.58"></a>

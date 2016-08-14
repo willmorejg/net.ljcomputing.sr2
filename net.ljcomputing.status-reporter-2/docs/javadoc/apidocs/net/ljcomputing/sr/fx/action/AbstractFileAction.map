@@ -1,7 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractFileAction.html" title="net.ljcomputing.sr.fx.action.AbstractFileAction" alt="" coords="84,17,201,42"/>
-<area shape="rect" id="node1" href="./AbstractFileAction.html" title="&lt;TABLE&gt;" alt="" coords="73,5,212,53"/>
-<area shape="rect" id="node2_1" href="./SaveCsvAction.html" title="net.ljcomputing.sr.fx.action.SaveCsvAction" alt="" coords="16,114,117,139"/>
-<area shape="rect" id="node2" href="./SaveCsvAction.html" title="&lt;TABLE&gt;" alt="" coords="5,103,128,151"/>
-<area shape="rect" id="node3" href="null" title="&lt;TABLE&gt;" alt="" coords="153,102,287,151"/>
+<area shape="rect" id="node1_0" href="./AbstractFileAction.html" title="net.ljcomputing.sr.fx.action.AbstractFileAction" alt="" coords="16,17,133,42"/>
+<area shape="rect" id="node1" href="./AbstractFileAction.html" title="&lt;TABLE&gt;" alt="" coords="5,5,144,53"/>
+<area shape="rect" id="node2_1" href="./SaveCsvAction.html" title="net.ljcomputing.sr.fx.action.SaveCsvAction" alt="" coords="24,113,125,138"/>
+<area shape="rect" id="node2" href="./SaveCsvAction.html" title="&lt;TABLE&gt;" alt="" coords="13,101,136,149"/>
 </map>

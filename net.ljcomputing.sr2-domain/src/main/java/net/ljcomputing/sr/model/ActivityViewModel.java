@@ -51,19 +51,6 @@ public class ActivityViewModel extends AbstractModel implements Model, Entity {
   private String wbsDescription;
 
   /**
-   * Instantiates a new activity view model.
-   *
-   * @param entityPopulator the entity populator
-   * @param resultSet the result set
-   * @throws PersistenceException the persistence exception
-   */
-  public ActivityViewModel(final EntityPopulator entityPopulator, final ResultSet resultSet)
-      throws PersistenceException {
-    super();
-    populate(entityPopulator, resultSet);
-  }
-
-  /**
    * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
    */
   public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {

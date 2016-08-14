@@ -10,27 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.sr.fx.action.AbstractFileAction
-	c529 [label=<<table title="net.ljcomputing.sr.fx.action.AbstractFileAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractFileAction.html">
+	c514 [label=<<table title="net.ljcomputing.sr.fx.action.AbstractFileAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractFileAction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractFileAction </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractFileAction.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.fx.action.SaveCsvAction
-	c530 [label=<<table title="net.ljcomputing.sr.fx.action.SaveCsvAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SaveCsvAction.html">
+	c515 [label=<<table title="net.ljcomputing.sr.fx.action.SaveCsvAction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SaveCsvAction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SaveCsvAction </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SaveCsvAction.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.sr.fx.action.SaveCsvAction extends net.ljcomputing.sr.fx.action.AbstractFileAction
-	c529:p -> c530:p [dir=back,arrowtail=empty];
-	// net.ljcomputing.sr.fx.action.AbstractFileAction NAVASSOC net.ljcomputing.fx.alert.ErrorAlert
-	c529:p -> c543:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.fx.alert.ErrorAlert
-	c543 [label=<<table title="net.ljcomputing.fx.alert.ErrorAlert" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ErrorAlert </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.fx.alert </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	c514:p -> c515:p [dir=back,arrowtail=empty];
 }
 

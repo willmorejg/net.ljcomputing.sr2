@@ -75,18 +75,6 @@ public class TaskViewModel extends AbstractModel
   private double elapsedHours;
 
   /**
-   * Instantiates a new task view model.
-   *
-   * @param entityPopulator the entity populator
-   * @param resultSet the result set
-   * @throws PersistenceException the persistence exception
-   */
-  public TaskViewModel(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
-    populate(entityPopulator, resultSet);
-  }
-
-
-  /**
    * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
    */
   public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {

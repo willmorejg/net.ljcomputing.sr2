@@ -24,14 +24,18 @@
 
   <github.username>willmorejg</github.username>
 
-  <net.ljcomputing.utility.version>utility-1.0.0</net.ljcomputing.utility.version>
-  <net.ljcomputing.model.version>model-1.0.0</net.ljcomputing.model.version>
-  <net.ljcomputing.persistence.version>persistence-1.0.2</net.ljcomputing.persistence.version>
+  <net.ljcomputing.utility.version>utility-1.0.1</net.ljcomputing.utility.version>
+  <net.ljcomputing.model.version>model-1.0.1</net.ljcomputing.model.version>
+  <net.ljcomputing.persistence.version>persistence-1.0.3</net.ljcomputing.persistence.version>
   <derby.version>10.12.1.1</derby.version>
   <commons-dbcp2.version>2.0.1</commons-dbcp2.version>
   <commons-lang3.version>3.4</commons-lang3.version>
   <slf4j.version>1.7.21</slf4j.version>
   <logback.version>1.1.7</logback.version>
+
+  <local.net.ljcomputing.model.version>1.0.1-SNAPSHOT</local.net.ljcomputing.model.version>
+  <local.net.ljcomputing.persistence.version>1.0.3-SNAPSHOT</local.net.ljcomputing.persistence.version>
+  <local.net.ljcomputing.utility.version>1.0.1-SNAPSHOT</local.net.ljcomputing.utility.version>
  </properties>
 
  <!-- Contact and License Information -->
@@ -74,10 +78,12 @@
  </distributionManagement>
 
  <repositories>
+
   <repository>
    <id>jitpack.io</id>
    <url>https://jitpack.io</url>
   </repository>
+
  </repositories>
 
  <dependencies>
@@ -88,10 +94,22 @@
    <version>${net.ljcomputing.utility.version}</version>
   </dependency>
 
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>utility</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.utility.version}</version> -->
+  <!-- </dependency> -->
+
+  <!-- <dependency> -->
+  <!-- <groupId>com.github.willmorejg</groupId> -->
+  <!-- <artifactId>net.ljcomputing.model</artifactId> -->
+  <!-- <version>${net.ljcomputing.model.version}</version> -->
+  <!-- </dependency> -->
+
   <dependency>
-   <groupId>com.github.willmorejg</groupId>
-   <artifactId>net.ljcomputing.model</artifactId>
-   <version>${net.ljcomputing.model.version}</version>
+   <groupId>net.ljcomputing</groupId>
+   <artifactId>model</artifactId>
+   <version>${local.net.ljcomputing.model.version}</version>
   </dependency>
 
   <dependency>
@@ -99,6 +117,12 @@
    <artifactId>net.ljcomputing.persistence</artifactId>
    <version>${net.ljcomputing.persistence.version}</version>
   </dependency>
+
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>persistence</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.persistence.version}</version> -->
+  <!-- </dependency> -->
 
   <dependency>
    <groupId>org.apache.derby</groupId>

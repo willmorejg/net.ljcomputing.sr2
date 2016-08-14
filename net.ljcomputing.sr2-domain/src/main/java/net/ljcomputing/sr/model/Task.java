@@ -49,21 +49,9 @@ public class Task extends AbstractModel implements Model, Entity {
 
   /**
    * Instantiates a new task.
-   *
-   * @param entityPopulator the entity populator
-   * @param resultSet the result set
-   * @throws PersistenceException the persistence exception
    */
-  public Task(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+  public Task() {
     super();
-    populate(entityPopulator, resultSet);
-  }
-
-  /**
-   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
-   */
-  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
-    entityPopulator.populate(this, resultSet);
   }
 
   /**
@@ -74,6 +62,13 @@ public class Task extends AbstractModel implements Model, Entity {
   public Task(final Integer activity) {
     super();
     this.activity = activity;
+  }
+
+  /**
+   * @see net.ljcomputing.persistence.Entity#populate(net.ljcomputing.persistence.EntityPopulator, java.sql.ResultSet)
+   */
+  public void populate(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+    entityPopulator.populate(this, resultSet);
   }
 
   /**

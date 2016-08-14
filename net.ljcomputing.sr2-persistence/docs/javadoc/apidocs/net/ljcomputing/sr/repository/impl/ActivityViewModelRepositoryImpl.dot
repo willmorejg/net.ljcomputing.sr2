@@ -18,7 +18,7 @@ digraph G {
 	//net.ljcomputing.sr.repository.impl.ActivityViewModelRepositoryImpl extends net.ljcomputing.repository.impl.AbstractRepository<net.ljcomputing.sr.model.ActivityViewModel>
 	c66:p -> c62:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.sr.repository.impl.ActivityViewModelRepositoryImpl DEPEND net.ljcomputing.sr.model.ActivityViewModel
-	c62:p -> c70:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c62:p -> c69:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.repository.impl.AbstractRepository<T extends net.ljcomputing.model.Model>
 	c66 [label=<<table title="net.ljcomputing.repository.impl.AbstractRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/repository/impl/AbstractRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/repository/impl/AbstractRepository.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.ActivityViewModel
-	c70 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/sr/model/ActivityViewModel.html">
+	c69 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/net/ljcomputing/sr/model/ActivityViewModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityViewModel </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

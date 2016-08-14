@@ -14,7 +14,6 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.sr.fx.controller;
 
 /**
@@ -23,15 +22,15 @@ package net.ljcomputing.sr.fx.controller;
  * @author James G. Willmore
  *
  */
-public interface ComponentController {
-  
+interface ComponentController {
+
   /**
    * Handle exception.
    *
    * @param exception the exception
    */
-  public void handleException(Exception exception);
-  
+  void handleException(Exception exception);
+
   /**
    * Refresh components assigned to the controller.
    */

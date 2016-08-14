@@ -65,8 +65,9 @@ import javafx.util.Callback;
 public class MainController implements Initializable {
 
   /** The logger. */
-  private static final Logger logger = LoggerFactory.getLogger(MainController.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);
   
+  /** The main pane. */
   @FXML
   private VBox mainPane;
 
@@ -132,7 +133,7 @@ public class MainController implements Initializable {
     
     statusBar.setText("Initialized");
     
-    logger.debug("initialized");
+    LOGGER.debug("initialized");
   }
   
   /**
@@ -216,7 +217,7 @@ public class MainController implements Initializable {
   /**
    * Populate tree root.
    */
-  public void populateTreeRoot() {
+  private void populateTreeRoot() {
     try {
       wbsTreeViewController.refreshComponents();
       wbsTree.init();

@@ -45,15 +45,10 @@ public class Activity extends AbstractModel implements Model, Entity {
   private transient Integer wbs;
 
   /**
-   * Instantiates a new activity.
-   *
-   * @param entityPopulator the entity populator
-   * @param resultSet the result set
-   * @throws PersistenceException the persistence exception
+   * Instantiates a new work breakdown structure.
    */
-  public Activity(final EntityPopulator entityPopulator, final ResultSet resultSet) throws PersistenceException {
+  public Activity() {
     super();
-    populate(entityPopulator, resultSet);
   }
 
   /**

@@ -28,7 +28,7 @@ import javafx.scene.control.MenuItem;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractWbsMenuItem extends MenuItem {
+abstract class AbstractWbsMenuItem extends MenuItem {
   
   /**
    * Gets the item text.

@@ -17,8 +17,6 @@
 
 package net.ljcomputing.sr.fx.action;
 
-import net.ljcomputing.fx.alert.ErrorAlert;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +30,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractFileAction {
-  
-  /** The error alert. */
-  protected ErrorAlert errorAlert = new ErrorAlert();
+abstract class AbstractFileAction {
   
   /**
    * Show file chooser.
@@ -44,7 +39,7 @@ public abstract class AbstractFileAction {
    * @param showAllFileTypes the show all file types
    * @return the file
    */
-  public File showFileChooser(String title, boolean showAllFileTypes) {
+  File showFileChooser(String title, boolean showAllFileTypes) {
     FileChooser chooser = new FileChooser();
 
     chooser.setTitle(title);
@@ -63,7 +58,7 @@ public abstract class AbstractFileAction {
    *
    * @return the all file types extension
    */
-  protected List<ExtensionFilter> getAllFileTypesExtension() {
+  private List<ExtensionFilter> getAllFileTypesExtension() {
     List<ExtensionFilter> textFileExtensions = new ArrayList<ExtensionFilter>();
     
     textFileExtensions.add(new ExtensionFilter("All file types (*.*)", "*.*"));
@@ -76,7 +71,7 @@ public abstract class AbstractFileAction {
    *
    * @return the text file extensions
    */
-  protected List<ExtensionFilter> getTextFileExtensions() {
+  private List<ExtensionFilter> getTextFileExtensions() {
     List<ExtensionFilter> textFileExtensions = new ArrayList<ExtensionFilter>();
     
     textFileExtensions.add(new ExtensionFilter("CSV files (*.csv)", "*.csv"));

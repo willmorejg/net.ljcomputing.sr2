@@ -32,24 +32,28 @@ import java.sql.Statement;
  * @author James G. Willmore
  *
  */
-public class PersistenceValidator {
+public final class PersistenceValidator {
   
   /** The logger. */
-  private final static Logger logger = LoggerFactory.getLogger(PersistenceValidator.class);
-
+  private final static Logger LOGGER = LoggerFactory.getLogger(PersistenceValidator.class);
+  
   /**
-   * Instantiates a new persistence validator.
+   * Initialize the database tables.
    */
-  public PersistenceValidator() {
-    ConnectionPool cp = ConnectionPool.getInstance();
+  public static boolean initialize() {
+    boolean initialized = true;
     
     try {
-      logger.debug(" ... initialize tables");
+      LOGGER.debug(" ... initialize tables");
+      ConnectionPool cp = ConnectionPool.getInstance();
       initTables(cp.getConnection());
-      logger.debug("COMPLETED ... initialize tables");
-    } catch (Exception e) {
-      e.printStackTrace();
+      LOGGER.debug("COMPLETED ... initialize tables");
+    } catch (Exception exception) {
+      LOGGER.error("Cannot initialize database tables: ", exception);
+      initialized = false;
     }
+    
+    return initialized;
   }
 
   /**
@@ -58,18 +62,18 @@ public class PersistenceValidator {
    * @param conn the conn
    * @throws Exception the exception
    */
-  private void initTables(Connection conn) throws Exception {
+  private static void initTables(Connection conn) throws Exception {
     for (DataSourceTable table : Tables.values()) {
       if (!exists(conn, table)) {
-        logger.debug(" ... table " + table.getTableName() + " does not exist ... creating");
+        LOGGER.debug(" ... table " + table.getTableName() + " does not exist ... creating");
         createTable(conn, table);
-        logger.debug("CREATED ... " + table.getTableName());
+        LOGGER.debug("CREATED ... " + table.getTableName());
       }
     }
 
-    logger.debug(" ... adding items");
+    LOGGER.debug(" ... adding items");
     addItems(conn);
-    logger.debug("COMPLETED ... adding items");
+    LOGGER.debug("COMPLETED ... adding items");
   }
 
   /**
@@ -80,7 +84,7 @@ public class PersistenceValidator {
    * @return true, if successful
    * @throws Exception the exception
    */
-  private boolean exists(Connection conn, DataSourceTable table)
+  private static boolean exists(Connection conn, DataSourceTable table)
       throws Exception {
     try {
       Statement stmt = conn.createStatement();
@@ -103,7 +107,7 @@ public class PersistenceValidator {
    * @param table the table
    * @throws Exception the exception
    */
-  private void createTable(Connection conn, DataSourceTable table)
+  private static void createTable(Connection conn, DataSourceTable table)
       throws Exception {
     Statement stmt = conn.createStatement();
     stmt.executeUpdate(table.getDDl());
@@ -116,7 +120,7 @@ public class PersistenceValidator {
    * @param conn the conn
    * @throws Exception the exception
    */
-  private void addItems(Connection conn) throws Exception {
+  private static void addItems(Connection conn) throws Exception {
     int count = 0;
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("select count(*) as cnt from wbs");
