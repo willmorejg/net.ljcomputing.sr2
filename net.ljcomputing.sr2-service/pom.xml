@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
- xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
  <modelVersion>4.0.0</modelVersion>
  <parent>
   <artifactId>sr2</artifactId>
   <groupId>net.ljcomputing</groupId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
  </parent>
 
  <artifactId>sr2-service</artifactId>
@@ -62,7 +59,8 @@
   <url>https://github.com/${github.username}/${project.groupId}.${project.artifactId}</url>
   <connection>scm:git:ssh://git@github.com/${github.username}/${project.groupId}.${project.artifactId}.git</connection>
   <developerConnection>scm:git:ssh://git@github.com/${github.username}/${project.groupId}.${project.artifactId}.git</developerConnection>
- </scm>
+   <tag>HEAD</tag>
+  </scm>
 
  <distributionManagement>
 
@@ -142,13 +140,13 @@
   <dependency>
    <groupId>net.ljcomputing</groupId>
    <artifactId>sr2-domain</artifactId>
-   <version>1.0.0-SNAPSHOT</version>
+   <version>1.0.1-SNAPSHOT</version>
   </dependency>
 
   <dependency>
    <groupId>net.ljcomputing</groupId>
    <artifactId>sr2-persistence</artifactId>
-   <version>1.0.0-SNAPSHOT</version>
+   <version>1.0.1-SNAPSHOT</version>
   </dependency>
 
   <dependency>
