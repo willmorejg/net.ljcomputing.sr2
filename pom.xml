@@ -4,7 +4,7 @@
 
  <groupId>net.ljcomputing</groupId>
  <artifactId>sr2</artifactId>
- <version>1.0.2-SNAPSHOT</version>
+ <version>1.0.3-SNAPSHOT</version>
  <packaging>pom</packaging>
 
  <name>LJ_Computing-Status_Reporter</name>
