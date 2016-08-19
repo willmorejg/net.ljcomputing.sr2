@@ -11,9 +11,9 @@
  <description>LJ Computing - Status Reporter</description>
 
  <modules>
-  <module>net.ljcomputing.sr2-domain</module>
-  <module>net.ljcomputing.sr2-persistence</module>
-  <module>net.ljcomputing.sr2-service</module>
+  
+  
+  
   <module>net.ljcomputing.status-reporter-2</module>
  </modules>
 

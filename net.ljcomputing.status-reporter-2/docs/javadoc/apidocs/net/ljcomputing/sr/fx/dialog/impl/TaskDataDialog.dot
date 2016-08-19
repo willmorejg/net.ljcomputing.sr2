@@ -33,21 +33,21 @@ digraph G {
 	c1314:p -> c1339:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog NAVASSOC net.ljcomputing.fx.control.time.TimeControl
 	c1314:p -> c1339:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.ActivityViewModel
+	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.Task
 	c1314:p -> c1340:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.TaskViewModel
 	c1314:p -> c1338:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
-	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.Task
+	// net.ljcomputing.sr.fx.dialog.impl.TaskDataDialog DEPEND net.ljcomputing.sr.model.ActivityViewModel
 	c1314:p -> c1341:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.ActivityViewModel
-	c1340 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1341 [label=<<table title="net.ljcomputing.sr.model.ActivityViewModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActivityViewModel </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.Task
-	c1341 [label=<<table title="net.ljcomputing.sr.model.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1340 [label=<<table title="net.ljcomputing.sr.model.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>

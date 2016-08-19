@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+ xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
  <modelVersion>4.0.0</modelVersion>
 
  <parent>
@@ -26,9 +29,9 @@
   <net.ljcomputing.persistence.version>persistence-1.0.3</net.ljcomputing.persistence.version>
   <net.ljcomputing.service.version>service-1.0.1</net.ljcomputing.service.version>
   <net.ljcomputing.fx.version>fx-1.0.0</net.ljcomputing.fx.version>
-  <net.ljcomputing.sr2-domain.version>1.0.2-SNAPSHOT</net.ljcomputing.sr2-domain.version>
-  <net.ljcomputing.sr2-persistence.version>1.0.2-SNAPSHOT</net.ljcomputing.sr2-persistence.version>
-  <net.ljcomputing.sr2-service.version>1.0.2-SNAPSHOT</net.ljcomputing.sr2-service.version>
+  <net.ljcomputing.sr2-domain.version>sr2-domain-1.0.2</net.ljcomputing.sr2-domain.version>
+  <net.ljcomputing.sr2-persistence.version>sr2-persistence-1.0.2</net.ljcomputing.sr2-persistence.version>
+  <net.ljcomputing.sr2-service.version>sr2-service-1.0.2</net.ljcomputing.sr2-service.version>
   <derby.version>10.12.1.1</derby.version>
   <commons-dbcp2.version>2.0.1</commons-dbcp2.version>
   <commons-lang3.version>3.4</commons-lang3.version>
@@ -40,6 +43,9 @@
   <!-- <local.net.ljcomputing.persistence.version>1.0.3-SNAPSHOT</local.net.ljcomputing.persistence.version> -->
   <!-- <local.net.ljcomputing.service.version>1.0.2-SNAPSHOT</local.net.ljcomputing.service.version> -->
   <!-- <local.net.ljcomputing.utility.version>1.0.1-SNAPSHOT</local.net.ljcomputing.utility.version> -->
+  <!-- <local.net.ljcomputing.sr2-domain.version>1.0.2-SNAPSHOT</local.net.ljcomputing.sr2-domain.version> -->
+  <!-- <local.net.ljcomputing.sr2-persistence.version>1.0.2-SNAPSHOT</local.net.ljcomputing.sr2-persistence.version> -->
+  <!-- <local.net.ljcomputing.sr2-service.version>1.0.2-SNAPSHOT</local.net.ljcomputing.sr2-service.version> -->
  </properties>
 
  <!-- Contact and License Information -->
@@ -63,8 +69,8 @@
   <url>https://github.com/${github.username}/${project.groupId}.${project.artifactId}</url>
   <connection>scm:git:ssh://git@github.com/${github.username}/${project.groupId}.${project.artifactId}.git</connection>
   <developerConnection>scm:git:ssh://git@github.com/${github.username}/${project.groupId}.${project.artifactId}.git</developerConnection>
-   <tag>HEAD</tag>
-  </scm>
+  <tag>HEAD</tag>
+ </scm>
 
  <distributionManagement>
 
@@ -198,22 +204,40 @@
   </dependency>
 
   <dependency>
-   <groupId>net.ljcomputing</groupId>
-   <artifactId>sr2-domain</artifactId>
+   <groupId>com.github.willmorejg</groupId>
+   <artifactId>net.ljcomputing.sr2-domain</artifactId>
    <version>${net.ljcomputing.sr2-domain.version}</version>
   </dependency>
 
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>sr2-domain</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.sr2-domain.version}</version> -->
+  <!-- </dependency> -->
+
   <dependency>
-   <groupId>net.ljcomputing</groupId>
-   <artifactId>sr2-persistence</artifactId>
+   <groupId>com.github.willmorejg</groupId>
+   <artifactId>net.ljcomputing.sr2-persistence</artifactId>
    <version>${net.ljcomputing.sr2-persistence.version}</version>
   </dependency>
 
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>sr2-persistence</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.sr2-persistence.version}</version> -->
+  <!-- </dependency> -->
+
   <dependency>
-   <groupId>net.ljcomputing</groupId>
-   <artifactId>sr2-service</artifactId>
+   <groupId>com.github.willmorejg</groupId>
+   <artifactId>net.ljcomputing.sr2-service</artifactId>
    <version>${net.ljcomputing.sr2-service.version}</version>
   </dependency>
+
+  <!-- <dependency> -->
+  <!-- <groupId>net.ljcomputing</groupId> -->
+  <!-- <artifactId>sr2-service</artifactId> -->
+  <!-- <version>${local.net.ljcomputing.sr2-service.version}</version> -->
+  <!-- </dependency> -->
 
  </dependencies>
 

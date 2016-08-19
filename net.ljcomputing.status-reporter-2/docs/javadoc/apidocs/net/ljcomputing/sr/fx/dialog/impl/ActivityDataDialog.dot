@@ -27,12 +27,12 @@ digraph G {
 	c650:p -> c675:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.sr.fx.dialog.impl.AbstractModelDataDialog<T extends net.ljcomputing.model.Model> NAVASSOC org.slf4j.Logger
 	c651:p -> c675:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog DEPEND net.ljcomputing.sr.model.WorkBreakdownStructure
-	c650:p -> c676:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog DEPEND net.ljcomputing.sr.model.Activity
+	c650:p -> c676:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.sr.fx.dialog.impl.ActivityDataDialog DEPEND net.ljcomputing.sr.model.WorkBreakdownStructure
 	c650:p -> c677:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.sr.model.WorkBreakdownStructure
-	c676 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c677 [label=<<table title="net.ljcomputing.sr.model.WorkBreakdownStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WorkBreakdownStructure </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://www.slf4j.org/apidocs/org/slf4j/Logger.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.sr.model.Activity
-	c677 [label=<<table title="net.ljcomputing.sr.model.Activity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c676 [label=<<table title="net.ljcomputing.sr.model.Activity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Activity </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.sr.model </font></td></tr>
